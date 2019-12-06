@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7906239AD9F700EC8111 /* AppDelegate.swift */; };
+		D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D75E7908239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld */; };
+		D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75E790B239AD9F800EC8111 /* Assets.xcassets */; };
+		D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75E790D239AD9F800EC8111 /* MainMenu.xib */; };
+		D75E791B239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E791A239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift */; };
+		D75E7926239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */; };
+		D75E7934239ADA1400EC8111 /* CartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7933239ADA1400EC8111 /* CartesianView.swift */; };
+		D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7935239AF6EC00EC8111 /* ParabolaView.swift */; };
+		D75E7938239B12D100EC8111 /* Sinus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7937239B12D100EC8111 /* Sinus.swift */; };
+		D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7939239B187600EC8111 /* GeneralEquationView.swift */; };
+		D75E793C239B18E900EC8111 /* SpecificEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E793B239B18E900EC8111 /* SpecificEquationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D75E7917239AD9F800EC8111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D75E78FB239AD9F700EC8111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D75E7902239AD9F700EC8111;
+			remoteInfo = "Alfonso Equation Editor";
+		};
+		D75E7922239AD9F800EC8111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D75E78FB239AD9F700EC8111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D75E7902239AD9F700EC8111;
+			remoteInfo = "Alfonso Equation Editor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D75E7903239AD9F700EC8111 /* Alfonso Equation Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alfonso Equation Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75E7906239AD9F700EC8111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D75E7909239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alfonso_Equation_Editor.xcdatamodel; sourceTree = "<group>"; };
+		D75E790B239AD9F800EC8111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D75E790E239AD9F800EC8111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D75E7910239AD9F800EC8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75E7911239AD9F800EC8111 /* Alfonso_Equation_Editor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Alfonso_Equation_Editor.entitlements; sourceTree = "<group>"; };
+		D75E7916239AD9F800EC8111 /* Alfonso Equation EditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alfonso Equation EditorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75E791A239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alfonso_Equation_EditorTests.swift; sourceTree = "<group>"; };
+		D75E791C239AD9F800EC8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75E7921239AD9F800EC8111 /* Alfonso Equation EditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alfonso Equation EditorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alfonso_Equation_EditorUITests.swift; sourceTree = "<group>"; };
+		D75E7927239AD9F800EC8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75E7933239ADA1400EC8111 /* CartesianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianView.swift; sourceTree = "<group>"; };
+		D75E7935239AF6EC00EC8111 /* ParabolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParabolaView.swift; sourceTree = "<group>"; };
+		D75E7937239B12D100EC8111 /* Sinus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sinus.swift; sourceTree = "<group>"; };
+		D75E7939239B187600EC8111 /* GeneralEquationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralEquationView.swift; sourceTree = "<group>"; };
+		D75E793B239B18E900EC8111 /* SpecificEquationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificEquationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D75E7900239AD9F700EC8111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75E7913239AD9F800EC8111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75E791E239AD9F800EC8111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D75E78FA239AD9F700EC8111 = {
+			isa = PBXGroup;
+			children = (
+				D75E7905239AD9F700EC8111 /* Alfonso Equation Editor */,
+				D75E7919239AD9F800EC8111 /* Alfonso Equation EditorTests */,
+				D75E7924239AD9F800EC8111 /* Alfonso Equation EditorUITests */,
+				D75E7904239AD9F700EC8111 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D75E7904239AD9F700EC8111 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D75E7903239AD9F700EC8111 /* Alfonso Equation Editor.app */,
+				D75E7916239AD9F800EC8111 /* Alfonso Equation EditorTests.xctest */,
+				D75E7921239AD9F800EC8111 /* Alfonso Equation EditorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D75E7905239AD9F700EC8111 /* Alfonso Equation Editor */ = {
+			isa = PBXGroup;
+			children = (
+				D75E7906239AD9F700EC8111 /* AppDelegate.swift */,
+				D75E7933239ADA1400EC8111 /* CartesianView.swift */,
+				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
+				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
+				D75E793B239B18E900EC8111 /* SpecificEquationView.swift */,
+				D75E7937239B12D100EC8111 /* Sinus.swift */,
+				D75E790B239AD9F800EC8111 /* Assets.xcassets */,
+				D75E790D239AD9F800EC8111 /* MainMenu.xib */,
+				D75E7910239AD9F800EC8111 /* Info.plist */,
+				D75E7911239AD9F800EC8111 /* Alfonso_Equation_Editor.entitlements */,
+				D75E7908239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld */,
+			);
+			path = "Alfonso Equation Editor";
+			sourceTree = "<group>";
+		};
+		D75E7919239AD9F800EC8111 /* Alfonso Equation EditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D75E791A239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift */,
+				D75E791C239AD9F800EC8111 /* Info.plist */,
+			);
+			path = "Alfonso Equation EditorTests";
+			sourceTree = "<group>";
+		};
+		D75E7924239AD9F800EC8111 /* Alfonso Equation EditorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */,
+				D75E7927239AD9F800EC8111 /* Info.plist */,
+			);
+			path = "Alfonso Equation EditorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D75E7902239AD9F700EC8111 /* Alfonso Equation Editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75E792A239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation Editor" */;
+			buildPhases = (
+				D75E78FF239AD9F700EC8111 /* Sources */,
+				D75E7900239AD9F700EC8111 /* Frameworks */,
+				D75E7901239AD9F700EC8111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alfonso Equation Editor";
+			productName = "Alfonso Equation Editor";
+			productReference = D75E7903239AD9F700EC8111 /* Alfonso Equation Editor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D75E7915239AD9F800EC8111 /* Alfonso Equation EditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75E792D239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation EditorTests" */;
+			buildPhases = (
+				D75E7912239AD9F800EC8111 /* Sources */,
+				D75E7913239AD9F800EC8111 /* Frameworks */,
+				D75E7914239AD9F800EC8111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D75E7918239AD9F800EC8111 /* PBXTargetDependency */,
+			);
+			name = "Alfonso Equation EditorTests";
+			productName = "Alfonso Equation EditorTests";
+			productReference = D75E7916239AD9F800EC8111 /* Alfonso Equation EditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D75E7920239AD9F800EC8111 /* Alfonso Equation EditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75E7930239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation EditorUITests" */;
+			buildPhases = (
+				D75E791D239AD9F800EC8111 /* Sources */,
+				D75E791E239AD9F800EC8111 /* Frameworks */,
+				D75E791F239AD9F800EC8111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D75E7923239AD9F800EC8111 /* PBXTargetDependency */,
+			);
+			name = "Alfonso Equation EditorUITests";
+			productName = "Alfonso Equation EditorUITests";
+			productReference = D75E7921239AD9F800EC8111 /* Alfonso Equation EditorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D75E78FB239AD9F700EC8111 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Alfonso Maria Tesauro";
+				TargetAttributes = {
+					D75E7902239AD9F700EC8111 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					D75E7915239AD9F800EC8111 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D75E7902239AD9F700EC8111;
+					};
+					D75E7920239AD9F800EC8111 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D75E7902239AD9F700EC8111;
+					};
+				};
+			};
+			buildConfigurationList = D75E78FE239AD9F700EC8111 /* Build configuration list for PBXProject "Alfonso Equation Editor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D75E78FA239AD9F700EC8111;
+			productRefGroup = D75E7904239AD9F700EC8111 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D75E7902239AD9F700EC8111 /* Alfonso Equation Editor */,
+				D75E7915239AD9F800EC8111 /* Alfonso Equation EditorTests */,
+				D75E7920239AD9F800EC8111 /* Alfonso Equation EditorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D75E7901239AD9F700EC8111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */,
+				D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75E7914239AD9F800EC8111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75E791F239AD9F800EC8111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D75E78FF239AD9F700EC8111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75E793C239B18E900EC8111 /* SpecificEquationView.swift in Sources */,
+				D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */,
+				D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */,
+				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
+				D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */,
+				D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */,
+				D75E7934239ADA1400EC8111 /* CartesianView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75E7912239AD9F800EC8111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75E791B239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75E791D239AD9F800EC8111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75E7926239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D75E7918239AD9F800EC8111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D75E7902239AD9F700EC8111 /* Alfonso Equation Editor */;
+			targetProxy = D75E7917239AD9F800EC8111 /* PBXContainerItemProxy */;
+		};
+		D75E7923239AD9F800EC8111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D75E7902239AD9F700EC8111 /* Alfonso Equation Editor */;
+			targetProxy = D75E7922239AD9F800EC8111 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D75E790D239AD9F800EC8111 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D75E790E239AD9F800EC8111 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D75E7928239AD9F800EC8111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D75E7929239AD9F800EC8111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D75E792B239AD9F800EC8111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Alfonso Equation Editor/Alfonso_Equation_Editor.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Alfonso Equation Editor/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D75E792C239AD9F800EC8111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Alfonso Equation Editor/Alfonso_Equation_Editor.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Alfonso Equation Editor/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-Editor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D75E792E239AD9F800EC8111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				INFOPLIST_FILE = "Alfonso Equation EditorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-EditorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alfonso Equation Editor.app/Contents/MacOS/Alfonso Equation Editor";
+			};
+			name = Debug;
+		};
+		D75E792F239AD9F800EC8111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				INFOPLIST_FILE = "Alfonso Equation EditorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-EditorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alfonso Equation Editor.app/Contents/MacOS/Alfonso Equation Editor";
+			};
+			name = Release;
+		};
+		D75E7931239AD9F800EC8111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				INFOPLIST_FILE = "Alfonso Equation EditorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-EditorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Alfonso Equation Editor";
+			};
+			name = Debug;
+		};
+		D75E7932239AD9F800EC8111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				INFOPLIST_FILE = "Alfonso Equation EditorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-EditorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Alfonso Equation Editor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D75E78FE239AD9F700EC8111 /* Build configuration list for PBXProject "Alfonso Equation Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75E7928239AD9F800EC8111 /* Debug */,
+				D75E7929239AD9F800EC8111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75E792A239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75E792B239AD9F800EC8111 /* Debug */,
+				D75E792C239AD9F800EC8111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75E792D239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation EditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75E792E239AD9F800EC8111 /* Debug */,
+				D75E792F239AD9F800EC8111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75E7930239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation EditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75E7931239AD9F800EC8111 /* Debug */,
+				D75E7932239AD9F800EC8111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D75E7908239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D75E7909239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodel */,
+			);
+			currentVersion = D75E7909239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodel */;
+			path = Alfonso_Equation_Editor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D75E78FB239AD9F700EC8111 /* Project object */;
+}
