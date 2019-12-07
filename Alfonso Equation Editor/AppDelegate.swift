@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var fourthSliderDoubleValue: Double = 8.0
     @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
+    @objc dynamic var shouldUseSquareGrid: Bool = false
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -34,7 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
     }
-
+    @IBAction func userDidSelectSquareGridCheckbox(_ sender: NSButton) {
+          
+          self.equationView.setNeedsDisplay(self.equationView.bounds)
+          
+          
+      }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

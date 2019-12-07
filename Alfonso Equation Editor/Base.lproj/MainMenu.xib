@@ -697,18 +697,29 @@
                         </constraints>
                     </customView>
                     <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moN-th-iCr">
-                        <rect key="frame" x="572" y="40" width="116" height="280"/>
+                        <rect key="frame" x="572" y="30" width="116" height="300"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x07-KO-vzw">
-                                <rect key="frame" x="0.0" y="246" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="250" width="116" height="50"/>
                                 <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8p3-kl-frx">
+                                        <rect key="frame" x="12" y="32" width="93" height="20"/>
+                                        <buttonCell key="cell" type="check" title="Square grid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Vcl-CI-gRa">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectSquareGridCheckbox:" target="Voe-Tx-rLC" id="MDA-Fr-kic"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldUseSquareGrid" id="uRN-W6-aO7"/>
+                                        </connections>
+                                    </button>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3w-qR-zQU">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="XF9-m5-P1Y"/>
                                             <constraint firstAttribute="width" constant="116" id="mfT-g6-myj"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="F1S-iC-1EU"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="3" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="F1S-iC-1EU"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSliders:" target="Voe-Tx-rLC" id="BU7-Cm-WBn"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="firstSliderDoubleValue" id="XxK-LJ-jlS"/>
@@ -733,14 +744,16 @@
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j89-NJ-183">
-                                <rect key="frame" x="0.0" y="196" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="200" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-bX-2E0">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -780,7 +793,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHy-gx-6s0">
-                                <rect key="frame" x="0.0" y="146" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="150" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-uN-JUZ">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -820,7 +833,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSR-8l-zIN">
-                                <rect key="frame" x="0.0" y="96" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="100" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Urv-Mf-BR7">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -862,7 +875,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAJ-ta-HDV">
-                                <rect key="frame" x="0.0" y="46" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="50" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lSR-Ey-uDP">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -904,7 +917,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNH-0b-9hz">
-                                <rect key="frame" x="0.0" y="-4" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-QL-HbQ">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -948,7 +961,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="Edy-YV-Ubw"/>
-                            <constraint firstAttribute="height" constant="280" id="g9m-gT-Z2J"/>
+                            <constraint firstAttribute="height" constant="300" id="g9m-gT-Z2J"/>
                         </constraints>
                         <visibilityPriorities>
                             <integer value="1000"/>
