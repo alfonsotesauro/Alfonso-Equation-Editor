@@ -10,13 +10,14 @@ import Cocoa
 
 class GeneralEquationView: CartesianView {
 
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         // Drawing code here.
-        let steps = 1000.0
+        let steps = appDelegate?.secondSliderDoubleValue // 1000 is the original
                   
-              var ctr = -10000.0
+        var ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
               
               let finalValue = fabs(ctr)
               
@@ -24,7 +25,7 @@ class GeneralEquationView: CartesianView {
               let width = self.frame.size.width
               
               //let distanceBetweenHorizontalLines = Double(height) / steps
-              let distanceBetweenVerticalLines = Double(width) / steps
+              let distanceBetweenVerticalLines = Double(width) / steps!
               
               let currentSegment = NSBezierPath.init()
               var firstCorrectY = self.transformXIntoY(Double(Int(ctr * distanceBetweenVerticalLines)))
@@ -40,7 +41,7 @@ class GeneralEquationView: CartesianView {
                   
                   correctX = correctX + Double(width / 2)
                   
-                  var correctY = self.transformXIntoY(Double(Int((ctr / 8) * distanceBetweenVerticalLines)))
+                var correctY = self.transformXIntoY(Double(Int((ctr / appDelegate!.fourthSliderDoubleValue) * distanceBetweenVerticalLines))) * self.appDelegate!.fifthSliderDoubleValue
               
                   correctY = correctY + Double(height / 2)
                   

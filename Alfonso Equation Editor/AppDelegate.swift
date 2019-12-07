@@ -14,10 +14,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var equationView: CartesianView!
     @IBOutlet weak var window: NSWindow!
     @objc dynamic var firstSliderDoubleValue: Double = 40.0
-    @objc dynamic var secondSliderDoubleValue: Double = 0.0
-    @objc dynamic var thirdSliderDoubleValue: Double = 0.0
-    @objc dynamic var fourthSliderDoubleValue: Double = 0.0
-    @objc dynamic var fifthSliderDoubleValue: Double = 0.0
+    @objc dynamic var secondSliderDoubleValue: Double = 1000.0
+    @objc dynamic var thirdSliderDoubleValue: Double = 10000.0
+    @objc dynamic var fourthSliderDoubleValue: Double = 8.0
+    @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

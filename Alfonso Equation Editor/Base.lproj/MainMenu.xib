@@ -688,9 +688,9 @@
             <rect key="screenRect" x="0.0" y="0.0" width="3200" height="1777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="734" height="360"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SpecificEquationView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
                         <rect key="frame" x="20" y="20" width="496" height="320"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="496" id="j5Q-kQ-NoA"/>
@@ -700,7 +700,7 @@
                         <rect key="frame" x="572" y="40" width="116" height="280"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x07-KO-vzw">
-                                <rect key="frame" x="0.0" y="246" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="250" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3w-qR-zQU">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -740,7 +740,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j89-NJ-183">
-                                <rect key="frame" x="0.0" y="196" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="200" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-bX-2E0">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -748,7 +748,7 @@
                                             <constraint firstAttribute="height" constant="19" id="4zv-Pc-b9m"/>
                                             <constraint firstAttribute="width" constant="116" id="BJC-bx-etK"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="7oo-Wy-xVV"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="5000" doubleValue="1000" tickMarkPosition="above" sliderType="linear" id="7oo-Wy-xVV"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSliders:" target="Voe-Tx-rLC" id="AyJ-0e-rWW"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="secondSliderDoubleValue" id="M6u-hT-NWA"/>
@@ -765,6 +765,9 @@
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="secondSliderDoubleValue" id="xS8-yu-dwy"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <visibilityPriorities>
@@ -777,7 +780,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHy-gx-6s0">
-                                <rect key="frame" x="0.0" y="146" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="150" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-uN-JUZ">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -785,7 +788,7 @@
                                             <constraint firstAttribute="height" constant="19" id="iXJ-Ip-cYL"/>
                                             <constraint firstAttribute="width" constant="116" id="oFn-Oy-LCr"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="uqG-P8-z3I"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="50000" doubleValue="10000" tickMarkPosition="above" sliderType="linear" id="uqG-P8-z3I"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSliders:" target="Voe-Tx-rLC" id="E0j-IR-UTa"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="thirdSliderDoubleValue" id="6xS-k6-UHA"/>
@@ -802,6 +805,9 @@
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="thirdSliderDoubleValue" id="lgU-p1-VRp"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <visibilityPriorities>
@@ -814,7 +820,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSR-8l-zIN">
-                                <rect key="frame" x="0.0" y="96" width="116" height="34"/>
+                                <rect key="frame" x="0.0" y="100" width="116" height="34"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Urv-Mf-BR7">
                                         <rect key="frame" x="-2" y="13" width="120" height="23"/>
@@ -824,7 +830,7 @@
                                             <constraint firstAttribute="width" constant="116" id="Eam-KU-B4V"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="Twe-hE-r2w"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Py0-mt-4fx"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="30" doubleValue="8" tickMarkPosition="above" sliderType="linear" id="Py0-mt-4fx"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSliders:" target="Voe-Tx-rLC" id="6SA-1L-a9Q"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="fourthSliderDoubleValue" id="xgq-rU-BgM"/>
@@ -841,6 +847,9 @@
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="fourthSliderDoubleValue" id="9hk-GN-DsM"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <visibilityPriorities>
@@ -863,7 +872,7 @@
                                             <constraint firstAttribute="height" constant="19" id="Zai-Bd-HUk"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="tXS-Hs-gvI"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="PT3-eZ-dgu"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="20" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="PT3-eZ-dgu"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSliders:" target="Voe-Tx-rLC" id="N1c-Rh-Sff"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="fifthSliderDoubleValue" id="jnK-z3-oEC"/>
@@ -880,6 +889,9 @@
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="fifthSliderDoubleValue" id="8PH-WV-2PC"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <visibilityPriorities>
@@ -919,6 +931,9 @@
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="sixthSliderDoubleValue" id="JUI-6l-Hdf"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <visibilityPriorities>

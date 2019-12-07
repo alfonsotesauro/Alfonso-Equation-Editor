@@ -108,9 +108,9 @@
 			children = (
 				D75E7906239AD9F700EC8111 /* AppDelegate.swift */,
 				D75E7933239ADA1400EC8111 /* CartesianView.swift */,
-				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
 				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
 				D75E793B239B18E900EC8111 /* SpecificEquationView.swift */,
+				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
 				D75E7937239B12D100EC8111 /* Sinus.swift */,
 				D75E790B239AD9F800EC8111 /* Assets.xcassets */,
 				D75E790D239AD9F800EC8111 /* MainMenu.xib */,

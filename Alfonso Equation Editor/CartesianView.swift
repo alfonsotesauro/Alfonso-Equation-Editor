@@ -72,3 +72,8 @@ class CartesianView: NSView {
     }
    
 }
+precedencegroup PowerPrecedence { higherThan: MultiplicationPrecedence }
+infix operator ^^ : PowerPrecedence
+func ^^ (radix: Double, power: Double) -> Double {
+    return pow(radix, power)
+}
