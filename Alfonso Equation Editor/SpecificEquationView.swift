@@ -12,7 +12,7 @@ class SpecificEquationView: GeneralEquationView {
 
    override func transformXIntoY(_ x: Double) -> Double {
         
-        return x * 3
+        return x  ^^ 3
         
     }
     

@@ -12,8 +12,19 @@ class SinusView: GeneralEquationView {
 
    override func transformXIntoY(_ x: Double) -> Double {
           
-          return sin(x)
+    return Double(self.factorial(of: Int(x)))
           
+    }
+    
+    func factorial(of x: Int) -> Int {
+        
+        
+        if x == 0 {
+            return 1;
+        }
+        
+        return x * self.factorial(of: x-1)
+        
     }
     
 }

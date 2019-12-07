@@ -12,7 +12,7 @@ class ParabolaView: GeneralEquationView {
 
    override func transformXIntoY(_ x: Double) -> Double {
             
-            return sin(x)
+            return x ^^ 2
             
     }
     

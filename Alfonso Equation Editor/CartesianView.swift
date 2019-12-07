@@ -44,15 +44,21 @@ class CartesianView: NSView {
         let distanceBetweenVerticalLines = Double(width) / count!
 
         repeat {
-           
-
-            path.move(to: NSPoint.init(x: distanceBetweenVerticalLines * ctr, y: 0))
-            path.line(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr), y: height))
+            path.move(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: 0))
+            path.line(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: height))
+            path.move(to: NSPoint.init(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: 0))
+            path.line(to: NSPoint.init(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: height))
+          //  path.move(to: NSPoint.init(x: distanceBetweenVerticalLines * ctr, y: 0))
+          //  path.line(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr), y: height))
             path.lineWidth = 0.5
             
-            path.move(to: NSPoint.init(x: 0, y: distanceBetweenHorizontalLines * ctr))
-            path.line(to: NSPoint.init(x: width, y: CGFloat(distanceBetweenHorizontalLines * ctr)))
-            path.lineWidth = 0.5
+            path.move(to: NSPoint.init(x: 0, y: (CGFloat((distanceBetweenHorizontalLines * ctr)) + height / 2)))
+        path.line(to: NSPoint.init(x: width, y: (CGFloat((distanceBetweenHorizontalLines * ctr)) + height / 2)))
+            
+        path.move(to: NSPoint.init(x: 0, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
+        path.line(to: NSPoint.init(x: width, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
+            
+        //    path.lineWidth = 0.5
             
             ctr += 1
         } while(ctr < count!)
