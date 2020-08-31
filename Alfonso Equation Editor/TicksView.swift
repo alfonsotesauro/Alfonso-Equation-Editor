@@ -42,9 +42,9 @@ class TicksView: AxesView {
             print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
-                tickHeight = 8.0
+                tickHeight = 5.0
             } else {
-                tickHeight = 4.5
+                tickHeight = 2.0
             }
             
             intCounter += 1
@@ -75,9 +75,9 @@ class TicksView: AxesView {
             print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
-                tickHeight = 8.0
+                tickHeight = 5.0
             } else {
-                tickHeight = 4.5
+                tickHeight = 2.0
             }
             
             intCounter += 1
@@ -108,9 +108,9 @@ class TicksView: AxesView {
             print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
-                tickHeight = 8.0
+                tickHeight = 5.0
             } else {
-                tickHeight = 4.5
+                tickHeight = 2.0
             }
             
             intCounter += 1
@@ -141,9 +141,9 @@ class TicksView: AxesView {
             print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
-                tickHeight = 8.0
+                tickHeight = 5.0
             } else {
-                tickHeight = 4.5
+                tickHeight = 2.0
             }
             
             intCounter += 1
