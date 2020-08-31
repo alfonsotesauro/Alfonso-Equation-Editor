@@ -45,4 +45,8 @@ CGFloat centeredCoordinateUnitWithProposedContentViewBoundsDimensionAndDocumentV
     return newOrigin;
 }
 
+- (BOOL)isFlipped {
+    return YES;
+}
+
 @end
