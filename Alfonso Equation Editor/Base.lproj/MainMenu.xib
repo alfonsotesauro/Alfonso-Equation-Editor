@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
             <connections>
                 <outlet property="equationView" destination="bHt-Ho-ZNa" id="EMX-tz-6nO"/>
+                <outlet property="scrollView" destination="6Kg-Vu-dcM" id="ha7-Gs-vyx"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -684,20 +685,14 @@
         <window title="Alfonso Equation Editor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="734" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="734" height="390"/>
             <rect key="screenRect" x="0.0" y="0.0" width="3200" height="1777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="734" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="734" height="390"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SpecificEquationView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                        <rect key="frame" x="20" y="20" width="496" height="320"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="496" id="j5Q-kQ-NoA"/>
-                        </constraints>
-                    </customView>
                     <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moN-th-iCr">
-                        <rect key="frame" x="572" y="30" width="116" height="300"/>
+                        <rect key="frame" x="572" y="45" width="116" height="300"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x07-KO-vzw">
                                 <rect key="frame" x="0.0" y="250" width="116" height="50"/>
@@ -980,17 +975,43 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-Vu-dcM" customClass="SKTZoomingScrollView">
+                        <rect key="frame" x="19" y="20" width="516" height="351"/>
+                        <clipView key="contentView" id="3X5-MS-Mu5" customClass="SKTCenteringClipView">
+                            <rect key="frame" x="1" y="1" width="499" height="334"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="496" height="320"/>
+                                </customView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="bHt-Ho-ZNa" secondAttribute="trailing" constant="3" placeholder="YES" id="Nw9-nQ-aFJ"/>
+                                <constraint firstAttribute="bottom" secondItem="bHt-Ho-ZNa" secondAttribute="bottom" placeholder="YES" id="Svy-OF-85h"/>
+                                <constraint firstItem="bHt-Ho-ZNa" firstAttribute="leading" secondItem="3X5-MS-Mu5" secondAttribute="leading" placeholder="YES" id="oMU-hK-u0X"/>
+                                <constraint firstItem="bHt-Ho-ZNa" firstAttribute="top" secondItem="3X5-MS-Mu5" secondAttribute="top" constant="14" placeholder="YES" id="rIX-og-9PI"/>
+                            </constraints>
+                        </clipView>
+                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fBV-Iz-Hym">
+                            <rect key="frame" x="1" y="335" width="499" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="eKB-d8-W6y">
+                            <rect key="frame" x="500" y="1" width="15" height="334"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="moN-th-iCr" firstAttribute="leading" secondItem="6Kg-Vu-dcM" secondAttribute="trailing" constant="37" id="0vg-IN-EGh"/>
                     <constraint firstAttribute="trailing" secondItem="moN-th-iCr" secondAttribute="trailing" constant="46" id="O5M-r9-Ed0"/>
-                    <constraint firstItem="bHt-Ho-ZNa" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="R2B-4q-4wy"/>
-                    <constraint firstAttribute="bottom" secondItem="bHt-Ho-ZNa" secondAttribute="bottom" constant="20" id="SGo-DX-rp6"/>
-                    <constraint firstItem="bHt-Ho-ZNa" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="aaz-IN-ABT"/>
+                    <constraint firstAttribute="bottom" secondItem="6Kg-Vu-dcM" secondAttribute="bottom" constant="20" id="OH4-VV-kCF"/>
+                    <constraint firstItem="6Kg-Vu-dcM" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="19" id="cMr-Ka-t6s"/>
                     <constraint firstItem="moN-th-iCr" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="hw7-cO-deO"/>
-                    <constraint firstItem="moN-th-iCr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bHt-Ho-ZNa" secondAttribute="trailing" constant="56" id="yWP-BQ-CUM"/>
+                    <constraint firstItem="6Kg-Vu-dcM" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="19" id="nnC-4D-9zA"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="315" y="-120"/>
+            <point key="canvasLocation" x="315" y="-105"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="zaO-7A-IgU"/>
     </objects>

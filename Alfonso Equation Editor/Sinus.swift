@@ -8,23 +8,16 @@
 
 import Cocoa
 
-class SinusView: GeneralEquationView {
+class SinusView: ParabolaView {
 
    override func transformXIntoY(_ x: Double) -> Double {
           
-    return Double(self.factorial(of: Int(x)))
+    return x ^^ 2
           
     }
     
-    func factorial(of x: Int) -> Int {
-        
-        
-        if x == 0 {
-            return 1;
-        }
-        
-        return x * self.factorial(of: x-1)
-        
+    override var isFlipped: Bool {
+        return false
     }
     
 }

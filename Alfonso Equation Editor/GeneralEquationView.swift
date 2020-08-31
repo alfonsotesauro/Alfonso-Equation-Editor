@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class GeneralEquationView: CartesianView {
+class GeneralEquationView: NumbersView {
 
     
     override func draw(_ dirtyRect: NSRect) {
@@ -19,7 +19,7 @@ class GeneralEquationView: CartesianView {
                   
         var ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
               
-              let finalValue = fabs(ctr)
+              var finalValue = fabs(ctr)
               
               let height = self.frame.size.height
               let width = self.frame.size.width
@@ -57,11 +57,48 @@ class GeneralEquationView: CartesianView {
               } while(ctr < finalValue)
               NSColor.red.set()
               currentSegment.stroke()
+        
+        ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
+        
+        finalValue = fabs(ctr)
+        
+        let currentSegment2 = NSBezierPath.init()
+              var firstCorrectY2 = ctr * distanceBetweenVerticalLines
+        
+              firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+              
+              currentSegment2.move(to: NSPoint.init(x: 0, y: firstCorrectY2))
+
+              repeat {
+                  
+                  
+                  var correctX = ctr * distanceBetweenVerticalLines
+                  
+                  correctX = correctX + Double(width / 2)
+                  
+                var correctY = ctr / appDelegate!.fourthSliderDoubleValue * distanceBetweenVerticalLines * self.appDelegate!.fifthSliderDoubleValue
+              
+                  correctY = correctY + Double(height / 2)
+                  
+               
+                  
+                  
+                 // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
+                  currentSegment2.curve(to: NSPoint.init(x: correctX + 3.0, y: correctY), controlPoint1: NSPoint.init(x: correctX + 3.0, y: correctY), controlPoint2: NSPoint.init(x: correctX + 3.0, y: correctY))
+                 
+                  
+                  
+              ctr += 1
+              } while(ctr < finalValue)
+              NSColor.blue.set()
+              currentSegment2.stroke()
+        
+        
     }
     
     func transformXIntoY(_ x: Double) -> Double {
            
-        return x ^^ 2.0
-           
+        return x * 2
+
     }
 }

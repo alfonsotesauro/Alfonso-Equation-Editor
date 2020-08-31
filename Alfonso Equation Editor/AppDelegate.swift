@@ -11,6 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    @IBOutlet weak var scrollView: SKTZoomingScrollView!
     @IBOutlet weak var equationView: CartesianView!
     @IBOutlet weak var window: NSWindow!
     @objc dynamic var firstSliderDoubleValue: Double = 40.0
@@ -23,6 +24,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        self.scrollView.bind(NSBindingName(rawValue: "factor"), to: self, withKeyPath: "fifthSliderDoubleValue", options: nil)
+        
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

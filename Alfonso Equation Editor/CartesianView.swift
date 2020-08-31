@@ -9,95 +9,87 @@
 import Cocoa
 
 class CartesianView: NSView {
-
     weak var appDelegate: AppDelegate?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.appDelegate = NSApp!.delegate as! AppDelegate
+
+        appDelegate = NSApp!.delegate as! AppDelegate
     }
-    
+
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        
-        print("Eccoci dirtyRect = \(NSStringFromRect(dirtyRect))")
-        
+
+        let backgroundRect = NSBezierPath(rect: bounds)
+
+        NSColor.white.set()
+
+        backgroundRect.fill()
+
+        //print("Eccoci dirtyRect = \(NSStringFromRect(dirtyRect))")
+
         // Drawing code here.
-        let color = NSColor.init(red: 0.0, green: 0.0, blue: 200, alpha: 1.0)
+        let color = NSColor.black
         color.set()
-                
+
         var count = appDelegate?.firstSliderDoubleValue
-        
+
         var ctr = 1.0
-        
-        let contourPath = NSBezierPath.init(rect: self.bounds)
-        
+
+        let contourPath = NSBezierPath(rect: bounds)
+
         contourPath.stroke()
-        
-        let path = NSBezierPath.init()
-                
-        let height = self.frame.size.height
-        let width = self.frame.size.width
-        
+
+        let height = frame.size.height
+        let width = frame.size.width
+
         let distanceBetweenHorizontalLines = Double(height) / count!
         let distanceBetweenVerticalLines = Double(width) / count!
 
+        var verticalLines: [NSBezierPath] = [NSBezierPath]()
+
         repeat {
-            path.move(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: 0))
-            path.line(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: height))
-            path.move(to: NSPoint.init(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: 0))
-            path.line(to: NSPoint.init(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: height))
-          //  path.move(to: NSPoint.init(x: distanceBetweenVerticalLines * ctr, y: 0))
-          //  path.line(to: NSPoint.init(x: CGFloat(distanceBetweenVerticalLines * ctr), y: height))
+            let path = NSBezierPath()
+
+            path.move(to: NSPoint(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: 0))
+            path.line(to: NSPoint(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: height))
+            path.move(to: NSPoint(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: 0))
+            path.line(to: NSPoint(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: height))
+
             path.lineWidth = 0.5
+
             if appDelegate!.shouldUseSquareGrid {
-            path.move(to: NSPoint.init(x: 0, y: (CGFloat((distanceBetweenVerticalLines * ctr)) + height / 2)))
-        path.line(to: NSPoint.init(x: width, y: (CGFloat((distanceBetweenVerticalLines * ctr)) + height / 2)))
-            
-        path.move(to: NSPoint.init(x: 0, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
-        path.line(to: NSPoint.init(x: width, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
+                path.move(to: NSPoint(x: 0, y: CGFloat(distanceBetweenVerticalLines * ctr) + height / 2))
+                path.line(to: NSPoint(x: width, y: CGFloat(distanceBetweenVerticalLines * ctr) + height / 2))
+
+                path.move(to: NSPoint(x: 0, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
+                path.line(to: NSPoint(x: width, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
             } else {
-                path.move(to: NSPoint.init(x: 0, y: (CGFloat((distanceBetweenHorizontalLines * ctr)) + height / 2)))
-                      path.line(to: NSPoint.init(x: width, y: (CGFloat((distanceBetweenHorizontalLines * ctr)) + height / 2)))
-                          
-                      path.move(to: NSPoint.init(x: 0, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
-                      path.line(to: NSPoint.init(x: width, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
+                path.move(to: NSPoint(x: 0, y: CGFloat(distanceBetweenHorizontalLines * ctr) + height / 2))
+                path.line(to: NSPoint(x: width, y: CGFloat(distanceBetweenHorizontalLines * ctr) + height / 2))
+
+                path.move(to: NSPoint(x: 0, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
+                path.line(to: NSPoint(x: width, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
             }
-        //    path.lineWidth = 0.5
-            
+            //    path.lineWidth = 0.5
+            verticalLines.append(path)
             ctr += 1
-        } while(ctr < count!)
-        
-        path.stroke()
-        
-        let axesPath = NSBezierPath.init()
-        
-        axesPath.move(to: NSPoint.init(x: width / 2, y: 0))
-        axesPath.line(to: NSPoint.init(x: width / 2, y: height))
-        axesPath.line(to: NSPoint.init(x: width / 2 - 6, y: height-10))
-        axesPath.move(to: NSPoint.init(x: width / 2, y: height))
-        axesPath.line(to: NSPoint.init(x: width / 2 + 6, y: height-10))
+        } while ctr < count!
 
-        
-        
-        axesPath.move(to: NSPoint.init(x: 0, y: height / 2))
-        axesPath.line(to: NSPoint.init(x: width, y: height / 2))
-        axesPath.line(to: NSPoint.init(x: width - 10, y: height / 2 + 6))
-        axesPath.move(to: NSPoint.init(x: width, y: height / 2))
-        axesPath.line(to: NSPoint.init(x: width - 10, y: height / 2 - 6))
+        for (index, item) in verticalLines.enumerated() {
+            if index % 6 == 0, index != 0 {
+                NSColor.black.set()
+            } else {
+                NSColor.lightGray.set()
+            }
 
-        
-        
-        NSColor.yellow.set()
-        axesPath.stroke()
-        
-        
+            item.stroke()
+        }
     }
-   
 }
+
 precedencegroup PowerPrecedence { higherThan: MultiplicationPrecedence }
-infix operator ^^ : PowerPrecedence
+infix operator ^^: PowerPrecedence
 func ^^ (radix: Double, power: Double) -> Double {
     return pow(radix, power)
 }
