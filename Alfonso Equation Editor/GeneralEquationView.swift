@@ -8,26 +8,42 @@
 
 import Cocoa
 
+let shuldDrawExactCenterRect = false
+
 class GeneralEquationView: NumbersView {
 
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
+        if shuldDrawExactCenterRect {
+        
+            var bounds = self.bounds
+        
+            bounds = bounds.insetBy(dx: 230, dy: 120)
+        
+            let exactPath = NSBezierPath(rect: bounds)
+        
+            NSColor.orange.set()
+        
+            exactPath.stroke()
+        }
+        
         // Drawing code here.
-        let steps = appDelegate?.secondSliderDoubleValue // 1000 is the original
+        let steps = 100.0 // 1000 is the original
                   
-        var ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
+        var ctr = -1000.0 // -10000 is the original
               
               var finalValue = fabs(ctr)
               
-              let height = self.frame.size.height
-              let width = self.frame.size.width
+              let height = self.bounds.size.height
+              let width = self.bounds.size.width
               
               //let distanceBetweenHorizontalLines = Double(height) / steps
-              let distanceBetweenVerticalLines = Double(width) / steps!
+              let distanceBetweenVerticalLines = Double(width) / steps
               
               let currentSegment = NSBezierPath.init()
+        currentSegment.lineWidth = 0.5
               var firstCorrectY = self.transformXIntoY(Double(Int(ctr * distanceBetweenVerticalLines)))
         
               firstCorrectY = firstCorrectY + Double(height / 2)
@@ -37,11 +53,10 @@ class GeneralEquationView: NumbersView {
               repeat {
                   
                   
-                  var correctX = ctr * distanceBetweenVerticalLines
+                  var correctX = ctr + Double(width / 2)
+                  var correctY = ctr + Double(height / 2)
                   
-                  correctX = correctX + Double(width / 2)
-                  
-                var correctY = self.transformXIntoY(Double(Int((ctr / appDelegate!.fourthSliderDoubleValue) * distanceBetweenVerticalLines))) * self.appDelegate!.fifthSliderDoubleValue
+                correctY = self.transformXIntoY(Double(Int(ctr))) / appDelegate!.fourthSliderDoubleValue
               
                   correctY = correctY + Double(height / 2)
                   
@@ -49,11 +64,11 @@ class GeneralEquationView: NumbersView {
                   
                   
                  // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
-                  currentSegment.curve(to: NSPoint.init(x: correctX + 3.0, y: correctY), controlPoint1: NSPoint.init(x: correctX + 3.0, y: correctY), controlPoint2: NSPoint.init(x: correctX + 3.0, y: correctY))
+                  currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                  
                   
                   
-              ctr += 1
+                ctr += 3.0
               } while(ctr < finalValue)
               NSColor.red.set()
               currentSegment.stroke()
@@ -65,7 +80,7 @@ class GeneralEquationView: NumbersView {
         let currentSegment2 = NSBezierPath.init()
               var firstCorrectY2 = ctr * distanceBetweenVerticalLines
         
-              firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+              firstCorrectY2 = firstCorrectY2 + 0 //Double(height / 2)
               
               currentSegment2.move(to: NSPoint.init(x: 0, y: firstCorrectY2))
 
@@ -76,7 +91,7 @@ class GeneralEquationView: NumbersView {
                   
                   correctX = correctX + Double(width / 2)
                   
-                var correctY = ctr / appDelegate!.fourthSliderDoubleValue * distanceBetweenVerticalLines * self.appDelegate!.fifthSliderDoubleValue
+                var correctY = ctr * distanceBetweenVerticalLines
               
                   correctY = correctY + Double(height / 2)
                   
@@ -84,11 +99,11 @@ class GeneralEquationView: NumbersView {
                   
                   
                  // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
-                  currentSegment2.curve(to: NSPoint.init(x: correctX + 3.0, y: correctY), controlPoint1: NSPoint.init(x: correctX + 3.0, y: correctY), controlPoint2: NSPoint.init(x: correctX + 3.0, y: correctY))
+                  currentSegment2.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                  
+                
                   
-                  
-              ctr += 1
+                ctr += 0.1
               } while(ctr < finalValue)
               NSColor.blue.set()
               currentSegment2.stroke()

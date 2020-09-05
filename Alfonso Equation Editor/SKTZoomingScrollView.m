@@ -108,10 +108,23 @@ NSLocalizedStringFromTable(@"1600%", @"SKTZoomingScrollView", @"A level of zoomi
 - (void)setFactor:(CGFloat)factor {
 
     //The default implementation of key-value binding is informing this object that the value to which our "factor" property is bound has changed. Record the value, and apply the zoom factor by fooling with the bounds of the clip view that every scroll view has. (We leave its frame alone.)
+    
+    CGFloat previousFactor = _factor;
+    
     _factor = factor;
+    
+    
+    
     NSView *clipView = [[self documentView] superview];
+    double currentValue = self.horizontalScroller.doubleValue;
     NSSize clipViewFrameSize = [clipView frame].size;
     [clipView setBoundsSize:NSMakeSize((clipViewFrameSize.width / factor), (clipViewFrameSize.height / factor))];
+   
+    CGFloat goodPointx = ((clipView.bounds.size.width) / 2) - 32;
+   
+    CGFloat goodPointy = (((clipView.bounds.size.height)) / 2) - 16;
+    [clipView setBoundsOrigin:NSMakePoint(goodPointx, goodPointy)];
+   
     
 }
 

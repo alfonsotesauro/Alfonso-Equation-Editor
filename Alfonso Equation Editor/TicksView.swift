@@ -13,7 +13,11 @@ class TicksView: AxesView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
+        
+        if !appDelegate!.shouldDrawTicks {
+            return
+        }
+        
         let height = frame.size.height
         let width = frame.size.width
         
@@ -39,7 +43,7 @@ class TicksView: AxesView {
             
             let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
-            print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+            //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
@@ -72,7 +76,7 @@ class TicksView: AxesView {
             
             let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
-            print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+          //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
@@ -105,7 +109,7 @@ class TicksView: AxesView {
             
             let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
-            print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+        //    print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
@@ -138,7 +142,7 @@ class TicksView: AxesView {
             
             let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
-            print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+         //   print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0

@@ -13,7 +13,7 @@ class NumbersView: TicksView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
+        return;
         let height = frame.size.height
         let width = frame.size.width
         
@@ -39,7 +39,7 @@ class NumbersView: TicksView {
             
             let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
-            print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+          //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 8.0

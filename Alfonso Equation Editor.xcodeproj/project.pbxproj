@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F7BF2EC9D6BB21C53CBC7F9 /* Pods_Alfonso_Equation_Editor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D9F978E3EA4E54C7FB36A4 /* Pods_Alfonso_Equation_Editor.framework */; };
+		5733154547F1971A8425DD74 /* Pods_Alfonso_Equation_EditorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66317F13004906B686B22A /* Pods_Alfonso_Equation_EditorTests.framework */; };
 		D731082E24FD44FE00FA86BD /* SKTZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731085E24FD756300FA86BD /* DraggableClipView.swift */; };
 		D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7906239AD9F700EC8111 /* AppDelegate.swift */; };
 		D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D75E7908239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld */; };
 		D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75E790B239AD9F800EC8111 /* Assets.xcassets */; };
@@ -19,9 +22,11 @@
 		D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7935239AF6EC00EC8111 /* ParabolaView.swift */; };
 		D75E7938239B12D100EC8111 /* Sinus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7937239B12D100EC8111 /* Sinus.swift */; };
 		D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7939239B187600EC8111 /* GeneralEquationView.swift */; };
+		D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A02503506F0044AFA1 /* AbstractEquationView.swift */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */; };
 		D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */; };
+		DFA4C29CAEB10DFB74F51493 /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F7E657F82329EE21BF9BFB /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +47,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FF62BE588D8C7D7E1FC1AD5 /* Pods-Alfonso Equation Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor.release.xcconfig"; sourceTree = "<group>"; };
+		4F01D70B01B45CF0E4114CC9 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F4CA010A231D1F78FE1DA36 /* Pods-Alfonso Equation EditorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation EditorTests.debug.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation EditorTests/Pods-Alfonso Equation EditorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79F7E657F82329EE21BF9BFB /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C66317F13004906B686B22A /* Pods_Alfonso_Equation_EditorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_EditorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2B5FA16F775FD03A2C1500 /* Pods-Alfonso Equation EditorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation EditorTests.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation EditorTests/Pods-Alfonso Equation EditorTests.release.xcconfig"; sourceTree = "<group>"; };
+		B6D9F978E3EA4E54C7FB36A4 /* Pods_Alfonso_Equation_Editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_Editor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF39B7D02B47E679617F61B /* Pods-Alfonso Equation Editor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor.debug.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor.debug.xcconfig"; sourceTree = "<group>"; };
 		D731082B24FD44FD00FA86BD /* Alfonso Equation Editor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alfonso Equation Editor-Bridging-Header.h"; sourceTree = "<group>"; };
 		D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTZoomingScrollView.m; sourceTree = "<group>"; };
 		D731082D24FD44FE00FA86BD /* SKTZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTZoomingScrollView.h; sourceTree = "<group>"; };
 		D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCenteringClipView.m; sourceTree = "<group>"; };
 		D731083024FD450C00FA86BD /* SKTCenteringClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCenteringClipView.h; sourceTree = "<group>"; };
+		D731085E24FD756300FA86BD /* DraggableClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableClipView.swift; sourceTree = "<group>"; };
 		D75E7903239AD9F700EC8111 /* Alfonso Equation Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alfonso Equation Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75E7906239AD9F700EC8111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75E7909239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alfonso_Equation_Editor.xcdatamodel; sourceTree = "<group>"; };
@@ -64,9 +78,11 @@
 		D75E7935239AF6EC00EC8111 /* ParabolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParabolaView.swift; sourceTree = "<group>"; };
 		D75E7937239B12D100EC8111 /* Sinus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sinus.swift; sourceTree = "<group>"; };
 		D75E7939239B187600EC8111 /* GeneralEquationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralEquationView.swift; sourceTree = "<group>"; };
+		D76639A02503506F0044AFA1 /* AbstractEquationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractEquationView.swift; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicksView.swift; sourceTree = "<group>"; };
 		D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		DA2DC54DCF33F70F7DB5DFEB /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7BF2EC9D6BB21C53CBC7F9 /* Pods_Alfonso_Equation_Editor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5733154547F1971A8425DD74 /* Pods_Alfonso_Equation_EditorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +106,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA4C29CAEB10DFB74F51493 /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C9E1325FCC5928D9EC686ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9F978E3EA4E54C7FB36A4 /* Pods_Alfonso_Equation_Editor.framework */,
+				79F7E657F82329EE21BF9BFB /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */,
+				9C66317F13004906B686B22A /* Pods_Alfonso_Equation_EditorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD6C93DBD8033C9700663AD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCF39B7D02B47E679617F61B /* Pods-Alfonso Equation Editor.debug.xcconfig */,
+				2FF62BE588D8C7D7E1FC1AD5 /* Pods-Alfonso Equation Editor.release.xcconfig */,
+				4F01D70B01B45CF0E4114CC9 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig */,
+				DA2DC54DCF33F70F7DB5DFEB /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */,
+				4F4CA010A231D1F78FE1DA36 /* Pods-Alfonso Equation EditorTests.debug.xcconfig */,
+				AE2B5FA16F775FD03A2C1500 /* Pods-Alfonso Equation EditorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D75E78FA239AD9F700EC8111 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +143,8 @@
 				D75E7919239AD9F800EC8111 /* Alfonso Equation EditorTests */,
 				D75E7924239AD9F800EC8111 /* Alfonso Equation EditorUITests */,
 				D75E7904239AD9F700EC8111 /* Products */,
+				CD6C93DBD8033C9700663AD7 /* Pods */,
+				9C9E1325FCC5928D9EC686ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D75E7906239AD9F700EC8111 /* AppDelegate.swift */,
+				D76639A02503506F0044AFA1 /* AbstractEquationView.swift */,
 				D75E7933239ADA1400EC8111 /* CartesianView.swift */,
 				D7C04C4424FA90B100EC9DD6 /* AxesView.swift */,
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
@@ -129,6 +174,7 @@
 				D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */,
 				D731083024FD450C00FA86BD /* SKTCenteringClipView.h */,
 				D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */,
+				D731085E24FD756300FA86BD /* DraggableClipView.swift */,
 				D75E790B239AD9F800EC8111 /* Assets.xcassets */,
 				D75E790D239AD9F800EC8111 /* MainMenu.xib */,
 				D75E7910239AD9F800EC8111 /* Info.plist */,
@@ -164,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75E792A239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation Editor" */;
 			buildPhases = (
+				8060B5F922B7E11A0B9FA98A /* [CP] Check Pods Manifest.lock */,
 				D75E78FF239AD9F700EC8111 /* Sources */,
 				D75E7900239AD9F700EC8111 /* Frameworks */,
 				D75E7901239AD9F700EC8111 /* Resources */,
+				6513C3AB9389D94F352D5290 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75E792D239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation EditorTests" */;
 			buildPhases = (
+				C804E820B1A0959CCF82C782 /* [CP] Check Pods Manifest.lock */,
 				D75E7912239AD9F800EC8111 /* Sources */,
 				D75E7913239AD9F800EC8111 /* Frameworks */,
 				D75E7914239AD9F800EC8111 /* Resources */,
@@ -199,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75E7930239AD9F800EC8111 /* Build configuration list for PBXNativeTarget "Alfonso Equation EditorUITests" */;
 			buildPhases = (
+				00FAD68D0CDE220193082465 /* [CP] Check Pods Manifest.lock */,
 				D75E791D239AD9F800EC8111 /* Sources */,
 				D75E791E239AD9F800EC8111 /* Frameworks */,
 				D75E791F239AD9F800EC8111 /* Resources */,
+				8103829B222EE78DA038A451 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +334,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00FAD68D0CDE220193082465 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6513C3AB9389D94F352D5290 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8060B5F922B7E11A0B9FA98A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alfonso Equation Editor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8103829B222EE78DA038A451 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C804E820B1A0959CCF82C782 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alfonso Equation EditorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D75E78FF239AD9F700EC8111 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -294,7 +448,9 @@
 				D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */,
 				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
 				D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */,
+				D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */,
 				D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */,
+				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
 				D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */,
 				D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */,
 				D731082E24FD44FE00FA86BD /* SKTZoomingScrollView.m in Sources */,
@@ -460,6 +616,7 @@
 		};
 		D75E792B239AD9F800EC8111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF39B7D02B47E679617F61B /* Pods-Alfonso Equation Editor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -483,6 +640,7 @@
 		};
 		D75E792C239AD9F800EC8111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FF62BE588D8C7D7E1FC1AD5 /* Pods-Alfonso Equation Editor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -505,6 +663,7 @@
 		};
 		D75E792E239AD9F800EC8111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4CA010A231D1F78FE1DA36 /* Pods-Alfonso Equation EditorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +686,7 @@
 		};
 		D75E792F239AD9F800EC8111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE2B5FA16F775FD03A2C1500 /* Pods-Alfonso Equation EditorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -549,6 +709,7 @@
 		};
 		D75E7931239AD9F800EC8111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F01D70B01B45CF0E4114CC9 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,6 +730,7 @@
 		};
 		D75E7932239AD9F800EC8111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA2DC54DCF33F70F7DB5DFEB /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -10,6 +10,14 @@ import Cocoa
 
 class SinusView: ParabolaView {
 
+    override func draw(_ dirtyRect: NSRect) {
+        
+            super.draw(dirtyRect)
+        
+    }
+    
+    
+    
    override func transformXIntoY(_ x: Double) -> Double {
           
     return x ^^ 2

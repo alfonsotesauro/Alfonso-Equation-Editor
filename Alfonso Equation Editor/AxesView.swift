@@ -13,7 +13,11 @@ class AxesView: CartesianView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
+        
+        if !appDelegate!.shouldDrawAxes {
+            return
+        }
+        
         let height = frame.size.height
         let width = frame.size.width
 

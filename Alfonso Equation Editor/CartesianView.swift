@@ -8,31 +8,33 @@
 
 import Cocoa
 
-class CartesianView: NSView {
-    weak var appDelegate: AppDelegate?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        appDelegate = NSApp!.delegate as! AppDelegate
-    }
+class CartesianView: AbstractEquationView {
+    
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
+       
+        
+        
         let backgroundRect = NSBezierPath(rect: bounds)
 
         NSColor.white.set()
 
         backgroundRect.fill()
-
+        
+        
+        
+        if !appDelegate!.shouldDrawGrid {
+            return
+        }
         //print("Eccoci dirtyRect = \(NSStringFromRect(dirtyRect))")
 
         // Drawing code here.
         let color = NSColor.black
         color.set()
 
-        var count = appDelegate?.firstSliderDoubleValue
+        let count = 38.0
 
         var ctr = 1.0
 
@@ -43,8 +45,8 @@ class CartesianView: NSView {
         let height = frame.size.height
         let width = frame.size.width
 
-        let distanceBetweenHorizontalLines = Double(height) / count!
-        let distanceBetweenVerticalLines = Double(width) / count!
+        let distanceBetweenHorizontalLines = Double(height) / count
+        let distanceBetweenVerticalLines = Double(width) / count
 
         var verticalLines: [NSBezierPath] = [NSBezierPath]()
 
@@ -58,23 +60,16 @@ class CartesianView: NSView {
 
             path.lineWidth = 0.5
 
-            if appDelegate!.shouldUseSquareGrid {
+            
                 path.move(to: NSPoint(x: 0, y: CGFloat(distanceBetweenVerticalLines * ctr) + height / 2))
                 path.line(to: NSPoint(x: width, y: CGFloat(distanceBetweenVerticalLines * ctr) + height / 2))
 
                 path.move(to: NSPoint(x: 0, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
                 path.line(to: NSPoint(x: width, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
-            } else {
-                path.move(to: NSPoint(x: 0, y: CGFloat(distanceBetweenHorizontalLines * ctr) + height / 2))
-                path.line(to: NSPoint(x: width, y: CGFloat(distanceBetweenHorizontalLines * ctr) + height / 2))
-
-                path.move(to: NSPoint(x: 0, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
-                path.line(to: NSPoint(x: width, y: height / 2 - CGFloat(distanceBetweenHorizontalLines * ctr)))
-            }
-            //    path.lineWidth = 0.5
+           
             verticalLines.append(path)
-            ctr += 1
-        } while ctr < count!
+            ctr += 1.5
+        } while ctr < count
 
         for (index, item) in verticalLines.enumerated() {
             if index % 6 == 0, index != 0 {

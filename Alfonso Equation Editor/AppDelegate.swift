@@ -14,6 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var scrollView: SKTZoomingScrollView!
     @IBOutlet weak var equationView: CartesianView!
     @IBOutlet weak var window: NSWindow!
+    
+    @IBOutlet weak var mathLabel: MTMathUILabel!
+    
     @objc dynamic var firstSliderDoubleValue: Double = 40.0
     @objc dynamic var secondSliderDoubleValue: Double = 1000.0
     @objc dynamic var thirdSliderDoubleValue: Double = 10000.0
@@ -21,24 +24,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
     @objc dynamic var shouldUseSquareGrid: Bool = true
+    @objc dynamic var shouldDrawGrid: Bool = true
+    @objc dynamic var shouldDrawAxes: Bool = true
+    @objc dynamic var shouldDrawTicks: Bool = true
 
+    var kvoToken: NSKeyValueObservation?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
         self.scrollView.bind(NSBindingName(rawValue: "factor"), to: self, withKeyPath: "fifthSliderDoubleValue", options: nil)
-        
-        
+        self.mathLabel.latex = "x = y^2";
+        self.mathLabel.textColor = .white
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     
-    @IBAction func userDidSelectOneOfTheSliders(_ sender: NSSlider) {
+    @IBAction func userDidSelectOneOfTheCheckBoxes(_ sender: NSButton) {
         
         self.equationView.setNeedsDisplay(self.equationView.bounds)
         
         
+    }
+    @IBAction func userDidSelectOneOfTheSliders(_ sender: NSSlider) {
+           
+           self.equationView.setNeedsDisplay(self.equationView.bounds)
+           
+           
     }
     @IBAction func userDidSelectSquareGridCheckbox(_ sender: NSButton) {
           
