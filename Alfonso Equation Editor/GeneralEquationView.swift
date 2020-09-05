@@ -15,6 +15,8 @@ class GeneralEquationView: NumbersView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
+        
+        // Drawing code here.
 
         if shuldDrawExactCenterRect {
         
@@ -29,21 +31,17 @@ class GeneralEquationView: NumbersView {
             exactPath.stroke()
         }
         
-        // Drawing code here.
-        let steps = 100.0 // 1000 is the original
-                  
+        
         var ctr = -1000.0 // -10000 is the original
               
               var finalValue = fabs(ctr)
               
-              let height = self.bounds.size.height
-              let width = self.bounds.size.width
               
               //let distanceBetweenHorizontalLines = Double(height) / steps
-              let distanceBetweenVerticalLines = Double(width) / steps
               
+              if self.appDelegate!.shouldDrawParabola {
               let currentSegment = NSBezierPath.init()
-        currentSegment.lineWidth = 0.5
+                currentSegment.lineWidth = 0.5
               var firstCorrectY = self.transformXIntoY(Double(Int(ctr * distanceBetweenVerticalLines)))
         
               firstCorrectY = firstCorrectY + Double(height / 2)
@@ -53,10 +51,10 @@ class GeneralEquationView: NumbersView {
               repeat {
                   
                   
-                  var correctX = ctr + Double(width / 2)
+                  let correctX = ctr + Double(width / 2)
                   var correctY = ctr + Double(height / 2)
                   
-                correctY = self.transformXIntoY(Double(Int(ctr))) / appDelegate!.fourthSliderDoubleValue
+                correctY = self.transformXIntoY(Double(Int(ctr))) / (steps / 2)
               
                   correctY = correctY + Double(height / 2)
                   
@@ -72,6 +70,9 @@ class GeneralEquationView: NumbersView {
               } while(ctr < finalValue)
               NSColor.red.set()
               currentSegment.stroke()
+        }
+        
+        if self.appDelegate!.shouldDrawRetta {
         
         ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
         
@@ -107,8 +108,50 @@ class GeneralEquationView: NumbersView {
               } while(ctr < finalValue)
               NSColor.blue.set()
               currentSegment2.stroke()
+        }
         
-        
+        if self.appDelegate!.shouldDrawAbsoluteValue {
+              
+              ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
+                     
+                     finalValue = fabs(ctr)
+                     
+                     let currentSegment2 = NSBezierPath.init()
+                           var firstCorrectY2 = ctr * distanceBetweenVerticalLines
+                     
+                           firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+                           
+                           currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
+
+                           repeat {
+                               
+                               
+                               var correctX = ctr * distanceBetweenVerticalLines
+                               
+                               correctX = correctX + Double(width / 2)
+                               
+                             var correctY = ctr * distanceBetweenVerticalLines
+                           
+                               correctY = correctY + Double(height / 2)
+                               
+                            let halfPlanHeight = Double(height / 2)
+                            
+                            if correctX < Double(width / 2) {
+                                let difference = halfPlanHeight - correctY
+                                correctY = halfPlanHeight + difference
+                            }
+                            
+                        
+                                 currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
+                                
+                           
+                               
+                        ctr += 0.1
+                    } while(ctr < finalValue)
+                    NSColor.orange.set()
+                    currentSegment2.stroke()
+              }
+              
     }
     
     func transformXIntoY(_ x: Double) -> Double {

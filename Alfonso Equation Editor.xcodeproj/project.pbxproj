@@ -18,11 +18,12 @@
 		D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75E790D239AD9F800EC8111 /* MainMenu.xib */; };
 		D75E791B239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E791A239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift */; };
 		D75E7926239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */; };
-		D75E7934239ADA1400EC8111 /* CartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7933239ADA1400EC8111 /* CartesianView.swift */; };
+		D75E7934239ADA1400EC8111 /* CartesianBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */; };
 		D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7935239AF6EC00EC8111 /* ParabolaView.swift */; };
 		D75E7938239B12D100EC8111 /* Sinus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7937239B12D100EC8111 /* Sinus.swift */; };
 		D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7939239B187600EC8111 /* GeneralEquationView.swift */; };
 		D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A02503506F0044AFA1 /* AbstractEquationView.swift */; };
+		D76639A32503631D0044AFA1 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A22503631D0044AFA1 /* GridView.swift */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */; };
 		D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */; };
@@ -74,11 +75,12 @@
 		D75E7921239AD9F800EC8111 /* Alfonso Equation EditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alfonso Equation EditorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alfonso_Equation_EditorUITests.swift; sourceTree = "<group>"; };
 		D75E7927239AD9F800EC8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D75E7933239ADA1400EC8111 /* CartesianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianView.swift; sourceTree = "<group>"; };
+		D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianBackgroundView.swift; sourceTree = "<group>"; };
 		D75E7935239AF6EC00EC8111 /* ParabolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParabolaView.swift; sourceTree = "<group>"; };
 		D75E7937239B12D100EC8111 /* Sinus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sinus.swift; sourceTree = "<group>"; };
 		D75E7939239B187600EC8111 /* GeneralEquationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralEquationView.swift; sourceTree = "<group>"; };
 		D76639A02503506F0044AFA1 /* AbstractEquationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractEquationView.swift; sourceTree = "<group>"; };
+		D76639A22503631D0044AFA1 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicksView.swift; sourceTree = "<group>"; };
 		D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
@@ -163,8 +165,9 @@
 			children = (
 				D75E7906239AD9F700EC8111 /* AppDelegate.swift */,
 				D76639A02503506F0044AFA1 /* AbstractEquationView.swift */,
-				D75E7933239ADA1400EC8111 /* CartesianView.swift */,
+				D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */,
 				D7C04C4424FA90B100EC9DD6 /* AxesView.swift */,
+				D76639A22503631D0044AFA1 /* GridView.swift */,
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
 				D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */,
 				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
@@ -452,9 +455,10 @@
 				D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
 				D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */,
+				D76639A32503631D0044AFA1 /* GridView.swift in Sources */,
 				D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */,
 				D731082E24FD44FE00FA86BD /* SKTZoomingScrollView.m in Sources */,
-				D75E7934239ADA1400EC8111 /* CartesianView.swift in Sources */,
+				D75E7934239ADA1400EC8111 /* CartesianBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

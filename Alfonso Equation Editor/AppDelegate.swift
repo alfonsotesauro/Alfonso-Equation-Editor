@@ -12,7 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var scrollView: SKTZoomingScrollView!
-    @IBOutlet weak var equationView: CartesianView!
+    @IBOutlet weak var equationView: CartesianBackgroundView!
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var mathLabel: MTMathUILabel!
@@ -27,7 +27,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawGrid: Bool = true
     @objc dynamic var shouldDrawAxes: Bool = true
     @objc dynamic var shouldDrawTicks: Bool = true
-
+    @objc dynamic var shouldDrawParabola: Bool = true
+    @objc dynamic var shouldDrawRetta: Bool = true
+    @objc dynamic var shouldDrawAbsoluteValue: Bool = true
     var kvoToken: NSKeyValueObservation?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {

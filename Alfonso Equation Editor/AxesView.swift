@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class AxesView: CartesianView {
+class AxesView: GridView {
    
 
     override func draw(_ dirtyRect: NSRect) {
@@ -17,9 +17,6 @@ class AxesView: CartesianView {
         if !appDelegate!.shouldDrawAxes {
             return
         }
-        
-        let height = frame.size.height
-        let width = frame.size.width
 
         let axesPath = NSBezierPath()
 

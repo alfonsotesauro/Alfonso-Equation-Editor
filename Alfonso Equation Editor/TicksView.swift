@@ -18,30 +18,18 @@ class TicksView: AxesView {
             return
         }
         
-        let height = frame.size.height
-        let width = frame.size.width
-        
-        guard let count = (appDelegate?.firstSliderDoubleValue) else {
-            fatalError()
-        }
-        
-        let distanceBetweenHorizontalLines = height / CGFloat(count)
-        let distanceBetweenVerticalLines = width / CGFloat(count)
-        
-       
         // Draw X axis positive Ticks
         
-        var ctr = width / 2
+        var ctr: Double = Double(width / 2)
         
         var tickHeight = CGFloat(6.0)
         var intCounter: Int = 0
         
-        while ctr < width {
+        while ctr < Double(width) {
             
             ctr += distanceBetweenVerticalLines
             
-            
-            let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
                 
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -54,8 +42,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = NSBezierPath()
             
-            tickBezierPath.move(to: NSPoint(x: ctr, y: height / 2 - tickHeight))
-            tickBezierPath.line(to: NSPoint(x: ctr, y: height / 2 + tickHeight))
+            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: height / 2 - tickHeight))
+            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: height / 2 + tickHeight))
 
             tickBezierPath.lineWidth = 2.0
             
@@ -64,7 +52,10 @@ class TicksView: AxesView {
             tickBezierPath.stroke()
         }
         
-        ctr = width / 2
+        
+
+        
+        ctr = Double(width / 2)
         
         tickHeight = CGFloat(6.0)
         intCounter = 0
@@ -87,8 +78,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = NSBezierPath()
             
-            tickBezierPath.move(to: NSPoint(x: ctr, y: height / 2 - tickHeight))
-            tickBezierPath.line(to: NSPoint(x: ctr, y: height / 2 + tickHeight))
+            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: height / 2 - tickHeight))
+            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: height / 2 + tickHeight))
 
             tickBezierPath.lineWidth = 2.0
             
@@ -97,12 +88,12 @@ class TicksView: AxesView {
             tickBezierPath.stroke()
         }
         
-        ctr = height / 2
+        ctr = Double(height / 2)
         
         tickHeight = CGFloat(6.0)
         intCounter = 0
         
-        while ctr < height {
+        while ctr < Double(height) {
             
             ctr += distanceBetweenHorizontalLines
             
@@ -120,8 +111,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = NSBezierPath()
             
-            tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: ctr))
-            tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: ctr))
+            tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: CGFloat(ctr)))
 
             tickBezierPath.lineWidth = 2.0
             
@@ -130,7 +121,7 @@ class TicksView: AxesView {
             tickBezierPath.stroke()
         }
         
-        ctr = height / 2
+        ctr = Double(height / 2)
         
         tickHeight = CGFloat(6.0)
         intCounter = 0
@@ -153,8 +144,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = NSBezierPath()
             
-            tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: ctr))
-            tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: ctr))
+            tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: CGFloat(ctr)))
 
             tickBezierPath.lineWidth = 2.0
             

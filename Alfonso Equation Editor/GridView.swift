@@ -8,47 +8,28 @@
 
 import Cocoa
 
-class CartesianView: AbstractEquationView {
+class GridView: CartesianBackgroundView {
     
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
-       
         
-        
-        let backgroundRect = NSBezierPath(rect: bounds)
-
-        NSColor.white.set()
-
-        backgroundRect.fill()
-        
-        
-        
+        // Checkbox can disable grid drawing.
         if !appDelegate!.shouldDrawGrid {
             return
         }
-        //print("Eccoci dirtyRect = \(NSStringFromRect(dirtyRect))")
-
-        // Drawing code here.
+        
         let color = NSColor.black
         color.set()
 
-        let count = 38.0
-
-        var ctr = 1.0
 
         let contourPath = NSBezierPath(rect: bounds)
 
         contourPath.stroke()
-
-        let height = frame.size.height
-        let width = frame.size.width
-
-        let distanceBetweenHorizontalLines = Double(height) / count
-        let distanceBetweenVerticalLines = Double(width) / count
-
+        
         var verticalLines: [NSBezierPath] = [NSBezierPath]()
+        
+        var ctr = 0.0
 
         repeat {
             let path = NSBezierPath()
@@ -69,7 +50,7 @@ class CartesianView: AbstractEquationView {
            
             verticalLines.append(path)
             ctr += 1.5
-        } while ctr < count
+        } while ctr < steps
 
         for (index, item) in verticalLines.enumerated() {
             if index % 6 == 0, index != 0 {
