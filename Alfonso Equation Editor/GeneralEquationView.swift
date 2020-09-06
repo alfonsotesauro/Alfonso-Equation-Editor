@@ -54,7 +54,7 @@ class GeneralEquationView: NumbersView {
                   let correctX = ctr + Double(width / 2)
                   var correctY = ctr + Double(height / 2)
                   
-                correctY = self.transformXIntoY(Double(Int(ctr))) / (steps / 2)
+                correctY = self.transformXIntoY(Double(Int(ctr))) / self.steps / 2
               
                   correctY = correctY + Double(height / 2)
                   
@@ -104,7 +104,7 @@ class GeneralEquationView: NumbersView {
                  
                 
                   
-                ctr += 0.1
+                ctr += 3.0
               } while(ctr < finalValue)
               NSColor.blue.set()
               currentSegment2.stroke()
@@ -146,7 +146,7 @@ class GeneralEquationView: NumbersView {
                                 
                            
                                
-                        ctr += 0.1
+                            ctr += 1.0
                     } while(ctr < finalValue)
                     NSColor.orange.set()
                     currentSegment2.stroke()

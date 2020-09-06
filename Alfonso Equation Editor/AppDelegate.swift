@@ -12,7 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var scrollView: SKTZoomingScrollView!
-    @IBOutlet weak var equationView: CartesianBackgroundView!
+    @IBOutlet weak var equationView: SinusView!
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var mathLabel: MTMathUILabel!
@@ -30,6 +30,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawParabola: Bool = true
     @objc dynamic var shouldDrawRetta: Bool = true
     @objc dynamic var shouldDrawAbsoluteValue: Bool = true
+    @objc dynamic var numberOfSteps: Double = 38 {
+        didSet(newValue) {
+            self.equationView.steps = newValue
+        }
+    }
+
+    
     var kvoToken: NSKeyValueObservation?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -52,10 +59,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     @IBAction func userDidSelectOneOfTheSliders(_ sender: NSSlider) {
            
-           self.equationView.setNeedsDisplay(self.equationView.bounds)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(performSetNeedsDisplay), object: nil)
+        
+        
+        self.perform(#selector(performSetNeedsDisplay), with: nil, afterDelay: 1.0)
            
            
     }
+    
+    
+    @objc func performSetNeedsDisplay() {
+        self.equationView.setNeedsDisplay(self.equationView.bounds)
+    }
+    @IBAction func userDidSelectOneOfTheSlidersAndActImmediately(_ sender: NSSlider) {
+    
+        self.equationView.setNeedsDisplay(self.equationView.bounds)
+    
+    }
+
+    
     @IBAction func userDidSelectSquareGridCheckbox(_ sender: NSButton) {
           
           self.equationView.setNeedsDisplay(self.equationView.bounds)

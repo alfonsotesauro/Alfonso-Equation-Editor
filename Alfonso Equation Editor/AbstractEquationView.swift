@@ -14,20 +14,36 @@ class AbstractEquationView: NSView {
     
     var height: CGFloat!
     var width: CGFloat!
-    var steps = 38.0
+    var steps = 19.0 {
+        didSet(newValue) {
+           setUpUI()
+        }
+    }
     var distanceBetweenVerticalLines: Double!
     var distanceBetweenHorizontalLines: Double!
     
 
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
         appDelegate = NSApp.delegate as? AppDelegate
+        
+        //steps = appDelegate
+        
+        steps = appDelegate.numberOfSteps
+        
+        setUpUI()
+
+    }
+    
+    fileprivate func setUpUI() {
         height = self.bounds.size.height
         width = self.bounds.size.width
         distanceBetweenVerticalLines = Double(width) / steps
         distanceBetweenHorizontalLines = Double(height) / steps
-
     }
+    
 
 }

@@ -27,14 +27,15 @@ class TicksView: AxesView {
         
         while ctr < Double(width) {
             
-            ctr += distanceBetweenVerticalLines
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
+                
             } else {
                 tickHeight = 2.0
             }
@@ -50,9 +51,11 @@ class TicksView: AxesView {
             NSColor.black.set()
             
             tickBezierPath.stroke()
+            
+            ctr += distanceBetweenVerticalLines
         }
         
-        
+        // Draw X axis negative Ticks
 
         
         ctr = Double(width / 2)
@@ -62,10 +65,10 @@ class TicksView: AxesView {
         
         while ctr > 0 {
             
-            ctr -= distanceBetweenVerticalLines
             
             
-            let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
           //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -86,7 +89,11 @@ class TicksView: AxesView {
             NSColor.black.set()
             
             tickBezierPath.stroke()
+            
+            ctr -= distanceBetweenVerticalLines
         }
+        
+        // Draw Y axis positive Ticks
         
         ctr = Double(height / 2)
         
@@ -95,10 +102,10 @@ class TicksView: AxesView {
         
         while ctr < Double(height) {
             
-            ctr += distanceBetweenHorizontalLines
             
             
-            let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
         //    print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -119,8 +126,12 @@ class TicksView: AxesView {
             NSColor.black.set()
             
             tickBezierPath.stroke()
+            
+            ctr += distanceBetweenVerticalLines
         }
         
+        // Draw Y axis negative Ticks
+
         ctr = Double(height / 2)
         
         tickHeight = CGFloat(6.0)
@@ -128,10 +139,10 @@ class TicksView: AxesView {
         
         while ctr > 0 {
             
-            ctr -= distanceBetweenHorizontalLines
             
             
-            let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
                 
          //   print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -152,6 +163,8 @@ class TicksView: AxesView {
             NSColor.black.set()
             
             tickBezierPath.stroke()
+            
+            ctr -= distanceBetweenVerticalLines
         }
     }
 }

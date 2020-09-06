@@ -49,7 +49,7 @@ class GridView: CartesianBackgroundView {
                 path.line(to: NSPoint(x: width, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
            
             verticalLines.append(path)
-            ctr += 1.5
+            ctr += 1.0
         } while ctr < steps
 
         for (index, item) in verticalLines.enumerated() {
