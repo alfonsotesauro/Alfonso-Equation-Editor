@@ -54,7 +54,7 @@ class GeneralEquationView: NumbersView {
                   let correctX = ctr + Double(width / 2)
                   var correctY = ctr + Double(height / 2)
                   
-                correctY = self.transformXIntoY(Double(Int(ctr))) / self.steps / 2
+                correctY = self.transformXIntoY(Double(Int(ctr))) / self.steps
               
                   correctY = correctY + Double(height / 2)
                   
@@ -173,7 +173,7 @@ class GeneralEquationView: NumbersView {
                                     
                                     var correctY = cos(toCalc / self.steps / 2)
                                     
-                                    correctY = correctY * 40
+                                    correctY = correctY * self.steps
                                   
                                       correctY = correctY + Double(height / 2)
                                       
@@ -211,7 +211,7 @@ class GeneralEquationView: NumbersView {
                                           
                                           var correctY = cos(toCalc / self.steps / 2)
                                           
-                                          correctY = correctY * 40
+                                          correctY = correctY * self.steps
                                         
                                             correctY = correctY + Double(height / 2)
                                             
