@@ -8,12 +8,12 @@
 
 import Cocoa
 
-class SinusView: TangentView {
+class TangentView: CosinusView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        if self.appDelegate!.shouldDrawSin {
+        if self.appDelegate!.shouldDrawTan {
             var ctr = Double(width / 2) // -10000 is the original
             
             
@@ -26,16 +26,17 @@ class SinusView: TangentView {
             currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
             
             repeat {
-                 var correctX = ctr
-                                  
+                
+                var correctX = ctr
+                
                 correctX = ctr
-                                  
+                
                 let toCalc = (ctr - (Double(width / 2)))
-                                  
-                var correctY = sin(toCalc / self.steps)
-                                  
+                
+                var correctY = tan(toCalc / self.steps)
+                
                 correctY = correctY * self.steps
-                                  
+                
                 correctY = correctY + Double(height / 2)
                 
                 
@@ -48,7 +49,7 @@ class SinusView: TangentView {
                 ctr += 5.0
             } while(ctr < Double(width))
             NSColor.red.set()
-            //currentSegment2.stroke()
+            currentSegment2.stroke()
             if true {
                 
                 ctr = 0 // -10000 is the original
@@ -70,7 +71,7 @@ class SinusView: TangentView {
                     
                     let toCalc = (ctr - (Double(width / 2)))
                     
-                    var correctY = sin(toCalc / self.steps)
+                    var correctY = tan(toCalc / self.steps)
                     
                     correctY = correctY * self.steps
                     

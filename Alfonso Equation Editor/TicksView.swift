@@ -29,7 +29,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
                 
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -52,7 +52,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr += distanceBetweenVerticalLines
+            ctr += distanceBetweenVerticalLines * 3.0
         }
         
         // Draw X axis negative Ticks
@@ -68,7 +68,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
                 
           //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -90,7 +90,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr -= distanceBetweenVerticalLines
+            ctr -= distanceBetweenVerticalLines * 3
         }
         
         // Draw Y axis positive Ticks
@@ -105,7 +105,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
                 
         //    print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -127,7 +127,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr += distanceBetweenVerticalLines
+            ctr += distanceBetweenVerticalLines * 3
         }
         
         // Draw Y axis negative Ticks
@@ -142,7 +142,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
                 
          //   print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -164,7 +164,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr -= distanceBetweenVerticalLines
+            ctr -= distanceBetweenVerticalLines * 3
         }
     }
 }

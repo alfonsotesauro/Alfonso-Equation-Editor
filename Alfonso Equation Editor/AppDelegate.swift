@@ -17,10 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var mathLabel: MTMathUILabel!
     
-    @objc dynamic var firstSliderDoubleValue: Double = 40.0
+    @objc dynamic var firstSliderDoubleValue: Double = 3.0
     @objc dynamic var secondSliderDoubleValue: Double = 1000.0
     @objc dynamic var thirdSliderDoubleValue: Double = 10000.0
-    @objc dynamic var fourthSliderDoubleValue: Double = 8.0
+    @objc dynamic var fourthSliderDoubleValue: Double = 1.0
     @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
     @objc dynamic var shouldUseSquareGrid: Bool = true
@@ -28,9 +28,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawAxes: Bool = true
     @objc dynamic var shouldDrawTicks: Bool = true
     @objc dynamic var shouldDrawParabola: Bool = true
-    @objc dynamic var shouldDrawRetta: Bool = true
-    @objc dynamic var shouldDrawAbsoluteValue: Bool = true
-    @objc dynamic var numberOfSteps: Double = 38 {
+    @objc dynamic var shouldDrawRetta: Bool = false
+    @objc dynamic var shouldDrawAbsoluteValue: Bool = false
+    @objc dynamic var shouldDrawSin: Bool = false
+    @objc dynamic var shouldDrawCos: Bool = false
+    @objc dynamic var shouldDrawTan: Bool = false
+    
+    
+    @objc dynamic var numberOfSteps: Double = 141.537 {
         didSet(newValue) {
             self.equationView.steps = newValue
         }

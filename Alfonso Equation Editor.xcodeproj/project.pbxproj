@@ -35,6 +35,12 @@
 		D78E739E2505335C0044682C /* Folio-Std-Light.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7391250531E50044682C /* Folio-Std-Light.ttf */; };
 		D78E739F2505335C0044682C /* Folio-Std-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7393250531E50044682C /* Folio-Std-Medium.ttf */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
+		D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC7250563CF0084C2C9 /* CosinusView.swift */; };
+		D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC9250564650084C2C9 /* TangentView.swift */; };
+		D7C38FCD2505797D0084C2C9 /* Zoom.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FCB2505797D0084C2C9 /* Zoom.pdf */; };
+		D7C38FCE2505797D0084C2C9 /* Move.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FCC2505797D0084C2C9 /* Move.pdf */; };
+		D7C38FD0250579940084C2C9 /* Arrow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FCF250579940084C2C9 /* Arrow.pdf */; };
+		D7C38FD325057A250084C2C9 /* Selection.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FD225057A250084C2C9 /* Selection.pdf */; };
 		D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */; };
 		D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */; };
 		DFA4C29CAEB10DFB74F51493 /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F7E657F82329EE21BF9BFB /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */; };
@@ -114,6 +120,12 @@
 		D78E7393250531E50044682C /* Folio-Std-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Medium.ttf"; sourceTree = "<group>"; };
 		D78E7394250531E50044682C /* Folio-Std-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Bold.ttf"; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
+		D7C38FC7250563CF0084C2C9 /* CosinusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosinusView.swift; sourceTree = "<group>"; };
+		D7C38FC9250564650084C2C9 /* TangentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangentView.swift; sourceTree = "<group>"; };
+		D7C38FCB2505797D0084C2C9 /* Zoom.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Zoom.pdf; sourceTree = "<group>"; };
+		D7C38FCC2505797D0084C2C9 /* Move.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Move.pdf; sourceTree = "<group>"; };
+		D7C38FCF250579940084C2C9 /* Arrow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Arrow.pdf; sourceTree = "<group>"; };
+		D7C38FD225057A250084C2C9 /* Selection.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Selection.pdf; sourceTree = "<group>"; };
 		D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicksView.swift; sourceTree = "<group>"; };
 		D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
 		DA2DC54DCF33F70F7DB5DFEB /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,12 +217,15 @@
 				D78E738F250531D70044682C /* Fonts */,
 				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
 				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
+				D7C38FC7250563CF0084C2C9 /* CosinusView.swift */,
+				D7C38FC9250564650084C2C9 /* TangentView.swift */,
 				D75E7937239B12D100EC8111 /* Sinus.swift */,
 				D731082D24FD44FE00FA86BD /* SKTZoomingScrollView.h */,
 				D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */,
 				D731083024FD450C00FA86BD /* SKTCenteringClipView.h */,
 				D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */,
 				D731085E24FD756300FA86BD /* DraggableClipView.swift */,
+				D7C38FD1250579990084C2C9 /* Images From Grapher */,
 				D75E790B239AD9F800EC8111 /* Assets.xcassets */,
 				D75E790D239AD9F800EC8111 /* MainMenu.xib */,
 				D75E7910239AD9F800EC8111 /* Info.plist */,
@@ -249,6 +264,17 @@
 				D78E7393250531E50044682C /* Folio-Std-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D7C38FD1250579990084C2C9 /* Images From Grapher */ = {
+			isa = PBXGroup;
+			children = (
+				D7C38FCC2505797D0084C2C9 /* Move.pdf */,
+				D7C38FCB2505797D0084C2C9 /* Zoom.pdf */,
+				D7C38FCF250579940084C2C9 /* Arrow.pdf */,
+				D7C38FD225057A250084C2C9 /* Selection.pdf */,
+			);
+			path = "Images From Grapher";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,11 +390,15 @@
 			files = (
 				D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */,
 				D78E7397250531E50044682C /* Folio-Std-Extra-Bold.ttf in Resources */,
+				D7C38FD0250579940084C2C9 /* Arrow.pdf in Resources */,
 				D78E7396250531E50044682C /* Folio-Std-Light.ttf in Resources */,
 				D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */,
 				D78E7399250531E50044682C /* Folio-Std-Bold.ttf in Resources */,
+				D7C38FCD2505797D0084C2C9 /* Zoom.pdf in Resources */,
+				D7C38FCE2505797D0084C2C9 /* Move.pdf in Resources */,
 				D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */,
 				D78E7398250531E50044682C /* Folio-Std-Medium.ttf in Resources */,
+				D7C38FD325057A250084C2C9 /* Selection.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +535,8 @@
 				D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */,
 				D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
+				D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */,
+				D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */,
 				D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */,
 				D76639A32503631D0044AFA1 /* GridView.swift in Sources */,
 				D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */,
