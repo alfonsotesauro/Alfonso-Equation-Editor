@@ -37,8 +37,23 @@ class DraggableClipView: SKTCenteringClipView
         // Account for a magnified parent scrollview.
         let scale = (superview as? NSScrollView)?.magnification ?? 1.0
         let newPoint = event.locationInWindow
-        let newOrigin = NSPoint(x: originalOrigin.x + (clickPoint.x - newPoint.x) / scale,
-                                y: originalOrigin.y + (clickPoint.y - newPoint.y) / scale)
+        
+        let halfSizeOfPlan = self.bounds.size.width / 2
+        
+        var newX = originalOrigin.x + (clickPoint.x - newPoint.x) / scale
+        
+        let difference = halfSizeOfPlan - newX
+        
+        newX = halfSizeOfPlan + difference
+        
+        var newY = originalOrigin.y + (clickPoint.y - newPoint.y) / scale
+        
+        let difference2 = halfSizeOfPlan - newY
+        
+        //newY = halfSizeOfPlan + difference2
+        
+        let newOrigin = NSPoint(x: newX,
+                                y: newY)
         let constrainedRect = constrainBoundsRect(NSRect(origin: newOrigin, size: bounds.size))
         scroll(to: constrainedRect.origin)
         superview?.reflectScrolledClipView(self)

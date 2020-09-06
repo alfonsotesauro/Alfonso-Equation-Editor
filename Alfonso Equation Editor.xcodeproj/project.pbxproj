@@ -24,6 +24,16 @@
 		D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7939239B187600EC8111 /* GeneralEquationView.swift */; };
 		D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A02503506F0044AFA1 /* AbstractEquationView.swift */; };
 		D76639A32503631D0044AFA1 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A22503631D0044AFA1 /* GridView.swift */; };
+		D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7390250531E50044682C /* Folio-Std-Bold-Condensed.ttf */; };
+		D78E7396250531E50044682C /* Folio-Std-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7391250531E50044682C /* Folio-Std-Light.ttf */; };
+		D78E7397250531E50044682C /* Folio-Std-Extra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */; };
+		D78E7398250531E50044682C /* Folio-Std-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7393250531E50044682C /* Folio-Std-Medium.ttf */; };
+		D78E7399250531E50044682C /* Folio-Std-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7394250531E50044682C /* Folio-Std-Bold.ttf */; };
+		D78E739B2505335C0044682C /* Folio-Std-Bold-Condensed.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7390250531E50044682C /* Folio-Std-Bold-Condensed.ttf */; };
+		D78E739C2505335C0044682C /* Folio-Std-Bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7394250531E50044682C /* Folio-Std-Bold.ttf */; };
+		D78E739D2505335C0044682C /* Folio-Std-Extra-Bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */; };
+		D78E739E2505335C0044682C /* Folio-Std-Light.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7391250531E50044682C /* Folio-Std-Light.ttf */; };
+		D78E739F2505335C0044682C /* Folio-Std-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7393250531E50044682C /* Folio-Std-Medium.ttf */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */; };
 		D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */; };
@@ -46,6 +56,23 @@
 			remoteInfo = "Alfonso Equation Editor";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D78E739A250533510044682C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				D78E739B2505335C0044682C /* Folio-Std-Bold-Condensed.ttf in CopyFiles */,
+				D78E739C2505335C0044682C /* Folio-Std-Bold.ttf in CopyFiles */,
+				D78E739D2505335C0044682C /* Folio-Std-Extra-Bold.ttf in CopyFiles */,
+				D78E739E2505335C0044682C /* Folio-Std-Light.ttf in CopyFiles */,
+				D78E739F2505335C0044682C /* Folio-Std-Medium.ttf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2FF62BE588D8C7D7E1FC1AD5 /* Pods-Alfonso Equation Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +108,11 @@
 		D75E7939239B187600EC8111 /* GeneralEquationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralEquationView.swift; sourceTree = "<group>"; };
 		D76639A02503506F0044AFA1 /* AbstractEquationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractEquationView.swift; sourceTree = "<group>"; };
 		D76639A22503631D0044AFA1 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		D78E7390250531E50044682C /* Folio-Std-Bold-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Bold-Condensed.ttf"; sourceTree = "<group>"; };
+		D78E7391250531E50044682C /* Folio-Std-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Light.ttf"; sourceTree = "<group>"; };
+		D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Extra-Bold.ttf"; sourceTree = "<group>"; };
+		D78E7393250531E50044682C /* Folio-Std-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Medium.ttf"; sourceTree = "<group>"; };
+		D78E7394250531E50044682C /* Folio-Std-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Bold.ttf"; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicksView.swift; sourceTree = "<group>"; };
 		D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
@@ -170,6 +202,7 @@
 				D76639A22503631D0044AFA1 /* GridView.swift */,
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
 				D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */,
+				D78E738F250531D70044682C /* Fonts */,
 				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
 				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
 				D75E7937239B12D100EC8111 /* Sinus.swift */,
@@ -206,6 +239,18 @@
 			path = "Alfonso Equation EditorUITests";
 			sourceTree = "<group>";
 		};
+		D78E738F250531D70044682C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D78E7390250531E50044682C /* Folio-Std-Bold-Condensed.ttf */,
+				D78E7394250531E50044682C /* Folio-Std-Bold.ttf */,
+				D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */,
+				D78E7391250531E50044682C /* Folio-Std-Light.ttf */,
+				D78E7393250531E50044682C /* Folio-Std-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +263,7 @@
 				D75E7900239AD9F700EC8111 /* Frameworks */,
 				D75E7901239AD9F700EC8111 /* Resources */,
 				6513C3AB9389D94F352D5290 /* [CP] Embed Pods Frameworks */,
+				D78E739A250533510044682C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -317,7 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */,
+				D78E7397250531E50044682C /* Folio-Std-Extra-Bold.ttf in Resources */,
+				D78E7396250531E50044682C /* Folio-Std-Light.ttf in Resources */,
 				D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */,
+				D78E7399250531E50044682C /* Folio-Std-Bold.ttf in Resources */,
+				D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */,
+				D78E7398250531E50044682C /* Folio-Std-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

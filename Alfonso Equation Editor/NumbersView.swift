@@ -13,47 +13,55 @@ class NumbersView: TicksView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        return;
-        let height = frame.size.height
-        let width = frame.size.width
         
         guard let count = (appDelegate?.firstSliderDoubleValue) else {
             fatalError()
         }
         
-        let distanceBetweenHorizontalLines = height / CGFloat(count)
-        let distanceBetweenVerticalLines = width / CGFloat(count)
+        print("\(NSFontManager.shared.availableFontFamilies.description)")
         
-       
-        // Draw X axis positive Ticks
+        // Draw the Zero
         
-        var ctr = width / 2
+        let zeroPoint = NSPoint(x: Double(width / 2) - 15, y: Double(height / 2 - 20))
+        let nsZeroString = "0" as NSString
+        nsZeroString.draw(at: zeroPoint, withAttributes: [NSAttributedString.Key.font : NSFont(name: "Folio Std", size: 15)!])
+
+         // Draw the small x
         
-        var tickHeight = CGFloat(6.0)
+        let xPoint = NSPoint(x: Double(width / 2) + 100, y: Double(height / 2 - 20))
+        let nsXString = "x" as NSString
+        nsXString.draw(at: xPoint, withAttributes: [NSAttributedString.Key.font : NSFont(name: "Folio Std", size: 15)!])
+
+        // Draw the small y
+             
+        let yPoint = NSPoint(x: Double(width / 2) - 15, y: Double(height / 2 + 100))
+        let nsYString = "y" as NSString
+        nsYString.draw(at: yPoint, withAttributes: [NSAttributedString.Key.font : NSFont(name: "Folio Std", size: 15)!])
+
+        
+        var ctr: Double = Double(width / 2)
+        
         var intCounter: Int = 0
         
-        while ctr < width {
-            
-            ctr += distanceBetweenVerticalLines
+        while ctr < Double(width) {
             
             
-            let (quotient, reminder) =  intCounter.quotientAndRemainder(dividingBy: 6)
+            
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
                 
           //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
-            if reminder == 0 && intCounter != 0 {
-                tickHeight = 8.0
-            } else {
-                tickHeight = 4.5
-            }
+            
             
             intCounter += 1
-            let tickPoint = NSPoint(x: ctr + 5, y: height / 2 - 20)
+            let tickPoint = NSPoint(x: ctr + 5, y: Double(height / 2 - 20))
             
             let nsString = "\(intCounter)" as NSString
             
-            nsString.draw(at: tickPoint, withAttributes: nil)
+           // nsString.draw(at: tickPoint, withAttributes: nil)
             
+            ctr += distanceBetweenVerticalLines
+
         }
         
       

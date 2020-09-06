@@ -32,5 +32,15 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>ATSApplicationFontsPath</key>
+	<string>Fonts</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Folio-Std-Bold-Condensed.ttf</string>
+		<string>Folio-Std-Bold.ttf</string>
+		<string>Folio-Std-Extra-Bold.ttf</string>
+		<string>Folio-Std-Light.ttf</string>
+		<string>Folio-Std-Medium.ttf</string>
+	</array>
 </dict>
 </plist>

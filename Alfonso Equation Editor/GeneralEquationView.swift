@@ -88,11 +88,11 @@ class GeneralEquationView: NumbersView {
               repeat {
                   
                   
-                  var correctX = ctr * distanceBetweenVerticalLines
+                  var correctX = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
                   
                   correctX = correctX + Double(width / 2)
                   
-                var correctY = ctr * distanceBetweenVerticalLines
+                var correctY = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
               
                   correctY = correctY + Double(height / 2)
                   
@@ -126,11 +126,11 @@ class GeneralEquationView: NumbersView {
                            repeat {
                                
                                
-                               var correctX = ctr * distanceBetweenVerticalLines
+                               var correctX = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
                                
                                correctX = correctX + Double(width / 2)
                                
-                             var correctY = ctr * distanceBetweenVerticalLines
+                             var correctY = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
                            
                                correctY = correctY + Double(height / 2)
                                
