@@ -151,7 +151,84 @@ class GeneralEquationView: NumbersView {
                     NSColor.orange.set()
                     currentSegment2.stroke()
               }
+        
+        ctr = Double(width / 2) // -10000 is the original
+                            
+        
+                            
+                            let currentSegment2 = NSBezierPath.init()
+                                  var firstCorrectY2 = ctr * distanceBetweenVerticalLines
+                            
+                                  firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+                                  
+                                  currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
+
+                                  repeat {
+                                      
+                                      var correctX = ctr
+                                      
+                                      correctX = ctr
+                                      
+                                    let toCalc = (ctr - (Double(width / 2)))
+                                    
+                                    var correctY = cos(toCalc / self.steps / 2)
+                                    
+                                    correctY = correctY * 40
+                                  
+                                      correctY = correctY + Double(height / 2)
+                                      
+                                
+                                   
+                               
+                                        currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
+                                       
+                                  
+                                      
+                                   ctr += 5.0
+                           } while(ctr < Double(width))
+                           NSColor.red.set()
+                           currentSegment2.stroke()
+                          if true {
+                            
+        ctr = 0 // -10000 is the original
+                                  
               
+                                  
+                                  let currentSegment2 = NSBezierPath.init()
+                                        var firstCorrectY2 = ctr * distanceBetweenVerticalLines
+                                  
+                                        firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+                                        
+                                        currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
+
+                                        repeat {
+                                            
+                                            var correctX = ctr
+                                            
+                                            correctX = ctr
+                                            
+                                          let toCalc = (ctr - (Double(width / 2)))
+                                          
+                                          var correctY = cos(toCalc / self.steps / 2)
+                                          
+                                          correctY = correctY * 40
+                                        
+                                            correctY = correctY + Double(height / 2)
+                                            
+                                      
+                                         
+                                     
+                                              currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
+                                             
+                                        
+                                            
+                                         ctr += 5.0
+                                 } while(ctr < Double(width))
+                                 NSColor.red.set()
+                                 currentSegment2.stroke()
+              
+        }
+        
     }
     
     func transformXIntoY(_ x: Double) -> Double {
