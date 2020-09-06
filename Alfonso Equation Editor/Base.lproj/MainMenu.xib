@@ -693,224 +693,54 @@
                 <rect key="frame" x="0.0" y="0.0" width="900" height="568"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-Vu-dcM" customClass="SKTZoomingScrollView">
-                        <rect key="frame" x="19" y="20" width="682" height="415"/>
-                        <clipView key="contentView" id="3X5-MS-Mu5" customClass="DraggableClipView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                            <rect key="frame" x="1" y="1" width="665" height="398"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="662" height="384"/>
-                                </customView>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="bHt-Ho-ZNa" secondAttribute="trailing" constant="3" placeholder="YES" id="Nw9-nQ-aFJ"/>
-                                <constraint firstAttribute="bottom" secondItem="bHt-Ho-ZNa" secondAttribute="bottom" placeholder="YES" id="Svy-OF-85h"/>
-                                <constraint firstItem="bHt-Ho-ZNa" firstAttribute="leading" secondItem="3X5-MS-Mu5" secondAttribute="leading" placeholder="YES" id="oMU-hK-u0X"/>
-                                <constraint firstItem="bHt-Ho-ZNa" firstAttribute="top" secondItem="3X5-MS-Mu5" secondAttribute="top" constant="14" placeholder="YES" id="rIX-og-9PI"/>
-                            </constraints>
-                        </clipView>
-                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fBV-Iz-Hym">
-                            <rect key="frame" x="1" y="399" width="665" height="15"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKB-d8-W6y">
-                            <rect key="frame" x="666" y="1" width="15" height="398"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="zq5-oO-ujc" customClass="MTMathUILabel">
-                        <rect key="frame" x="360" y="463" width="180" height="64"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="64" id="cBj-ec-E1x"/>
-                            <constraint firstAttribute="width" constant="180" id="tNl-KA-WQp"/>
-                        </constraints>
-                    </customView>
-                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-K0-gcY">
-                        <rect key="frame" x="20" y="436" width="307" height="104"/>
+                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y01-0e-G7E">
+                        <rect key="frame" x="690" y="463" width="89" height="64"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="0.0" y="20" width="71" height="64"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="dDt-Zc-4c8"/>
-                                            <constraint firstAttribute="width" constant="71" id="sDm-ve-Y3a"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="Grid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zxN-6o-SNk">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="1FY-oR-XRs"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawGrid" id="dJr-3q-fTP"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o2H-jn-v2A">
-                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="OE5-4H-oIU"/>
-                                            <constraint firstAttribute="height" constant="14" id="b28-th-eCK"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="Ticks" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tdk-wG-xms">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="LZ9-HL-Vrr"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawTicks" id="Ll8-ul-542"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-Hr-cF9">
-                                        <rect key="frame" x="-2" y="-2" width="52" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="85H-Fq-dlJ"/>
-                                            <constraint firstAttribute="width" constant="89" id="zbW-w4-1Z0"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="Axes" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="2OD-Cm-fyK">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="PsE-7D-st1"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawAxes" id="PWF-yI-Tte"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="kge-lN-Rvf">
-                                <rect key="frame" x="109" y="20" width="89" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="71" id="0oQ-s1-i6A"/>
-                                            <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="Parabola" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DuQ-iG-5T6">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="9T3-8v-A5p"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawParabola" id="7us-SM-QUR"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
-                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="W1f-Ee-Ptc"/>
-                                            <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="Retta" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LNP-Pr-8vQ">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="w0G-Gu-euM"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawRetta" id="HAq-V5-jLz"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
-                                            <constraint firstAttribute="width" constant="89" id="qBM-Nk-KUq"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="abs |x|" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jtn-Bb-7pi">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="abo-Fo-avP"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawAbsoluteValue" id="ifx-Bx-w6d"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="pEu-SJ-at8">
-                                <rect key="frame" x="218" y="20" width="89" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-67-IKC">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="FHo-29-In3"/>
-                                            <constraint firstAttribute="width" constant="71" id="gce-Mg-Q3D"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="sin" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4Jk-Ci-oWd">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="1i8-rD-zNA"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawSin" id="2BC-Jw-9ld"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-ar-Fbg">
-                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="2qG-Wk-l9h"/>
-                                            <constraint firstAttribute="height" constant="14" id="ftf-e5-4ZJ"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="cos" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1jA-pt-Whd">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="w9d-g4-5oX"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawCos" id="aqd-Bk-Lye"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-ON-ocR">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="V6N-nd-cRd"/>
-                                            <constraint firstAttribute="width" constant="89" id="sf1-RD-jsZ"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="check" title="tan" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gXa-DY-NdI">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="BuZ-J9-ggl"/>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawTan" id="XtT-Id-I3j"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aWN-C4-7S3">
+                                <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="OZh-hr-5gb"/>
+                                    <constraint firstAttribute="width" constant="71" id="W1i-w0-nOU"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Numbers" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Yo0-Nd-LdC">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="Zoj-Li-AOw"/>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawNumbers" id="rV6-dt-4Ba"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-mX-OZh">
+                                <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="bBM-fy-ClH"/>
+                                    <constraint firstAttribute="width" constant="62" id="uNI-R5-SPX"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="x^3" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qU5-3W-n8M">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="HCd-F9-Mpm"/>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawPowerThree" id="4MB-aG-kpF"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XBn-4o-JRM">
+                                <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="gVb-BT-Joz"/>
+                                    <constraint firstAttribute="height" constant="14" id="rAP-DH-q5C"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="arccos" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Idr-J9-I9G">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="FPd-DJ-rtL"/>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawArcCos" id="AxA-oX-f4R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <visibilityPriorities>
                             <integer value="1000"/>
@@ -1266,6 +1096,236 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-Vu-dcM" customClass="SKTZoomingScrollView">
+                        <rect key="frame" x="19" y="20" width="682" height="415"/>
+                        <clipView key="contentView" id="3X5-MS-Mu5" customClass="DraggableClipView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
+                            <rect key="frame" x="1" y="1" width="665" height="398"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="662" height="384"/>
+                                </customView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="bHt-Ho-ZNa" secondAttribute="trailing" constant="3" placeholder="YES" id="Nw9-nQ-aFJ"/>
+                                <constraint firstAttribute="bottom" secondItem="bHt-Ho-ZNa" secondAttribute="bottom" placeholder="YES" id="Svy-OF-85h"/>
+                                <constraint firstItem="bHt-Ho-ZNa" firstAttribute="leading" secondItem="3X5-MS-Mu5" secondAttribute="leading" placeholder="YES" id="oMU-hK-u0X"/>
+                                <constraint firstItem="bHt-Ho-ZNa" firstAttribute="top" secondItem="3X5-MS-Mu5" secondAttribute="top" constant="14" placeholder="YES" id="rIX-og-9PI"/>
+                            </constraints>
+                        </clipView>
+                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fBV-Iz-Hym">
+                            <rect key="frame" x="1" y="399" width="665" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKB-d8-W6y">
+                            <rect key="frame" x="666" y="1" width="15" height="398"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="zq5-oO-ujc" customClass="MTMathUILabel">
+                        <rect key="frame" x="360" y="463" width="180" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="cBj-ec-E1x"/>
+                            <constraint firstAttribute="width" constant="180" id="tNl-KA-WQp"/>
+                        </constraints>
+                    </customView>
+                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-K0-gcY">
+                        <rect key="frame" x="20" y="436" width="307" height="104"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
+                                <rect key="frame" x="-2" y="20" width="71" height="64"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
+                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="dDt-Zc-4c8"/>
+                                            <constraint firstAttribute="width" constant="71" id="sDm-ve-Y3a"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="Grid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zxN-6o-SNk">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="1FY-oR-XRs"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawGrid" id="dJr-3q-fTP"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o2H-jn-v2A">
+                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="OE5-4H-oIU"/>
+                                            <constraint firstAttribute="height" constant="14" id="b28-th-eCK"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="Ticks" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tdk-wG-xms">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="LZ9-HL-Vrr"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawTicks" id="Ll8-ul-542"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-Hr-cF9">
+                                        <rect key="frame" x="-2" y="-2" width="52" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="85H-Fq-dlJ"/>
+                                            <constraint firstAttribute="width" constant="89" id="zbW-w4-1Z0"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="Axes" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="2OD-Cm-fyK">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="PsE-7D-st1"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawAxes" id="PWF-yI-Tte"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="kge-lN-Rvf">
+                                <rect key="frame" x="109" y="20" width="89" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
+                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71" id="0oQ-s1-i6A"/>
+                                            <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="Parabola" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DuQ-iG-5T6">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="9T3-8v-A5p"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawParabola" id="7us-SM-QUR"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
+                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="W1f-Ee-Ptc"/>
+                                            <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="Retta" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LNP-Pr-8vQ">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="w0G-Gu-euM"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawRetta" id="HAq-V5-jLz"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
+                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
+                                            <constraint firstAttribute="width" constant="89" id="qBM-Nk-KUq"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="abs |x|" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jtn-Bb-7pi">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="abo-Fo-avP"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawAbsoluteValue" id="ifx-Bx-w6d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="pEu-SJ-at8">
+                                <rect key="frame" x="218" y="20" width="89" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-67-IKC">
+                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="FHo-29-In3"/>
+                                            <constraint firstAttribute="width" constant="71" id="gce-Mg-Q3D"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="sin" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4Jk-Ci-oWd">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="1i8-rD-zNA"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawSin" id="2BC-Jw-9ld"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-ar-Fbg">
+                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="2qG-Wk-l9h"/>
+                                            <constraint firstAttribute="height" constant="14" id="ftf-e5-4ZJ"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="cos" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1jA-pt-Whd">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="w9d-g4-5oX"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawCos" id="aqd-Bk-Lye"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-ON-ocR">
+                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="V6N-nd-cRd"/>
+                                            <constraint firstAttribute="width" constant="89" id="sf1-RD-jsZ"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="tan" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gXa-DY-NdI">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="BuZ-J9-ggl"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawTan" id="XtT-Id-I3j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="moN-th-iCr" firstAttribute="leading" secondItem="6Kg-Vu-dcM" secondAttribute="trailing" constant="37" id="0vg-IN-EGh"/>
@@ -1274,8 +1334,10 @@
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="NrU-Ld-fKh"/>
                     <constraint firstAttribute="trailing" secondItem="moN-th-iCr" secondAttribute="trailing" constant="46" id="O5M-r9-Ed0"/>
                     <constraint firstAttribute="bottom" secondItem="6Kg-Vu-dcM" secondAttribute="bottom" constant="20" id="OH4-VV-kCF"/>
+                    <constraint firstItem="Y01-0e-G7E" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VXA-ya-73o"/>
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VxC-1R-EUf"/>
                     <constraint firstItem="bWt-K0-gcY" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="YyT-FJ-v02"/>
+                    <constraint firstAttribute="trailing" secondItem="Y01-0e-G7E" secondAttribute="trailing" constant="121" id="bks-97-3Xe"/>
                     <constraint firstItem="6Kg-Vu-dcM" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="19" id="cMr-Ka-t6s"/>
                     <constraint firstItem="6Kg-Vu-dcM" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="133" id="nnC-4D-9zA"/>
                 </constraints>

@@ -33,7 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawSin: Bool = false
     @objc dynamic var shouldDrawCos: Bool = false
     @objc dynamic var shouldDrawTan: Bool = false
-    
+    @objc dynamic var shouldDrawNumbers: Bool = true
+    @objc dynamic var shouldDrawPowerThree: Bool = false
+    @objc dynamic var shouldDrawArcCos: Bool = false
     
     @objc dynamic var numberOfSteps: Double = 141.537 {
         didSet(newValue) {

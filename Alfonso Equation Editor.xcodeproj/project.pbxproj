@@ -41,6 +41,7 @@
 		D7C38FCE2505797D0084C2C9 /* Move.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FCC2505797D0084C2C9 /* Move.pdf */; };
 		D7C38FD0250579940084C2C9 /* Arrow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FCF250579940084C2C9 /* Arrow.pdf */; };
 		D7C38FD325057A250084C2C9 /* Selection.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FD225057A250084C2C9 /* Selection.pdf */; };
+		D7C38FD5250585D00084C2C9 /* ArcCosinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FD4250585D00084C2C9 /* ArcCosinusView.swift */; };
 		D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */; };
 		D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */; };
 		DFA4C29CAEB10DFB74F51493 /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F7E657F82329EE21BF9BFB /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */; };
@@ -126,6 +127,7 @@
 		D7C38FCC2505797D0084C2C9 /* Move.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Move.pdf; sourceTree = "<group>"; };
 		D7C38FCF250579940084C2C9 /* Arrow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Arrow.pdf; sourceTree = "<group>"; };
 		D7C38FD225057A250084C2C9 /* Selection.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Selection.pdf; sourceTree = "<group>"; };
+		D7C38FD4250585D00084C2C9 /* ArcCosinusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcCosinusView.swift; sourceTree = "<group>"; };
 		D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicksView.swift; sourceTree = "<group>"; };
 		D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
 		DA2DC54DCF33F70F7DB5DFEB /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
 				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
 				D7C38FC7250563CF0084C2C9 /* CosinusView.swift */,
+				D7C38FD4250585D00084C2C9 /* ArcCosinusView.swift */,
 				D7C38FC9250564650084C2C9 /* TangentView.swift */,
 				D75E7937239B12D100EC8111 /* Sinus.swift */,
 				D731082D24FD44FE00FA86BD /* SKTZoomingScrollView.h */,
@@ -529,6 +532,7 @@
 				D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */,
 				D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */,
 				D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */,
+				D7C38FD5250585D00084C2C9 /* ArcCosinusView.swift in Sources */,
 				D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */,
 				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
 				D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */,

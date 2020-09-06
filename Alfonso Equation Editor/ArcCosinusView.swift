@@ -8,12 +8,12 @@
 
 import Cocoa
 
-class TangentView: ArcCosinusView {
-
+class ArcCosinusView: CosinusView {
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        if self.appDelegate!.shouldDrawTan {
+        if self.appDelegate!.shouldDrawArcCos {
             var ctr = Double(width / 2) // -10000 is the original
             
             
@@ -33,9 +33,9 @@ class TangentView: ArcCosinusView {
                 
                 let toCalc = (ctr - (Double(width / 2)))
                 
-                var correctY = tan(toCalc / self.steps)
+                var correctY = acos(toCalc / self.steps)
                 
-                correctY = correctY * self.steps
+                correctY = (correctY * self.steps)
                 
                 correctY = correctY + Double(height / 2)
                 
@@ -57,9 +57,13 @@ class TangentView: ArcCosinusView {
                 
                 
                 let currentSegment2 = NSBezierPath.init()
-                var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-                
-                firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+                 let toCalc = (ctr - (Double(width / 2)))
+                                   
+                    var correctY2 = acos(toCalc / self.steps)
+                                   
+                    correctY2 = (correctY2 * self.steps)
+                                   
+                correctY2 = correctY2 + Double(height / 2)
                 
                 currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
                 
@@ -71,9 +75,9 @@ class TangentView: ArcCosinusView {
                     
                     let toCalc = (ctr - (Double(width / 2)))
                     
-                    var correctY = tan(toCalc / self.steps)
+                    var correctY = acos(toCalc / self.steps)
                     
-                    correctY = correctY * self.steps
+                    correctY = (correctY * self.steps)
                     
                     correctY = correctY + Double(height / 2)
                     
@@ -84,7 +88,7 @@ class TangentView: ArcCosinusView {
                     
                     
                     
-                    ctr += 5.0
+                    ctr += 5
                 } while(ctr < Double(width))
                 NSColor.red.set()
                 currentSegment2.stroke()
@@ -94,5 +98,12 @@ class TangentView: ArcCosinusView {
         
     }
     
+    override func transformXIntoY(_ x: Double) -> Double {
+        
+        return x ^^ 2
+        
+    }
     
 }
+
+

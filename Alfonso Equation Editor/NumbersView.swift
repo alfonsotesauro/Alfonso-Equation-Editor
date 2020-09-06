@@ -14,11 +14,10 @@ class NumbersView: TicksView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        guard let count = (appDelegate?.firstSliderDoubleValue) else {
-            fatalError()
-        }
         
-        print("\(NSFontManager.shared.availableFontFamilies.description)")
+        if !appDelegate.shouldDrawNumbers {
+            return
+        }
         
         // Draw the Zero
         

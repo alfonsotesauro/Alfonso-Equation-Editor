@@ -72,6 +72,48 @@ class GeneralEquationView: NumbersView {
               currentSegment.stroke()
         }
         
+       
+              
+              
+              //let distanceBetweenHorizontalLines = Double(height) / steps
+              
+              if self.appDelegate!.shouldDrawPowerThree {
+                
+                ctr = -1000.0 // -10000 is the original
+                             
+                finalValue = fabs(ctr)
+                
+              let currentSegment = NSBezierPath.init()
+                currentSegment.lineWidth = 0.5
+              var firstCorrectY = self.transformXIntoY2(Double(Int(ctr * distanceBetweenVerticalLines)))
+        
+              firstCorrectY = firstCorrectY + Double(height / 2)
+                      
+              currentSegment.move(to: NSPoint.init(x: 0, y: firstCorrectY))
+
+              repeat {
+                  
+                  
+                  let correctX = ctr + Double(width / 2)
+                  var correctY = ctr + Double(height / 2)
+                  
+                correctY = ((self.transformXIntoY2(Double(Int(ctr / 2))) / self.steps / 12) / 10) * 9
+              
+                  correctY = correctY + Double(height / 2)
+                  
+               
+                  
+                  
+                 // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
+                  currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
+                 
+                  
+                  
+                ctr += 3.0
+              } while(ctr < finalValue)
+              NSColor.black.set()
+              currentSegment.stroke()
+        }
         if self.appDelegate!.shouldDrawRetta {
         
         ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
@@ -155,10 +197,15 @@ class GeneralEquationView: NumbersView {
        
         
     }
-    
     func transformXIntoY(_ x: Double) -> Double {
+              
+           return x * 2
+
+    }
+    
+    func transformXIntoY2(_ x: Double) -> Double {
            
-        return x * 2
+        return x ^^ 3
 
     }
 }
