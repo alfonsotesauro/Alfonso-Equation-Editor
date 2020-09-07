@@ -60,4 +60,7 @@ extern NSString *SKTZoomingScrollViewFactor;
     CGFloat _factor;
 
 }
+
+-(CGFloat)factor;
+
 @end

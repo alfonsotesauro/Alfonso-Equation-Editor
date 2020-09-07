@@ -19,6 +19,8 @@ class CosinusView: ParabolaView {
             
             
             let currentSegment2 = NSBezierPath.init()
+            
+            currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
             var firstCorrectY2 = ctr * distanceBetweenVerticalLines
             
             firstCorrectY2 = firstCorrectY2 + Double(height / 2)
@@ -49,7 +51,7 @@ class CosinusView: ParabolaView {
                 ctr += 5.0
             } while(ctr < Double(width))
             NSColor.red.set()
-            currentSegment2.stroke()
+            //currentSegment2.stroke()
             if true {
                 
                 ctr = 0 // -10000 is the original
@@ -57,6 +59,7 @@ class CosinusView: ParabolaView {
                 
                 
                 let currentSegment2 = NSBezierPath.init()
+                currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
                 var firstCorrectY2 = ctr * distanceBetweenVerticalLines
                 
                 firstCorrectY2 = firstCorrectY2 + Double(height / 2)

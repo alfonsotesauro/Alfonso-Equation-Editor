@@ -10,6 +10,29 @@ import Cocoa
 
 class SinusView: TangentView {
 
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let viewToObserve = self.enclosingScrollView
+        
+        let pippo = NotificationCenter.default.addObserver(forName: NSScrollView.didLiveScrollNotification, object: viewToObserve, queue: nil) { (note: Notification) in
+            
+            print("Current scroll = \(viewToObserve?.verticalScroller?.doubleValue)")
+            //print("Current clip = \(viewToObserve?.contentView.frame)")
+            //print("Current docView = \(viewToObserve?.documentView?.frame)")
+
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+           // self.enclosingScrollView?.verticalScroller?.doubleValue = 0.5
+        }
+    }
+    
+    @objc func viewDidScroll() {
+        
+    }
+    
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
@@ -20,7 +43,7 @@ class SinusView: TangentView {
             
             let currentSegment2 = NSBezierPath.init()
             var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-            
+            currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
             firstCorrectY2 = firstCorrectY2 + Double(height / 2)
             
             currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
@@ -57,7 +80,7 @@ class SinusView: TangentView {
                 
                 let currentSegment2 = NSBezierPath.init()
                 var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-                
+                currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
                 firstCorrectY2 = firstCorrectY2 + Double(height / 2)
                 
                 currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))

@@ -41,7 +41,7 @@ class GeneralEquationView: NumbersView {
               
               if self.appDelegate!.shouldDrawParabola {
               let currentSegment = NSBezierPath.init()
-                currentSegment.lineWidth = 0.5
+                currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
               var firstCorrectY = self.transformXIntoY(Double(Int(ctr * distanceBetweenVerticalLines)))
         
               firstCorrectY = firstCorrectY + Double(height / 2)
@@ -84,35 +84,35 @@ class GeneralEquationView: NumbersView {
                 finalValue = fabs(ctr)
                 
               let currentSegment = NSBezierPath.init()
-                currentSegment.lineWidth = 0.5
-              var firstCorrectY = self.transformXIntoY2(Double(Int(ctr * distanceBetweenVerticalLines)))
-        
-              firstCorrectY = firstCorrectY + Double(height / 2)
-                      
-              currentSegment.move(to: NSPoint.init(x: 0, y: firstCorrectY))
-
-              repeat {
-                  
-                  
-                  let correctX = ctr + Double(width / 2)
-                  var correctY = ctr + Double(height / 2)
-                  
-                correctY = ((self.transformXIntoY2(Double(Int(ctr / 2))) / self.steps / 12) / 10) * 9
+                      currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
+                    var firstCorrectY = self.transformXIntoY(Double(Int(ctr * distanceBetweenVerticalLines)))
               
-                  correctY = correctY + Double(height / 2)
-                  
-               
-                  
-                  
-                 // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
-                  currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
-                 
-                  
-                  
-                ctr += 3.0
-              } while(ctr < finalValue)
-              NSColor.black.set()
-              currentSegment.stroke()
+                    firstCorrectY = firstCorrectY + Double(height / 2)
+                            
+                    currentSegment.move(to: NSPoint.init(x: 0, y: firstCorrectY))
+
+                    repeat {
+                        
+                        
+                        let correctX = ctr + Double(width / 2)
+                        var correctY = ctr + Double(height / 2)
+                        
+                        correctY = self.transformXIntoY2(Double(ctr / 5.5)) / self.steps
+                    
+                        correctY = correctY + Double(height / 2)
+                        
+                     
+                        
+                        
+                       // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
+                        currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
+                       
+                        
+                        
+                      ctr += 3.0
+                    } while(ctr < finalValue)
+                    NSColor.red.set()
+                    currentSegment.stroke()
         }
         if self.appDelegate!.shouldDrawRetta {
         
@@ -121,6 +121,7 @@ class GeneralEquationView: NumbersView {
         finalValue = fabs(ctr)
         
         let currentSegment2 = NSBezierPath.init()
+            currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
               var firstCorrectY2 = ctr * distanceBetweenVerticalLines
         
               firstCorrectY2 = firstCorrectY2 + 0 //Double(height / 2)
@@ -159,6 +160,7 @@ class GeneralEquationView: NumbersView {
                      finalValue = fabs(ctr)
                      
                      let currentSegment2 = NSBezierPath.init()
+            currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
                            var firstCorrectY2 = ctr * distanceBetweenVerticalLines
                      
                            firstCorrectY2 = firstCorrectY2 + Double(height / 2)

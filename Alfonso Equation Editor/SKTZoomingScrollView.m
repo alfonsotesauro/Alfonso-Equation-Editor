@@ -104,7 +104,9 @@ NSLocalizedStringFromTable(@"1600%", @"SKTZoomingScrollView", @"A level of zoomi
 
 #pragma mark *** Bindings ***
 
-
+-(CGFloat)factor {
+    return _factor;
+}
 - (void)setFactor:(CGFloat)factor {
 
     //The default implementation of key-value binding is informing this object that the value to which our "factor" property is bound has changed. Record the value, and apply the zoom factor by fooling with the bounds of the clip view that every scroll view has. (We leave its frame alone.)
@@ -125,7 +127,25 @@ NSLocalizedStringFromTable(@"1600%", @"SKTZoomingScrollView", @"A level of zoomi
     CGFloat goodPointy = (((clipView.bounds.size.height)) / 2) - 16;
     [clipView setBoundsOrigin:NSMakePoint(goodPointx, goodPointy)];
    
+    NSScrollView *scrollView = self;
     
+    const CGFloat midX = NSMidX([[scrollView documentView] bounds]);
+       const CGFloat midY = NSMidY([[scrollView documentView] bounds]);
+
+       const CGFloat halfWidth = NSWidth([[scrollView contentView] frame]) / 2.0;
+       const CGFloat halfHeight = NSHeight([[scrollView contentView] frame]) / 2.0;
+
+       NSPoint newOrigin;
+       if([[scrollView documentView] isFlipped])
+       {
+           newOrigin = NSMakePoint(midX - halfWidth, midY + halfHeight);
+       }
+       else
+       {
+           newOrigin = NSMakePoint(midX - halfWidth, midY - halfHeight);
+       }
+
+       [[scrollView documentView] scrollPoint:newOrigin];
 }
 
 

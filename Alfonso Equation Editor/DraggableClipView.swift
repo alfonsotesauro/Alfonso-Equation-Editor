@@ -44,7 +44,7 @@ class DraggableClipView: SKTCenteringClipView
         
         let difference = halfSizeOfPlan - newX
         
-        newX = halfSizeOfPlan + difference
+        //newX = halfSizeOfPlan + difference
         
         var newY = originalOrigin.y + (clickPoint.y - newPoint.y) / scale
         

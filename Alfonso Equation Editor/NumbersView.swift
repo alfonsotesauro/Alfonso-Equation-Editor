@@ -15,9 +15,9 @@ class NumbersView: TicksView {
         super.draw(dirtyRect)
         
         
-        if !appDelegate.shouldDrawNumbers {
-            return
-        }
+        if appDelegate.shouldDrawBasicLetters {
+           
+        
         
         // Draw the Zero
         
@@ -36,8 +36,10 @@ class NumbersView: TicksView {
         let yPoint = NSPoint(x: Double(width / 2) - 40, y: Double(height / 2 + 100))
         let nsYString = "y" as NSString
         nsYString.draw(at: yPoint, withAttributes: [NSAttributedString.Key.font : NSFont(name: "Folio Std", size: 15)!])
-        
-        
+        }
+        if !appDelegate.shouldDrawNumbers {
+            return
+        }
         
         // Draw X axis positive Numbers
         
@@ -150,12 +152,12 @@ class NumbersView: TicksView {
             if reminder == 0 && intCounter != 0 {
                 let halfWidth: Double = Double(width / 2)
                 
-             var numberRect = NSRect(x: halfWidth - 25,y: ctr - 16, width:25.5, height: 20)
+             var numberRect = NSRect(x: halfWidth - 28,y: ctr - 16, width:25.5, height: 20)
                 let numberString = "\(numberToBeDrawn)"
                 var nsNumberString = numberString as NSString
                 if numberString.last == "0" {
                     nsNumberString = numberString.dropLast().dropLast() as NSString
-                 numberRect = NSRect(x: halfWidth - 14,y: ctr - 16, width:14.2, height: 20)
+                 numberRect = NSRect(x: halfWidth - 17,y: ctr - 16, width:14.2, height: 20)
                 }
                 nsNumberString.draw(in: numberRect, withAttributes: [NSAttributedString.Key.font : NSFont(name: "Folio Std", size: 13)!])
                 

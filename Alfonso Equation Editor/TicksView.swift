@@ -14,7 +14,7 @@ class TicksView: AxesView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        if !appDelegate!.shouldDrawTicks {
+        if !appDelegate!.shouldDrawAxes {
             return
         }
         
