@@ -16,10 +16,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var mathLabel: MTMathUILabel!
+    @IBOutlet weak var toolsSegmentedControl: NSSegmentedControl!
     
-    @objc dynamic var firstSliderDoubleValue: Double = 3.0
-    @objc dynamic var secondSliderDoubleValue: Double = 1000.0
-    @objc dynamic var thirdSliderDoubleValue: Double = 10000.0
+    @IBOutlet weak var sinusViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sinusViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sinusViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sinusViewBottomConstraint: NSLayoutConstraint!
+    
+    @objc dynamic var firstSliderDoubleValue: Double = 1
+    @objc dynamic var secondSliderDoubleValue: Double = 30
+    @objc dynamic var thirdSliderDoubleValue: Double = 160.0
     @objc dynamic var fourthSliderDoubleValue: Double = 1.0
     @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
@@ -36,21 +42,47 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawNumbers: Bool = true
     @objc dynamic var shouldDrawPowerThree: Bool = false
     @objc dynamic var shouldDrawArcCos: Bool = false
-    
-    @objc dynamic var numberOfSteps: Double = 167.324494949495 {
+    @objc dynamic var shouldApplyGridSpacing: Bool = false {
+        didSet(newValue) {
+           
+                self.equationView.setNeedsDisplay(self.equationView.bounds)
+            
+        }
+    }
+    @objc dynamic var shouldApplyParabolaDivisor: Bool = true {
+        didSet(newValue) {
+            
+                self.equationView.setNeedsDisplay(self.equationView.bounds)
+            
+        }
+    }
+
+    @objc dynamic var numberOfSteps: Double = 167 {
         didSet(newValue) {
             self.equationView.steps = newValue
         }
     }
 
-    
     var kvoToken: NSKeyValueObservation?
+    
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        
+        if #available(OSX 10.13, *) {
+            self.sinusViewLeadingConstraint.isActive = false
+            self.sinusViewTrailingConstraint.isActive = false
+            self.sinusViewTopConstraint.isActive = false
+            self.sinusViewBottomConstraint.isActive = false
+        } else {
+            // Fallback on earlier versions
+        }
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
         self.scrollView.bind(NSBindingName(rawValue: "factor"), to: self, withKeyPath: "fifthSliderDoubleValue", options: nil)
-        self.mathLabel.latex = "x = y^2";
+        self.mathLabel.latex = "y = x^2";
         self.mathLabel.textColor = .white
     }
     
@@ -88,7 +120,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.equationView.setNeedsDisplay(self.equationView.bounds)
     
     }
-
+    @IBAction func userDidSelectResetToDefaults(_ sender: NSButton) {
+        
+        self.firstSliderDoubleValue = 3.0
+        self.secondSliderDoubleValue = 1000.0
+        self.thirdSliderDoubleValue = 10000.0
+        self.fourthSliderDoubleValue = 1.0
+        self.fifthSliderDoubleValue = 1.0
+        self.sixthSliderDoubleValue = 0.0
+        self.numberOfSteps = 167.324494949495
+        DispatchQueue.main.async {
+            self.equationView.setNeedsDisplay(self.equationView.bounds)
+        }
+    }
+    
     
     @IBAction func userDidSelectSquareGridCheckbox(_ sender: NSButton) {
           
@@ -195,26 +240,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //
 }
 
-extension SKTZoomingScrollView {
+extension NSScrollView {
     func scrollToCenter() {
         guard let docView = documentView else { return }
-
-        let clipViewBounds = contentView.frame
-        let actualViewBounds = docView.frame
-        let selfBounds = self.frame
-        
-        let factor = self.factor()
-        
-        var center = CGPoint(
-            x: (contentView.frame.width / 2 - docView.bounds.midX) * factor,
+        let center = CGPoint(
+            x: docView.bounds.midX - contentView.frame.width / 2,
             y: docView.bounds.midY - (docView.isFlipped ? -1 : 1) * contentView.frame.height / 2
         )
-        
-        center.x = (selfBounds.width / 5) / factor
-        
-
-        
-        
         docView.scroll(center)
     }
 }

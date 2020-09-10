@@ -162,9 +162,12 @@ NSLocalizedStringFromTable(@"1600%", @"SKTZoomingScrollView", @"A level of zoomi
     [super bind:bindingName toObject:observableObject withKeyPath:observableKeyPath options:options];
     
 }
-//- (void)scrollWheel:(NSEvent *)event {
-//    [self setFactor:_factor + 10];
-//}
+- (void)scrollWheel:(NSEvent *)event {
+    if ([event modifierFlags] & NSAlternateKeyMask) {
+        CGFloat delta = [event deltaY] / 10;
+        [self setFactor:_factor + delta];
+    }
+}
 
 // An override of the NSObject(NSKeyValueBindingCreation) method.
 - (void)unbind:(NSString *)bindingName {

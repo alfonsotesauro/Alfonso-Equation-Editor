@@ -8,10 +8,13 @@
 
 import Cocoa
 
-class CosinusView: ParabolaView {
+class CosinusView: AbsoluteValueView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
+        
+         
+        let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
         
         if self.appDelegate!.shouldDrawCos {
             var ctr = Double(width / 2) // -10000 is the original
@@ -33,9 +36,9 @@ class CosinusView: ParabolaView {
                 
                 correctX = ctr
                 
-                let toCalc = (ctr - (Double(width / 2)))
+                let toCalc = ctr
                 
-                var correctY = cos(toCalc / self.steps)
+                var correctY = cos(toCalc) / self.steps
                 
                 correctY = (correctY * self.steps)
                 
@@ -97,11 +100,6 @@ class CosinusView: ParabolaView {
         
     }
     
-    override func transformXIntoY(_ x: Double) -> Double {
-        
-        return x ^^ 2
-        
-    }
     
 }
 

@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		2F7BF2EC9D6BB21C53CBC7F9 /* Pods_Alfonso_Equation_Editor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D9F978E3EA4E54C7FB36A4 /* Pods_Alfonso_Equation_Editor.framework */; };
 		5733154547F1971A8425DD74 /* Pods_Alfonso_Equation_EditorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66317F13004906B686B22A /* Pods_Alfonso_Equation_EditorTests.framework */; };
+		D711B50E250842FA00D1B510 /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D711B50D250842FA00D1B510 /* CenteringClipView.swift */; };
 		D731082E24FD44FE00FA86BD /* SKTZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731085E24FD756300FA86BD /* DraggableClipView.swift */; };
+		D75705BD2507A7A600E9D2CE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D75705BC2507A7A600E9D2CE /* Credits.rtf */; };
 		D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7906239AD9F700EC8111 /* AppDelegate.swift */; };
 		D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D75E7908239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld */; };
 		D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75E790B239AD9F800EC8111 /* Assets.xcassets */; };
@@ -19,11 +21,14 @@
 		D75E791B239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E791A239AD9F800EC8111 /* Alfonso_Equation_EditorTests.swift */; };
 		D75E7926239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */; };
 		D75E7934239ADA1400EC8111 /* CartesianBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */; };
-		D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7935239AF6EC00EC8111 /* ParabolaView.swift */; };
 		D75E7938239B12D100EC8111 /* Sinus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7937239B12D100EC8111 /* Sinus.swift */; };
-		D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7939239B187600EC8111 /* GeneralEquationView.swift */; };
+		D75E793A239B187600EC8111 /* ParabolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7939239B187600EC8111 /* ParabolaView.swift */; };
 		D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A02503506F0044AFA1 /* AbstractEquationView.swift */; };
 		D76639A32503631D0044AFA1 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76639A22503631D0044AFA1 /* GridView.swift */; };
+		D77DB410250A8D30002B50EF /* OrangeCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DB40F250A8D30002B50EF /* OrangeCenterView.swift */; };
+		D77DB412250AA1D5002B50EF /* PowerOfThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DB411250AA1D5002B50EF /* PowerOfThreeView.swift */; };
+		D77DB414250AA30A002B50EF /* RettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DB413250AA30A002B50EF /* RettaView.swift */; };
+		D77DB416250AA366002B50EF /* AbsoluteValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DB415250AA366002B50EF /* AbsoluteValueView.swift */; };
 		D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7390250531E50044682C /* Folio-Std-Bold-Condensed.ttf */; };
 		D78E7396250531E50044682C /* Folio-Std-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7391250531E50044682C /* Folio-Std-Light.ttf */; };
 		D78E7397250531E50044682C /* Folio-Std-Extra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */; };
@@ -90,12 +95,14 @@
 		AE2B5FA16F775FD03A2C1500 /* Pods-Alfonso Equation EditorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation EditorTests.release.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation EditorTests/Pods-Alfonso Equation EditorTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6D9F978E3EA4E54C7FB36A4 /* Pods_Alfonso_Equation_Editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_Editor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF39B7D02B47E679617F61B /* Pods-Alfonso Equation Editor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfonso Equation Editor.debug.xcconfig"; path = "Target Support Files/Pods-Alfonso Equation Editor/Pods-Alfonso Equation Editor.debug.xcconfig"; sourceTree = "<group>"; };
+		D711B50D250842FA00D1B510 /* CenteringClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteringClipView.swift; sourceTree = "<group>"; };
 		D731082B24FD44FD00FA86BD /* Alfonso Equation Editor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alfonso Equation Editor-Bridging-Header.h"; sourceTree = "<group>"; };
 		D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTZoomingScrollView.m; sourceTree = "<group>"; };
 		D731082D24FD44FE00FA86BD /* SKTZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTZoomingScrollView.h; sourceTree = "<group>"; };
 		D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCenteringClipView.m; sourceTree = "<group>"; };
 		D731083024FD450C00FA86BD /* SKTCenteringClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCenteringClipView.h; sourceTree = "<group>"; };
 		D731085E24FD756300FA86BD /* DraggableClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableClipView.swift; sourceTree = "<group>"; };
+		D75705BC2507A7A600E9D2CE /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		D75E7903239AD9F700EC8111 /* Alfonso Equation Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alfonso Equation Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75E7906239AD9F700EC8111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75E7909239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alfonso_Equation_Editor.xcdatamodel; sourceTree = "<group>"; };
@@ -110,11 +117,14 @@
 		D75E7925239AD9F800EC8111 /* Alfonso_Equation_EditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alfonso_Equation_EditorUITests.swift; sourceTree = "<group>"; };
 		D75E7927239AD9F800EC8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianBackgroundView.swift; sourceTree = "<group>"; };
-		D75E7935239AF6EC00EC8111 /* ParabolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParabolaView.swift; sourceTree = "<group>"; };
 		D75E7937239B12D100EC8111 /* Sinus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sinus.swift; sourceTree = "<group>"; };
-		D75E7939239B187600EC8111 /* GeneralEquationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralEquationView.swift; sourceTree = "<group>"; };
+		D75E7939239B187600EC8111 /* ParabolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParabolaView.swift; sourceTree = "<group>"; };
 		D76639A02503506F0044AFA1 /* AbstractEquationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractEquationView.swift; sourceTree = "<group>"; };
 		D76639A22503631D0044AFA1 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		D77DB40F250A8D30002B50EF /* OrangeCenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeCenterView.swift; sourceTree = "<group>"; };
+		D77DB411250AA1D5002B50EF /* PowerOfThreeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerOfThreeView.swift; sourceTree = "<group>"; };
+		D77DB413250AA30A002B50EF /* RettaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RettaView.swift; sourceTree = "<group>"; };
+		D77DB415250AA366002B50EF /* AbsoluteValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbsoluteValueView.swift; sourceTree = "<group>"; };
 		D78E7390250531E50044682C /* Folio-Std-Bold-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Bold-Condensed.ttf"; sourceTree = "<group>"; };
 		D78E7391250531E50044682C /* Folio-Std-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Light.ttf"; sourceTree = "<group>"; };
 		D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Extra-Bold.ttf"; sourceTree = "<group>"; };
@@ -216,13 +226,18 @@
 				D76639A22503631D0044AFA1 /* GridView.swift */,
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
 				D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */,
+				D75705BC2507A7A600E9D2CE /* Credits.rtf */,
 				D78E738F250531D70044682C /* Fonts */,
-				D75E7939239B187600EC8111 /* GeneralEquationView.swift */,
-				D75E7935239AF6EC00EC8111 /* ParabolaView.swift */,
+				D75E7939239B187600EC8111 /* ParabolaView.swift */,
+				D77DB411250AA1D5002B50EF /* PowerOfThreeView.swift */,
+				D77DB413250AA30A002B50EF /* RettaView.swift */,
+				D77DB415250AA366002B50EF /* AbsoluteValueView.swift */,
 				D7C38FC7250563CF0084C2C9 /* CosinusView.swift */,
 				D7C38FD4250585D00084C2C9 /* ArcCosinusView.swift */,
 				D7C38FC9250564650084C2C9 /* TangentView.swift */,
 				D75E7937239B12D100EC8111 /* Sinus.swift */,
+				D77DB40F250A8D30002B50EF /* OrangeCenterView.swift */,
+				D711B50D250842FA00D1B510 /* CenteringClipView.swift */,
 				D731082D24FD44FE00FA86BD /* SKTZoomingScrollView.h */,
 				D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */,
 				D731083024FD450C00FA86BD /* SKTCenteringClipView.h */,
@@ -398,6 +413,7 @@
 				D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */,
 				D78E7399250531E50044682C /* Folio-Std-Bold.ttf in Resources */,
 				D7C38FCD2505797D0084C2C9 /* Zoom.pdf in Resources */,
+				D75705BD2507A7A600E9D2CE /* Credits.rtf in Resources */,
 				D7C38FCE2505797D0084C2C9 /* Move.pdf in Resources */,
 				D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */,
 				D78E7398250531E50044682C /* Folio-Std-Medium.ttf in Resources */,
@@ -531,20 +547,24 @@
 			files = (
 				D7F5E5AC24FD269E003ABD52 /* NumbersView.swift in Sources */,
 				D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */,
+				D77DB412250AA1D5002B50EF /* PowerOfThreeView.swift in Sources */,
 				D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */,
 				D7C38FD5250585D00084C2C9 /* ArcCosinusView.swift in Sources */,
 				D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */,
 				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
-				D75E793A239B187600EC8111 /* GeneralEquationView.swift in Sources */,
+				D75E793A239B187600EC8111 /* ParabolaView.swift in Sources */,
 				D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */,
 				D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
 				D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */,
 				D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */,
+				D77DB414250AA30A002B50EF /* RettaView.swift in Sources */,
 				D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */,
 				D76639A32503631D0044AFA1 /* GridView.swift in Sources */,
-				D75E7936239AF6EC00EC8111 /* ParabolaView.swift in Sources */,
+				D711B50E250842FA00D1B510 /* CenteringClipView.swift in Sources */,
+				D77DB410250A8D30002B50EF /* OrangeCenterView.swift in Sources */,
 				D731082E24FD44FE00FA86BD /* SKTZoomingScrollView.m in Sources */,
+				D77DB416250AA366002B50EF /* AbsoluteValueView.swift in Sources */,
 				D75E7934239ADA1400EC8111 /* CartesianBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -98,11 +98,7 @@ class ArcCosinusView: CosinusView {
         
     }
     
-    override func transformXIntoY(_ x: Double) -> Double {
-        
-        return x ^^ 2
-        
-    }
+   
     
 }
 

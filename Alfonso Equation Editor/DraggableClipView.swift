@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class DraggableClipView: SKTCenteringClipView
+class DraggableClipView: CenteringClipView
 {
     private var clickPoint: NSPoint!
     private var originalOrigin: NSPoint!

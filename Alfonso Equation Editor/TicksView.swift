@@ -9,13 +9,28 @@
 import Cocoa
 
 class TicksView: AxesView {
-   
-
+    
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
         if !appDelegate!.shouldDrawAxes {
             return
+        }
+        
+        let multiplyFactor: Double!
+        
+        if self.appDelegate.shouldApplyGridSpacing {
+            multiplyFactor = Double(Int( self.appDelegate.firstSliderDoubleValue))
+        } else {
+            multiplyFactor = 1.0
+        }
+        
+        
+        let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
+        
+        if distanceBetweenVerticalLines == 0 {
+            print("Eccoci")
         }
         
         // Draw X axis positive Ticks
@@ -30,7 +45,7 @@ class TicksView: AxesView {
             
             
             let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
-                
+            
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
@@ -45,7 +60,7 @@ class TicksView: AxesView {
             
             tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: height / 2 - tickHeight))
             tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: height / 2 + tickHeight))
-
+            
             tickBezierPath.lineWidth = 2.0
             
             NSColor.black.set()
@@ -56,7 +71,7 @@ class TicksView: AxesView {
         }
         
         // Draw X axis negative Ticks
-
+        
         
         ctr = Double(width / 2)
         
@@ -69,8 +84,8 @@ class TicksView: AxesView {
             
             
             let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
-                
-          //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+            
+            //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
@@ -83,7 +98,7 @@ class TicksView: AxesView {
             
             tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: height / 2 - tickHeight))
             tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: height / 2 + tickHeight))
-
+            
             tickBezierPath.lineWidth = 2.0
             
             NSColor.black.set()
@@ -106,8 +121,8 @@ class TicksView: AxesView {
             
             
             let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
-                
-        //    print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+            
+            //    print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
@@ -120,7 +135,7 @@ class TicksView: AxesView {
             
             tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: CGFloat(ctr)))
             tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: CGFloat(ctr)))
-
+            
             tickBezierPath.lineWidth = 2.0
             
             NSColor.black.set()
@@ -131,7 +146,7 @@ class TicksView: AxesView {
         }
         
         // Draw Y axis negative Ticks
-
+        
         ctr = Double(height / 2)
         
         tickHeight = CGFloat(6.0)
@@ -143,8 +158,8 @@ class TicksView: AxesView {
             
             
             let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
-                
-         //   print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
+            
+            //   print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 tickHeight = 5.0
@@ -157,7 +172,7 @@ class TicksView: AxesView {
             
             tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: CGFloat(ctr)))
             tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: CGFloat(ctr)))
-
+            
             tickBezierPath.lineWidth = 2.0
             
             NSColor.black.set()

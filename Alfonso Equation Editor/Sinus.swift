@@ -116,5 +116,26 @@ class SinusView: TangentView {
         
     }
     
+    override func cursorUpdate(with event: NSEvent) {
+        
+        let segControl = self.appDelegate.toolsSegmentedControl
+        
+        if segControl?.selectedSegment == 0 {
+            NSCursor.arrow.set()
+        }
+        if segControl?.selectedSegment == 1 {
+        
+            let image = NSImage(named: "Move")!
+            
+            NSCursor(image: image, hotSpot: NSPoint(x: image.size.width / 2,y: image.size.height / 2)).set()
+        
+        }
+        if segControl?.selectedSegment == 2 {
+        
+            let image = NSImage(named: "Zoom")!
+                       
+            NSCursor(image: image, hotSpot: NSPoint(x: image.size.width / 2,y: image.size.height / 2)).set()
+        }
+    }
     
 }
