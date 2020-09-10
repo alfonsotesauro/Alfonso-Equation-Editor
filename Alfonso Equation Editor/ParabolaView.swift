@@ -47,7 +47,7 @@ class ParabolaView: NumbersView {
                 
                 if self.appDelegate.shouldApplyParabolaDivisor {
                 
-                    correctY = self.transformXIntoY(Double(ctr)) / self.steps
+                    correctY = self.transformXIntoY(Double(ctr)) / self.appDelegate.thirdSliderDoubleValue
                     
                 } else {
                     correctY = self.transformXIntoY(Double(ctr))
