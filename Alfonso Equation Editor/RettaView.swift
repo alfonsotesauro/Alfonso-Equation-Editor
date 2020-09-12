@@ -18,7 +18,7 @@ class RettaView: PowerOfThreeView {
         // Drawing code here.
         
         
-        let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
+        //let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
         
         
         var ctr = -Double(width / 2) // -10000 is the original
@@ -28,9 +28,8 @@ class RettaView: PowerOfThreeView {
         
         if self.appDelegate!.shouldDrawRetta {
         
-        ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
         
-        finalValue = fabs(ctr)
+        
         
         let currentSegment2 = NSBezierPath.init()
         currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
@@ -43,11 +42,11 @@ class RettaView: PowerOfThreeView {
         repeat {
             
             
-            var correctX = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
+            var correctX = (ctr * distanceBetweenVerticalLines) 
             
             correctX = correctX + Double(width / 2)
             
-            var correctY = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
+            var correctY = (ctr * distanceBetweenVerticalLines)
             
             correctY = correctY + Double(height / 2)
             

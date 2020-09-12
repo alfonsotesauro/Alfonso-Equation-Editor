@@ -37,21 +37,22 @@ class GridView: CartesianBackgroundView {
         let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
         
         repeat {
-            let path = NSBezierPath()
+    let path = CartesianBezierPath(cartesianPlanView: self)
             
-            path.move(to: NSPoint(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: 0))
-            path.line(to: NSPoint(x: CGFloat(distanceBetweenVerticalLines * ctr) + width / 2, y: height))
-            path.move(to: NSPoint(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: 0))
-            path.line(to: NSPoint(x: width / 2 - CGFloat(distanceBetweenVerticalLines * ctr), y: height))
+            path.move(to: NSPoint(x: CGFloat(distanceBetweenVerticalLines * ctr), y: -halfHeight))
+            path.line(to: NSPoint(x: CGFloat(distanceBetweenVerticalLines * ctr), y: halfHeight))
+            path.move(to: NSPoint(x: -CGFloat(distanceBetweenVerticalLines * ctr), y: -halfHeight))
+            path.line(to: NSPoint(x: -CGFloat(distanceBetweenVerticalLines * ctr), y: halfHeight))
+            
             
             path.lineWidth = 0.5
             
+            //////////
+            path.move(to: NSPoint(x: -halfWidth, y: CGFloat(distanceBetweenVerticalLines * ctr)))
+            path.line(to: NSPoint(x: halfWidth, y: CGFloat(distanceBetweenVerticalLines * ctr)))
             
-            path.move(to: NSPoint(x: 0, y: CGFloat(distanceBetweenVerticalLines * ctr) + height / 2))
-            path.line(to: NSPoint(x: width, y: CGFloat(distanceBetweenVerticalLines * ctr) + height / 2))
-            
-            path.move(to: NSPoint(x: 0, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
-            path.line(to: NSPoint(x: width, y: height / 2 - CGFloat(distanceBetweenVerticalLines * ctr)))
+            path.move(to: NSPoint(x: -halfWidth, y: 0 - CGFloat(distanceBetweenVerticalLines * ctr)))
+            path.line(to: NSPoint(x: halfWidth, y: 0 - CGFloat(distanceBetweenVerticalLines * ctr)))
             
             verticalLines.append(path)
             ctr += 1.0

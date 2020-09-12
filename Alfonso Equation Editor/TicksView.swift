@@ -35,12 +35,12 @@ class TicksView: AxesView {
         
         // Draw X axis positive Ticks
         
-        var ctr: Double = Double(width / 2)
+        var ctr: Double = 0.0
         
         var tickHeight = CGFloat(6.0)
         var intCounter: Int = 0
         
-        while ctr < Double(width) {
+        while ctr < Double(halfWidth) {
             
             
             
@@ -56,10 +56,10 @@ class TicksView: AxesView {
             }
             
             intCounter += 1
-            let tickBezierPath = NSBezierPath()
+            let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: height / 2 - tickHeight))
-            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: height / 2 + tickHeight))
+            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: 0 - tickHeight))
+            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: 0 + tickHeight))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -73,12 +73,12 @@ class TicksView: AxesView {
         // Draw X axis negative Ticks
         
         
-        ctr = Double(width / 2)
+        ctr = 0.0
         
         tickHeight = CGFloat(6.0)
         intCounter = 0
         
-        while ctr > 0 {
+        while ctr > -Double(halfWidth) {
             
             
             
@@ -94,10 +94,10 @@ class TicksView: AxesView {
             }
             
             intCounter += 1
-            let tickBezierPath = NSBezierPath()
+            let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: height / 2 - tickHeight))
-            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: height / 2 + tickHeight))
+            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: 0 - tickHeight))
+            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: 0 + tickHeight))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -110,12 +110,12 @@ class TicksView: AxesView {
         
         // Draw Y axis positive Ticks
         
-        ctr = Double(height / 2)
+        ctr = 0
         
         tickHeight = CGFloat(6.0)
         intCounter = 0
         
-        while ctr < Double(height) {
+        while ctr < Double(halfHeight) {
             
             
             
@@ -131,10 +131,10 @@ class TicksView: AxesView {
             }
             
             intCounter += 1
-            let tickBezierPath = NSBezierPath()
+            let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: CGFloat(ctr)))
-            tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.move(to: NSPoint(x: 0 - tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.line(to: NSPoint(x: 0 + tickHeight, y: CGFloat(ctr)))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -147,12 +147,12 @@ class TicksView: AxesView {
         
         // Draw Y axis negative Ticks
         
-        ctr = Double(height / 2)
+        ctr = 0
         
         tickHeight = CGFloat(6.0)
         intCounter = 0
         
-        while ctr > 0 {
+        while ctr > -Double(halfHeight) {
             
             
             
@@ -168,10 +168,10 @@ class TicksView: AxesView {
             }
             
             intCounter += 1
-            let tickBezierPath = NSBezierPath()
+            let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: width / 2 - tickHeight, y: CGFloat(ctr)))
-            tickBezierPath.line(to: NSPoint(x: width / 2 + tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.move(to: NSPoint(x: 0 - tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.line(to: NSPoint(x: 0 + tickHeight, y: CGFloat(ctr)))
             
             tickBezierPath.lineWidth = 2.0
             

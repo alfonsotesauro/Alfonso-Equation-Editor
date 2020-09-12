@@ -23,9 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var sinusViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var sinusViewBottomConstraint: NSLayoutConstraint!
     
+    @objc dynamic var distancesString: String = ""
+
     @objc dynamic var firstSliderDoubleValue: Double = 1
     @objc dynamic var secondSliderDoubleValue: Double = 30
-    @objc dynamic var thirdSliderDoubleValue: Double = 160.0
+    @objc dynamic var thirdSliderDoubleValue: Double = 168.771
     @objc dynamic var fourthSliderDoubleValue: Double = 1.0
     @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
@@ -40,8 +42,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawCos: Bool = false
     @objc dynamic var shouldDrawTan: Bool = false
     @objc dynamic var shouldDrawNumbers: Bool = true
-    @objc dynamic var shouldDrawPowerThree: Bool = false
-    @objc dynamic var shouldDrawArcCos: Bool = false
+    @objc dynamic var shouldDrawPowerThree: Bool = false {
+        didSet(newValue) {
+           
+                self.equationView.setNeedsDisplay(self.equationView.bounds)
+            
+        }
+    }
+    @objc dynamic var shouldDrawPowerOfFour: Bool = false {
+        didSet(newValue) {
+           
+                self.equationView.setNeedsDisplay(self.equationView.bounds)
+            
+        }
+    }
+    
     @objc dynamic var shouldApplyGridSpacing: Bool = false {
         didSet(newValue) {
            
@@ -57,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    @objc dynamic var numberOfSteps: Double = 167 {
+    @objc dynamic var numberOfSteps: Double = 170 {
         didSet(newValue) {
             self.equationView.steps = newValue
         }
@@ -84,6 +99,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.scrollView.bind(NSBindingName(rawValue: "factor"), to: self, withKeyPath: "fifthSliderDoubleValue", options: nil)
         self.mathLabel.latex = "y = x^2";
         self.mathLabel.textColor = .white
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "distancesChanged"), object: nil, queue: nil) { (note) in
+            
+            print("\(note.userInfo)")
+            
+        }
+        
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

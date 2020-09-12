@@ -18,25 +18,25 @@ class AxesView: GridView {
             return
         }
 
-        let axesPath = NSBezierPath()
+        let axesPath = CartesianBezierPath(cartesianPlanView: self)
+    
+        axesPath.move(to: NSPoint(x: 0, y: -halfHeight))
+        axesPath.line(to: NSPoint(x: 0, y: halfHeight))
+        axesPath.line(to: NSPoint(x: 0 - 6, y: halfHeight - 10))
+        axesPath.move(to: NSPoint(x: 0, y: halfHeight))
+        
+        axesPath.line(to: NSPoint(x: 0 + 6, y: halfHeight - 10))
 
-        axesPath.move(to: NSPoint(x: width / 2, y: 0))
-        axesPath.line(to: NSPoint(x: width / 2, y: height))
-        axesPath.line(to: NSPoint(x: width / 2 - 6, y: height - 10))
-        axesPath.move(to: NSPoint(x: width / 2, y: height))
-        axesPath.line(to: NSPoint(x: width / 2 + 6, y: height - 10))
-
-        axesPath.move(to: NSPoint(x: 0, y: height / 2))
-        axesPath.line(to: NSPoint(x: width, y: height / 2))
-        axesPath.line(to: NSPoint(x: width - 10, y: height / 2 + 6))
-        axesPath.move(to: NSPoint(x: width, y: height / 2))
-        axesPath.line(to: NSPoint(x: width - 10, y: height / 2 - 6))
-
+        axesPath.move(to: NSPoint(x: -halfWidth, y: 0))
+        
+        axesPath.line(to: NSPoint(x: halfWidth, y: 0))
+        axesPath.line(to: NSPoint(x: halfWidth - 10, y: 0 + 6))
+        axesPath.move(to: NSPoint(x: halfWidth, y: 0))
+        axesPath.line(to: NSPoint(x: halfWidth - 10, y: -6))
+         
         NSColor.black.set()
         axesPath.lineWidth = 2.0
         axesPath.stroke()
 
-       
-        
     }
 }

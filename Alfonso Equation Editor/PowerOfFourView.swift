@@ -8,9 +8,7 @@
 
 import Cocoa
 
-let shuldDrawExactCenterRect = false
-
-class ParabolaView: NumbersView {
+class PowerOfFourView: CosinusView {
     
     
     override func draw(_ dirtyRect: NSRect) {
@@ -18,7 +16,7 @@ class ParabolaView: NumbersView {
         
         // Drawing code here.
         
-    
+        
         
         
         let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
@@ -26,14 +24,18 @@ class ParabolaView: NumbersView {
         
         var ctr = -Double(width / 2) // -10000 is the original
         
-        let finalValue = fabs(ctr)
+        var finalValue = fabs(ctr)
         
-
-        if self.appDelegate!.shouldDrawParabola {
+        
+        if self.appDelegate!.shouldDrawPowerOfFour {
+            
+            ctr = -1000.0 // -10000 is the original
+            
+            finalValue = fabs(ctr)
+            
             let currentSegment = NSBezierPath.init()
             currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
-            
-            var firstCorrectY = self.transformXIntoY(Double(ctr * distanceBetweenVerticalLines))
+            var firstCorrectY = self.transformXIntoY3(Double(Int(ctr * distanceBetweenVerticalLines)))
             
             firstCorrectY = firstCorrectY + Double(height / 2)
             
@@ -45,11 +47,7 @@ class ParabolaView: NumbersView {
                 let correctX = ctr + Double(width / 2)
                 var correctY = ctr + Double(height / 2)
                 
-               
-                
-                    correctY = self.transformXIntoY(Double(ctr)) / self.appDelegate.thirdSliderDoubleValue
-                    
-              
+                correctY = self.transformXIntoY3(ctr / 46) 
                 
                 correctY = correctY + Double(height / 2)
                 
@@ -63,21 +61,17 @@ class ParabolaView: NumbersView {
                 
                 ctr += 3.0
             } while(ctr < finalValue)
-            NSColor.red.set()
+            NSColor.blue.set()
             currentSegment.stroke()
         }
-        
-      
-        
-      
-        
-        
-        
-    }
-    func transformXIntoY(_ x: Double) -> Double {
-        
-        return x ^^ 2
+       
         
     }
     
+    
+    func transformXIntoY3(_ x: Double) -> Double {
+        
+        return x ^^ 4
+        
+    }
 }

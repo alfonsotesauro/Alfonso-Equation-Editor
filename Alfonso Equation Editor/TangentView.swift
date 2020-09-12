@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class TangentView: ArcCosinusView {
+class TangentView: PowerOfFourView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)

@@ -34,7 +34,6 @@ class AbsoluteValueView: RettaView {
         
         if self.appDelegate!.shouldDrawAbsoluteValue {
             
-            ctr = -appDelegate!.thirdSliderDoubleValue // -10000 is the original
             
             finalValue = fabs(ctr)
             
@@ -49,11 +48,11 @@ class AbsoluteValueView: RettaView {
             repeat {
                 
                 
-                var correctX = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
+                var correctX = (ctr * distanceBetweenVerticalLines)
                 
                 correctX = correctX + Double(width / 2)
                 
-                var correctY = (ctr * distanceBetweenVerticalLines) / (self.steps / distanceBetweenVerticalLines)
+                var correctY = (ctr * distanceBetweenVerticalLines)
                 
                 correctY = correctY + Double(height / 2)
                 

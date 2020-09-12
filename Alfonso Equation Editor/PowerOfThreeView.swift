@@ -47,7 +47,7 @@ class PowerOfThreeView: ParabolaView {
                 let correctX = ctr + Double(width / 2)
                 var correctY = ctr + Double(height / 2)
                 
-                correctY = self.transformXIntoY2(Double(ctr / 25))
+                correctY = self.transformXIntoY2(Double(ctr / 30))
                 
                 correctY = correctY + Double(height / 2)
                 

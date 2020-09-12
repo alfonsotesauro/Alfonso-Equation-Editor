@@ -738,13 +738,13 @@
                                     <constraint firstAttribute="width" constant="89" id="gVb-BT-Joz"/>
                                     <constraint firstAttribute="height" constant="14" id="rAP-DH-q5C"/>
                                 </constraints>
-                                <buttonCell key="cell" type="check" title="arccos" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Idr-J9-I9G">
+                                <buttonCell key="cell" type="check" title="x^4" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Idr-J9-I9G">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="FPd-DJ-rtL"/>
-                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawArcCos" id="AxA-oX-f4R"/>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawPowerOfFour" id="nu5-C5-19W"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -763,7 +763,7 @@
                         <rect key="frame" x="1014" y="20" width="116" height="530"/>
                         <subviews>
                             <segmentedControl verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-7z-BWn">
-                                <rect key="frame" x="6" y="497" width="104" height="34"/>
+                                <rect key="frame" x="6" y="507" width="104" height="24"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="zym-6s-52y">
                                     <font key="font" metaFont="system"/>
                                     <segments>
@@ -776,7 +776,7 @@
                                 </segmentedCell>
                             </segmentedControl>
                             <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-Tf-kl5">
-                                <rect key="frame" x="12" y="460" width="93" height="23"/>
+                                <rect key="frame" x="12" y="460" width="93" height="33"/>
                                 <buttonCell key="cell" type="roundTextured" title="Center Scroll" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hfJ-gq-1I3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -906,7 +906,7 @@
                                             <constraint firstAttribute="height" constant="19" id="iXJ-Ip-cYL"/>
                                             <constraint firstAttribute="width" constant="116" id="oFn-Oy-LCr"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="150" maxValue="170" doubleValue="160" tickMarkPosition="above" sliderType="linear" id="uqG-P8-z3I"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="160" maxValue="180" doubleValue="170" tickMarkPosition="above" sliderType="linear" id="uqG-P8-z3I"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="HUx-n5-qIo"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="thirdSliderDoubleValue" id="6xS-k6-UHA"/>
@@ -1116,7 +1116,7 @@
                                             <constraint firstAttribute="width" constant="116" id="Ttb-fU-Gvh"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="ncc-Lv-96P"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="100" maxValue="500" doubleValue="166" tickMarkPosition="above" sliderType="linear" id="zwj-Ol-T9q"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="100" maxValue="300" doubleValue="170" tickMarkPosition="above" sliderType="linear" id="zwj-Ol-T9q"/>
                                         <connections>
                                             <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="JwI-Fr-WtN"/>
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfSteps" id="Aqf-GF-XG4"/>
