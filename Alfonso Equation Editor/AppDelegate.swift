@@ -41,12 +41,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawAxes: Bool = true
     @objc dynamic var shouldDrawBasicLetters: Bool = true
     @objc dynamic var shouldDrawParabola: Bool = true
-    @objc dynamic var shouldDrawRetta: Bool = false
+    @objc dynamic var shouldDrawRetta: Bool = true
     @objc dynamic var shouldDrawAbsoluteValue: Bool = false
     @objc dynamic var shouldDrawSin: Bool = false
     @objc dynamic var shouldDrawCos: Bool = false
     @objc dynamic var shouldDrawTan: Bool = false
     @objc dynamic var shouldDrawNumbers: Bool = true
+    @objc dynamic var shouldDrawCross: Bool = false
+    
     @objc dynamic var shouldDrawPowerThree: Bool = false {
         didSet(newValue) {
            
@@ -107,7 +109,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "distancesChanged"), object: nil, queue: nil) { (note) in
             
-            print("\(note.userInfo)")
+           // print("\(note.userInfo)")
             
         }
         
@@ -267,13 +269,46 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //
 }
 
-extension NSScrollView {
-    func scrollToCenter() {
-        guard let docView = documentView else { return }
-        let center = CGPoint(
-            x: docView.bounds.midX - contentView.frame.width / 2,
-            y: docView.bounds.midY - (docView.isFlipped ? -1 : 1) * contentView.frame.height / 2
-        )
-        docView.scroll(center)
+@objc extension SKTZoomingScrollView {
+    @objc func scrollToCenter() {
+        let docView = contentView
+        
+        // 90 va bene con 400%
+        // 120 va bene con 400%
+        // 185 va bene con 800%
+        // 218.2 va bene con 1600%
+        var ctr = 0.0
+        
+        if self.horizontalScroller!.isEnabled, self.verticalScroller!.isEnabled {
+            
+        ctr = 50.0
+        
+        while self.verticalScroller!.doubleValue < 0.4999 || self.verticalScroller!.doubleValue > 0.5001{
+            ctr += 0.05
+            let center2 = CGPoint(x: 0, y: ctr)
+            docView.scroll(center2)
+            
+            
+            
+        }
+            
+        }
+         if self.horizontalScroller!.isEnabled, self.verticalScroller!.isEnabled {
+        let verticalScrollerFoundPosition = ctr
+        
+        ctr = 50.0
+        
+        while self.horizontalScroller!.doubleValue < 0.4999 || self.horizontalScroller!.doubleValue > 0.5001{
+            
+            ctr += 0.05
+            let center2 = CGPoint(x: ctr, y: verticalScrollerFoundPosition)
+            docView.scroll(center2)
+            
+            
+            
+        }
+        
+        }
+        
     }
 }

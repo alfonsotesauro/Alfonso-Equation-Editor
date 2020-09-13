@@ -44,7 +44,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 2)
             
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -58,8 +58,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: 0 - tickHeight))
-            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: 0 + tickHeight))
+            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr * appDelegate.numberOfPixelsInUnit), y: 0 - tickHeight))
+            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr * appDelegate.numberOfPixelsInUnit), y: 0 + tickHeight))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -67,7 +67,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr += distanceBetweenVerticalLines * 3.0
+            ctr += 0.5
         }
         
         // Draw X axis negative Ticks
@@ -83,7 +83,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 2)
             
             //  print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -96,8 +96,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr), y: 0 - tickHeight))
-            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr), y: 0 + tickHeight))
+            tickBezierPath.move(to: NSPoint(x: CGFloat(ctr * appDelegate.numberOfPixelsInUnit), y: 0 - tickHeight))
+            tickBezierPath.line(to: NSPoint(x: CGFloat(ctr * appDelegate.numberOfPixelsInUnit), y: 0 + tickHeight))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -105,7 +105,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr -= distanceBetweenVerticalLines * 3
+            ctr -= 0.5
         }
         
         // Draw Y axis positive Ticks
@@ -120,7 +120,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 2)
             
             //    print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -133,8 +133,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: 0 - tickHeight, y: CGFloat(ctr)))
-            tickBezierPath.line(to: NSPoint(x: 0 + tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.move(to: NSPoint(x: 0 - tickHeight, y: CGFloat(ctr * appDelegate.numberOfPixelsInUnit)))
+            tickBezierPath.line(to: NSPoint(x: 0 + tickHeight, y: CGFloat(ctr * appDelegate.numberOfPixelsInUnit)))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -142,7 +142,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr += distanceBetweenVerticalLines * 3
+            ctr += 0.5
         }
         
         // Draw Y axis negative Ticks
@@ -157,7 +157,7 @@ class TicksView: AxesView {
             
             
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 2)
             
             //   print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -170,8 +170,8 @@ class TicksView: AxesView {
             intCounter += 1
             let tickBezierPath = CartesianBezierPath(cartesianPlanView: self)
             
-            tickBezierPath.move(to: NSPoint(x: 0 - tickHeight, y: CGFloat(ctr)))
-            tickBezierPath.line(to: NSPoint(x: 0 + tickHeight, y: CGFloat(ctr)))
+            tickBezierPath.move(to: NSPoint(x: 0 - tickHeight, y: CGFloat(ctr) * CGFloat(appDelegate.numberOfPixelsInUnit)))
+            tickBezierPath.line(to: NSPoint(x: 0 + tickHeight, y: CGFloat(ctr) * CGFloat(appDelegate.numberOfPixelsInUnit)))
             
             tickBezierPath.lineWidth = 2.0
             
@@ -179,7 +179,7 @@ class TicksView: AxesView {
             
             tickBezierPath.stroke()
             
-            ctr -= distanceBetweenVerticalLines * 3
+            ctr -= 0.5
         }
     }
 }

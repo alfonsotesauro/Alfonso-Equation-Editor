@@ -22,7 +22,7 @@ class ParabolaView: NumbersView {
         
         let finalValue = fabs(ctr)
         
-
+        
         if self.appDelegate!.shouldDrawParabola {
             let currentSegment = CartesianBezierPath(cartesianPlanView: self)
             currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
@@ -41,7 +41,7 @@ class ParabolaView: NumbersView {
                 var correctY = ctr
                 
                 correctY = self.transformXIntoY(Double(ctr)) * howManyPixelsInUnit
-                                    
+                
                 currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                 
                 ctr += 0.01

@@ -73,7 +73,7 @@ class NumbersView: TicksView {
             
             intCounter += 1
             
-            ctr += distanceBetweenVerticalLines * 3.0
+            ctr += appDelegate.numberOfPixelsInUnit / 9.9
         }
         
         // Draw X axis negative Numbers
@@ -105,9 +105,9 @@ class NumbersView: TicksView {
             
             intCounter += 1
             
-            ctr -= distanceBetweenVerticalLines * 3.0
+            ctr -= appDelegate.numberOfPixelsInUnit / 9.9
         }
-        
+
         // Draw Y axis positive Numbers
         
         ctr = Double(height / 2)
@@ -116,13 +116,13 @@ class NumbersView: TicksView {
         
         while ctr < Double(height) {
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 2)
             
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
             if reminder == 0 && intCounter != 0 {
                 let halfWidth: Double = Double(width / 2)
-                
+            
                 var numberRect = NSRect(x: halfWidth - 25,y: ctr - 16, width:25.5, height: 20)
                 let numberString = "\(numberToBeDrawn)"
                 var nsNumberString = numberString as NSString
@@ -137,9 +137,9 @@ class NumbersView: TicksView {
             
             intCounter += 1
             
-            ctr += distanceBetweenVerticalLines * 3.0
+            ctr += appDelegate.numberOfPixelsInUnit / 4
         }
-        
+
         // Draw Y axis negative Numbers
         
         ctr = Double(height / 2)
@@ -148,7 +148,7 @@ class NumbersView: TicksView {
         
         while ctr > 0 {
             
-            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 5)
+            let (_, reminder) =  intCounter.quotientAndRemainder(dividingBy: 2)
             
             //print("Orig - \(intCounter) - Quotient - \(quotient) - Remainder \(reminder)")
             
@@ -169,7 +169,7 @@ class NumbersView: TicksView {
             
             intCounter += 1
             
-            ctr -= distanceBetweenVerticalLines * 3.0
+            ctr -= appDelegate.numberOfPixelsInUnit / 4
         }
     }
 }

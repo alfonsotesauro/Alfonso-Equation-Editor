@@ -42,7 +42,7 @@ class AbstractEquationView: NSView {
         
         NotificationCenter.default.addObserver(forName: NSView.boundsDidChangeNotification, object: self, queue: nil) { (note) in
             
-            print("Coordinate: \(self.bounds)")
+           // print("Coordinate: \(self.bounds)")
         }
         
         self.postsBoundsChangedNotifications = true
@@ -59,8 +59,8 @@ class AbstractEquationView: NSView {
         halfWidth = width / 2
         halfHeight = height / 2
         
-        distanceBetweenVerticalLines = Double(Double(width) / steps)
-        distanceBetweenHorizontalLines = Double(Double(height) / steps)
+        distanceBetweenVerticalLines = Double(Double(width) / appDelegate.numberOfPixelsInUnit)
+        distanceBetweenHorizontalLines = Double(Double(height) / appDelegate.numberOfPixelsInUnit)
         
         let userInfo: [AnyHashable : Any] = ["verticalDistance":distanceBetweenVerticalLines, "horizontalDistance" : distanceBetweenHorizontalLines]
         

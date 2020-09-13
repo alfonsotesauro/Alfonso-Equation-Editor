@@ -17,66 +17,42 @@ class AbsoluteValueView: RettaView {
         
         // Drawing code here.
         
+        var ctr = -5.0 // -10000 is the original
         
-        let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
-        
-        
-        var ctr = -Double(width / 2) // -10000 is the original
-        
-        var finalValue = fabs(ctr)
-        
-        
-        //let distanceBetweenHorizontalLines = Double(height) / steps
-        
-        
-        //let distanceBetweenHorizontalLines = Double(height) / steps
-        
+        let finalValue = fabs(ctr)
         
         if self.appDelegate!.shouldDrawAbsoluteValue {
+        
+        let rettaBezierPath = CartesianBezierPath(cartesianPlanView: self)
+        rettaBezierPath.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
+            
+            let firstCorrectY2: CGFloat = CGFloat(fabs(ctr * appDelegate.numberOfPixelsInUnit))
+                
+        rettaBezierPath.move(to: NSPoint.init(x: -halfWidth, y: firstCorrectY2))
+        
+        repeat {
             
             
-            finalValue = fabs(ctr)
+            let correctX = ctr * appDelegate.numberOfPixelsInUnit
             
-            let currentSegment2 = NSBezierPath.init()
-            currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
-            var firstCorrectY2 = ctr * distanceBetweenVerticalLines
+            let correctY = fabs(ctr * appDelegate.numberOfPixelsInUnit)
             
-            firstCorrectY2 = firstCorrectY2 + Double(height / 2)
+             rettaBezierPath.line(to: NSPoint.init(x: correctX, y: correctY))
             
-            currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
             
-            repeat {
-                
-                
-                var correctX = (ctr * distanceBetweenVerticalLines)
-                
-                correctX = correctX + Double(width / 2)
-                
-                var correctY = (ctr * distanceBetweenVerticalLines)
-                
-                correctY = correctY + Double(height / 2)
-                
-                let halfPlanHeight = Double(height / 2)
-                
-                if correctX < Double(width / 2) {
-                    let difference = halfPlanHeight - correctY
-                    correctY = halfPlanHeight + difference
-                }
-                
-                
-                currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
-                
-                
-                
-                ctr += 1.0
-            } while(ctr < finalValue)
-            NSColor.orange.set()
-            currentSegment2.stroke()
-        }
+            
+            
+            ctr += 0.01
+        } while(ctr < finalValue)
+        NSColor.orange.set()
+        rettaBezierPath.stroke()
+    }
+        
+     
         
         
         
     }
-   
+
     
 }

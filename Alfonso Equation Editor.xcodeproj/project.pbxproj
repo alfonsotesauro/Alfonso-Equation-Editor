@@ -39,6 +39,7 @@
 		D78E739D2505335C0044682C /* Folio-Std-Extra-Bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */; };
 		D78E739E2505335C0044682C /* Folio-Std-Light.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7391250531E50044682C /* Folio-Std-Light.ttf */; };
 		D78E739F2505335C0044682C /* Folio-Std-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7393250531E50044682C /* Folio-Std-Medium.ttf */; };
+		D7A1565B250E5ECC00F4B8A3 /* CrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1565A250E5ECC00F4B8A3 /* CrossView.swift */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC7250563CF0084C2C9 /* CosinusView.swift */; };
 		D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC9250564650084C2C9 /* TangentView.swift */; };
@@ -131,6 +132,7 @@
 		D78E7392250531E50044682C /* Folio-Std-Extra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Extra-Bold.ttf"; sourceTree = "<group>"; };
 		D78E7393250531E50044682C /* Folio-Std-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Medium.ttf"; sourceTree = "<group>"; };
 		D78E7394250531E50044682C /* Folio-Std-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Bold.ttf"; sourceTree = "<group>"; };
+		D7A1565A250E5ECC00F4B8A3 /* CrossView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossView.swift; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7C38FC7250563CF0084C2C9 /* CosinusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosinusView.swift; sourceTree = "<group>"; };
 		D7C38FC9250564650084C2C9 /* TangentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangentView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				D77DB411250AA1D5002B50EF /* PowerOfThreeView.swift */,
 				D77DB413250AA30A002B50EF /* RettaView.swift */,
 				D77DB415250AA366002B50EF /* AbsoluteValueView.swift */,
+				D7A1565A250E5ECC00F4B8A3 /* CrossView.swift */,
 				D7C38FC7250563CF0084C2C9 /* CosinusView.swift */,
 				D7C38FD4250585D00084C2C9 /* PowerOfFourView.swift */,
 				D7C38FC9250564650084C2C9 /* TangentView.swift */,
@@ -559,6 +562,7 @@
 				D75E793A239B187600EC8111 /* ParabolaView.swift in Sources */,
 				D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */,
 				D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */,
+				D7A1565B250E5ECC00F4B8A3 /* CrossView.swift in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
 				D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */,
 				D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */,

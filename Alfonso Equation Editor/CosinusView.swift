@@ -8,99 +8,52 @@
 
 import Cocoa
 
-class CosinusView: AbsoluteValueView {
+class CosinusView: CrossView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-         
-        let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
+        // Drawing code here.
         
+        var ctr = -50.0 // -10000 is the original
+        
+        let finalValue = fabs(ctr)
+        
+
         if self.appDelegate!.shouldDrawCos {
-            var ctr = Double(width / 2) // -10000 is the original
+            let currentSegment = CartesianBezierPath(cartesianPlanView: self)
+            currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
+            
+            let howManyPixelsInUnit = appDelegate.numberOfPixelsInUnit
+            
+            let firstCorrectY = self.performCosinus(Double(ctr)) * howManyPixelsInUnit
             
             
-            
-            let currentSegment2 = NSBezierPath.init()
-            
-            currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
-            var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-            
-            firstCorrectY2 = firstCorrectY2 + Double(height / 2)
-            
-            currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
+            currentSegment.move(to: NSPoint.init(x: ctr * howManyPixelsInUnit, y: firstCorrectY))
             
             repeat {
                 
-                var correctX = ctr
                 
-                correctX = ctr
+                let correctX = ctr * howManyPixelsInUnit
+                var correctY = ctr
                 
-                let toCalc = ctr
+                correctY = self.performCosinus(Double(ctr)) * howManyPixelsInUnit
+                                    
+                currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                 
-                var correctY = cos(toCalc) / self.steps
-                
-                correctY = (correctY * self.steps)
-                
-                correctY = correctY + Double(height / 2)
-                
-                
-                
-                
-                currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
-                
-                
-                
-                ctr += 5.0
-            } while(ctr < Double(width))
+                ctr += 0.01
+            } while(ctr < finalValue)
             NSColor.red.set()
-            //currentSegment2.stroke()
-            if true {
-                
-                ctr = 0 // -10000 is the original
-                
-                
-                
-                let currentSegment2 = NSBezierPath.init()
-                currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
-                var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-                
-                firstCorrectY2 = firstCorrectY2 + Double(height / 2)
-                
-                currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
-                
-                repeat {
-                    
-                    var correctX = ctr
-                    
-                    correctX = ctr
-                    
-                    let toCalc = (ctr - (Double(width / 2)))
-                    
-                    var correctY = cos(toCalc / self.steps)
-                    
-                    correctY = (correctY * self.steps)
-                    
-                    correctY = correctY + Double(height / 2)
-                    
-                    
-                    
-                    
-                    currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
-                    
-                    
-                    
-                    ctr += 5
-                } while(ctr < Double(width))
-                NSColor.red.set()
-                currentSegment2.stroke()
-                
-            }
+            currentSegment.stroke()
         }
         
     }
-    
-    
+
+    func performCosinus(_ x: Double) -> Double {
+        
+        return cos(x)
+        
+    }
 }
 
 

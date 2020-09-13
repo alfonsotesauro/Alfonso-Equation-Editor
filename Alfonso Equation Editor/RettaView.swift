@@ -17,51 +17,35 @@ class RettaView: PowerOfThreeView {
         
         // Drawing code here.
         
+        var ctr = -50.0 // -10000 is the original
         
-        //let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
-        
-        
-        var ctr = -Double(width / 2) // -10000 is the original
-        
-        var finalValue = fabs(ctr)
-        
+        let finalValue = fabs(ctr)
         
         if self.appDelegate!.shouldDrawRetta {
         
-        
-        
-        
-        let currentSegment2 = NSBezierPath.init()
-        currentSegment2.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
-        var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-        
-        firstCorrectY2 = firstCorrectY2 + 0 //Double(height / 2)
-        
-        currentSegment2.move(to: NSPoint.init(x: 0, y: firstCorrectY2))
+        let rettaBezierPath = CartesianBezierPath(cartesianPlanView: self)
+        rettaBezierPath.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
+            
+        let firstCorrectY2 = ctr * appDelegate.numberOfPixelsInUnit
+                
+        rettaBezierPath.move(to: NSPoint.init(x: -Double(halfHeight), y: firstCorrectY2))
         
         repeat {
             
             
-            var correctX = (ctr * distanceBetweenVerticalLines) 
+            let correctX = ctr * appDelegate.numberOfPixelsInUnit
             
-            correctX = correctX + Double(width / 2)
+            let correctY = (ctr * appDelegate.numberOfPixelsInUnit)
             
-            var correctY = (ctr * distanceBetweenVerticalLines)
-            
-            correctY = correctY + Double(height / 2)
+             rettaBezierPath.line(to: NSPoint.init(x: correctX, y: correctY))
             
             
             
             
-            // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
-            currentSegment2.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
-            
-            
-            
-            ctr += 3.0
+            ctr += 0.01
         } while(ctr < finalValue)
         NSColor.blue.set()
-        currentSegment2.stroke()
+        rettaBezierPath.stroke()
     }
         
      

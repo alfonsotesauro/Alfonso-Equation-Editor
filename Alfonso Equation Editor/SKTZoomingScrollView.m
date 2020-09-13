@@ -46,7 +46,7 @@
  */
 
 #import "SKTZoomingScrollView.h"
-
+#import "Alfonso_Equation_Editor-Swift.h"
 
 // The name of the binding supported by this class, in addition to the ones whose support is inherited from NSView.
 NSString *SKTZoomingScrollViewFactor = @"factor";
@@ -127,25 +127,7 @@ NSLocalizedStringFromTable(@"1600%", @"SKTZoomingScrollView", @"A level of zoomi
     CGFloat goodPointy = (((clipView.bounds.size.height)) / 2) - 16;
     [clipView setBoundsOrigin:NSMakePoint(goodPointx, goodPointy)];
    
-    NSScrollView *scrollView = self;
-    
-    const CGFloat midX = NSMidX([[scrollView documentView] bounds]);
-       const CGFloat midY = NSMidY([[scrollView documentView] bounds]);
-
-       const CGFloat halfWidth = NSWidth([[scrollView contentView] frame]) / 2.0;
-       const CGFloat halfHeight = NSHeight([[scrollView contentView] frame]) / 2.0;
-
-       NSPoint newOrigin;
-       if([[scrollView documentView] isFlipped])
-       {
-           newOrigin = NSMakePoint(midX - halfWidth, midY + halfHeight);
-       }
-       else
-       {
-           newOrigin = NSMakePoint(midX - halfWidth, midY - halfHeight);
-       }
-
-       [[scrollView documentView] scrollPoint:newOrigin];
+    [self scrollToCenter];
 }
 
 
