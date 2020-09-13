@@ -760,13 +760,13 @@
                         </customSpacing>
                     </stackView>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-Vu-dcM" customClass="SKTZoomingScrollView">
-                        <rect key="frame" x="19" y="20" width="484" height="533"/>
+                        <rect key="frame" x="19" y="20" width="899" height="533"/>
                         <clipView key="contentView" id="3X5-MS-Mu5" customClass="DraggableClipView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                            <rect key="frame" x="1" y="1" width="467" height="516"/>
+                            <rect key="frame" x="1" y="1" width="882" height="516"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="464" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="879" height="502"/>
                                 </customView>
                             </subviews>
                             <constraints>
@@ -777,11 +777,11 @@
                             </constraints>
                         </clipView>
                         <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fBV-Iz-Hym">
-                            <rect key="frame" x="1" y="517" width="467" height="15"/>
+                            <rect key="frame" x="1" y="517" width="882" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKB-d8-W6y">
-                            <rect key="frame" x="468" y="1" width="15" height="516"/>
+                            <rect key="frame" x="883" y="1" width="15" height="516"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -796,7 +796,7 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="0.0" y="20" width="71" height="64"/>
+                                <rect key="frame" x="-2" y="20" width="71" height="64"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
                                         <rect key="frame" x="-2" y="48" width="75" height="18"/>
@@ -860,7 +860,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
-                                        <rect key="frame" x="-2" y="73" width="66" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="66" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="W1f-Ee-Ptc"/>
                                             <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
@@ -875,7 +875,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="75" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="71" id="0oQ-s1-i6A"/>
                                             <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
@@ -890,7 +890,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="23" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
                                             <constraint firstAttribute="width" constant="89" id="qBM-Nk-KUq"/>
@@ -905,7 +905,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="-27" width="93" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="89" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>
@@ -1006,8 +1006,8 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
-                    <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="206" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCW-0K-gi3">
-                        <rect key="frame" x="742" y="87" width="388" height="530"/>
+                    <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCW-0K-gi3">
+                        <rect key="frame" x="938" y="87" width="192" height="530"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1or-p5-XVI">
                                 <rect key="frame" x="0.0" y="0.0" width="66" height="515"/>
@@ -1046,7 +1046,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moN-th-iCr">
-                                <rect key="frame" x="272" y="0.0" width="116" height="530"/>
+                                <rect key="frame" x="76" y="0.0" width="116" height="530"/>
                                 <subviews>
                                     <segmentedControl verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-7z-BWn">
                                         <rect key="frame" x="6" y="497" width="104" height="34"/>
@@ -1481,7 +1481,7 @@
                     <constraint firstAttribute="trailing" secondItem="zCW-0K-gi3" secondAttribute="trailing" constant="46" id="DBT-yh-hiU"/>
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="NrU-Ld-fKh"/>
                     <constraint firstAttribute="bottom" secondItem="6Kg-Vu-dcM" secondAttribute="bottom" constant="20" id="OH4-VV-kCF"/>
-                    <constraint firstItem="zCW-0K-gi3" firstAttribute="leading" secondItem="6Kg-Vu-dcM" secondAttribute="trailing" constant="239" id="SYy-uH-SS9"/>
+                    <constraint firstItem="zCW-0K-gi3" firstAttribute="leading" secondItem="6Kg-Vu-dcM" secondAttribute="trailing" constant="20" id="SYy-uH-SS9"/>
                     <constraint firstItem="Y01-0e-G7E" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VXA-ya-73o"/>
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VxC-1R-EUf"/>
                     <constraint firstItem="bWt-K0-gcY" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="YyT-FJ-v02"/>
