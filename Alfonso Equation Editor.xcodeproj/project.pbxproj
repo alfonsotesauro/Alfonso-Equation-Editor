@@ -57,7 +57,10 @@
 		D7A15697250E97C100F4B8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A15696250E97C100F4B8A3 /* Assets.xcassets */; };
 		D7A1569A250E97C100F4B8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A15698250E97C100F4B8A3 /* LaunchScreen.storyboard */; };
 		D7A156A0250E97FA00F4B8A3 /* GridViewIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */; };
+		D7A156C6250EA1E200F4B8A3 /* MillimeterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A156C5250EA1E200F4B8A3 /* MillimeterGridView.swift */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
+		D7C2CF56250EBE4F000A1B16 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2CF55250EBE4F000A1B16 /* Formula.swift */; };
+		D7C2CF58250EBFFF000A1B16 /* FormulaTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2CF57250EBFFF000A1B16 /* FormulaTableCellView.swift */; };
 		D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC7250563CF0084C2C9 /* CosinusView.swift */; };
 		D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC9250564650084C2C9 /* TangentView.swift */; };
 		D7C38FCD2505797D0084C2C9 /* Zoom.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7C38FCB2505797D0084C2C9 /* Zoom.pdf */; };
@@ -177,7 +180,11 @@
 		D7A15699250E97C100F4B8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7A1569B250E97C100F4B8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewIos.swift; sourceTree = "<group>"; };
+		D7A156C5250EA1E200F4B8A3 /* MillimeterGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillimeterGridView.swift; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
+		D7C2CF53250EB319000A1B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D7C2CF55250EBE4F000A1B16 /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
+		D7C2CF57250EBFFF000A1B16 /* FormulaTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableCellView.swift; sourceTree = "<group>"; };
 		D7C38FC7250563CF0084C2C9 /* CosinusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosinusView.swift; sourceTree = "<group>"; };
 		D7C38FC9250564650084C2C9 /* TangentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangentView.swift; sourceTree = "<group>"; };
 		D7C38FCB2505797D0084C2C9 /* Zoom.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Zoom.pdf; sourceTree = "<group>"; };
@@ -277,14 +284,18 @@
 			isa = PBXGroup;
 			children = (
 				D75E7906239AD9F700EC8111 /* AppDelegate.swift */,
+				D7C2CF55250EBE4F000A1B16 /* Formula.swift */,
+				D7C2CF57250EBFFF000A1B16 /* FormulaTableCellView.swift */,
 				D76639A02503506F0044AFA1 /* AbstractEquationView.swift */,
 				D7EA41C6250D392B006A220A /* CartesianBezierPath.swift */,
 				D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */,
-				D7C04C4424FA90B100EC9DD6 /* AxesView.swift */,
 				D76639A22503631D0044AFA1 /* GridView.swift */,
+				D7A156C5250EA1E200F4B8A3 /* MillimeterGridView.swift */,
+				D7C04C4424FA90B100EC9DD6 /* AxesView.swift */,
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
 				D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */,
 				D75705BC2507A7A600E9D2CE /* Credits.rtf */,
+				D7C2CF52250EB307000A1B16 /* Podfile */,
 				D7A1565C250E8A3F00F4B8A3 /* Preferences */,
 				D78E738F250531D70044682C /* Fonts */,
 				D75E7939239B187600EC8111 /* ParabolaView.swift */,
@@ -432,6 +443,14 @@
 			path = "Alfonso Equation Editor iOS";
 			sourceTree = "<group>";
 		};
+		D7C2CF52250EB307000A1B16 /* Podfile */ = {
+			isa = PBXGroup;
+			children = (
+				D7C2CF53250EB319000A1B16 /* Podfile */,
+			);
+			path = Podfile;
+			sourceTree = "<group>";
+		};
 		D7C38FD1250579990084C2C9 /* Images From Grapher */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,8 +473,8 @@
 				D75E78FF239AD9F700EC8111 /* Sources */,
 				D75E7900239AD9F700EC8111 /* Frameworks */,
 				D75E7901239AD9F700EC8111 /* Resources */,
-				6513C3AB9389D94F352D5290 /* [CP] Embed Pods Frameworks */,
 				D78E739A250533510044682C /* CopyFiles */,
+				3B0E50D7FECBFC2912BA5DCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,7 +512,7 @@
 				D75E791D239AD9F800EC8111 /* Sources */,
 				D75E791E239AD9F800EC8111 /* Frameworks */,
 				D75E791F239AD9F800EC8111 /* Resources */,
-				8103829B222EE78DA038A451 /* [CP] Embed Pods Frameworks */,
+				2037E468C14ADFDDBF5A34F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -645,7 +664,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6513C3AB9389D94F352D5290 /* [CP] Embed Pods Frameworks */ = {
+		2037E468C14ADFDDBF5A34F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B0E50D7FECBFC2912BA5DCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -682,23 +718,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8103829B222EE78DA038A451 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C804E820B1A0959CCF82C782 /* [CP] Check Pods Manifest.lock */ = {
@@ -742,10 +761,13 @@
 				D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */,
 				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
 				D75E793A239B187600EC8111 /* ParabolaView.swift in Sources */,
+				D7A156C6250EA1E200F4B8A3 /* MillimeterGridView.swift in Sources */,
 				D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */,
 				D7A1565B250E5ECC00F4B8A3 /* CrossView.swift in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
+				D7C2CF56250EBE4F000A1B16 /* Formula.swift in Sources */,
 				D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */,
+				D7C2CF58250EBFFF000A1B16 /* FormulaTableCellView.swift in Sources */,
 				D7A15681250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.m in Sources */,
 				D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */,
 				D77DB414250AA30A002B50EF /* RettaView.swift in Sources */,

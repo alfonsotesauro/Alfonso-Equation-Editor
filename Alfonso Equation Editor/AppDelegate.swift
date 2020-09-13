@@ -10,7 +10,8 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
+    @IBOutlet weak var formulasTableView: NSTableView!
     @IBOutlet weak var scrollView: SKTZoomingScrollView!
     @IBOutlet weak var equationView: SinusView!
     @IBOutlet weak var window: NSWindow!
@@ -48,7 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc dynamic var shouldDrawTan: Bool = false
     @objc dynamic var shouldDrawNumbers: Bool = true
     @objc dynamic var shouldDrawCross: Bool = false
-    
+    @objc dynamic var shouldDrawMillimeterPaper: Bool = false
+
     @objc dynamic var shouldDrawPowerThree: Bool = false {
         didSet(newValue) {
            
@@ -86,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     var kvoToken: NSKeyValueObservation?
-    
+    var formulas: [Formula] = [Formula]()
     
     func applicationWillFinishLaunching(_ notification: Notification) {
         
@@ -139,6 +141,54 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
     }
+    
+    @IBAction func userDidSelectFormulaSegControl(_ sender: NSSegmentedControl) {
+        
+        defer {
+            self.formulasTableView.reloadData()
+        }
+        
+        let index = sender.selectedSegment
+        
+        if index == 0 {
+            
+            
+            let alert = NSAlert()
+            alert.messageText = (Bundle.main.infoDictionary?["CFBundleName"] as? String ?? "") + " Message"
+            
+            let textField = NSTextField(frame: NSRect(x: 0, y: 0, width:250, height: 24))
+            
+            alert.accessoryView = textField
+            
+            alert.informativeText = "Please enter a formula in latex format."
+            alert.addButton(withTitle: "OK")
+            alert.addButton(withTitle: "Cancel")
+
+            alert.beginSheetModal(for: window, completionHandler: { returnCode in
+                print("\(returnCode)")
+                if returnCode == .alertFirstButtonReturn {
+                    let newFormula = Formula()
+                    newFormula.enabled = true
+                    newFormula.latexString = textField.stringValue
+                    self.formulas.append(newFormula)
+                    self.formulasTableView.reloadData()
+                }
+                
+                
+
+            })
+            
+            
+            
+            
+        } else {
+            let row = self.formulasTableView.selectedRow
+            
+            self.formulas.remove(at: row)
+        }
+    }
+    
+    
     @IBAction func userDidSelectScrollButton(_ sender: NSButton) {
         
         self.scrollView.scrollToCenter()
@@ -288,11 +338,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let docView = contentView
         
         
-        self.verticalScroller!.willChangeValue(forKey: "doubleValue")
-        self.verticalScroller!.doubleValue = 0.5
-        self.verticalScroller!.didChangeValue(forKey: "doubleValue")
-        
-        return;
+       
         
         // 90 va bene con 400%
         // 120 va bene con 400%
@@ -343,4 +389,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
     }
+}
+
+extension AppDelegate: NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return formulas.count
+    }
+}
+extension AppDelegate: NSTableViewDelegate {
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let view: FormulaTableCellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("formulaCellIdentifier"), owner: self) as! FormulaTableCellView
+        
+        view.enabledCheckbox.state = self.formulas[row].enabled ? .on : .off
+        
+        view.formulaView.latex = self.formulas[row].latexString
+        
+        view.formulaView.textColor = .white
+        
+        return view;
+    }
+    
 }

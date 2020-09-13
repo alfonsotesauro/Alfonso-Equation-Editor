@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests/Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Expression/Expression.framework
 ${BUILT_PRODUCTS_DIR}/iosMath/iosMath.framework

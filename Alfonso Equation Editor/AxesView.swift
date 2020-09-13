@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class AxesView: GridView {
+class AxesView: MillimeterGridView {
    
 
     override func draw(_ dirtyRect: NSRect) {

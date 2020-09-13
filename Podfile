@@ -7,6 +7,7 @@ target 'Alfonso Equation Editor' do
 
   # Pods for Alfonso Equation Editor
 pod 'iosMath'
+pod 'Expression', '~> 0.12'
   target 'Alfonso Equation EditorTests' do
     inherit! :search_paths
     # Pods for testing

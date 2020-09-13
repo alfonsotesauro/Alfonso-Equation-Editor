@@ -16,6 +16,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
             <connections>
                 <outlet property="equationView" destination="bHt-Ho-ZNa" id="EMX-tz-6nO"/>
+                <outlet property="formulasTableView" destination="PU1-dS-vkE" id="rVN-sA-0bq"/>
                 <outlet property="mathLabel" destination="zq5-oO-ujc" id="JEa-CS-tXL"/>
                 <outlet property="scrollView" destination="6Kg-Vu-dcM" id="ha7-Gs-vyx"/>
                 <outlet property="sinusViewBottomConstraint" destination="Svy-OF-85h" id="3Ue-1o-0iQ"/>
@@ -800,7 +801,7 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="0.0" y="8" width="80" height="89"/>
+                                <rect key="frame" x="-11" y="8" width="80" height="89"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
                                         <rect key="frame" x="-2" y="73" width="48" height="18"/>
@@ -911,7 +912,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="qBM-Nk-KUq"/>
@@ -926,7 +927,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-27" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>
@@ -1107,13 +1108,13 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
-                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-zv-QHI">
+                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="58" horizontalPageScroll="10" verticalLineScroll="58" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-zv-QHI">
                         <rect key="frame" x="0.0" y="42" width="215" height="486"/>
                         <clipView key="contentView" id="6Bu-QE-jon">
                             <rect key="frame" x="0.0" y="0.0" width="215" height="486"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Nim-vb-sCx" viewBased="YES" id="PU1-dS-vkE">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="56" rowSizeStyle="automatic" headerView="Nim-vb-sCx" viewBased="YES" id="PU1-dS-vkE">
                                     <rect key="frame" x="0.0" y="0.0" width="215" height="461"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -1121,7 +1122,7 @@
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
                                         <tableColumn width="212" minWidth="40" maxWidth="1000" id="WpV-l8-adR">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Formulas:">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -1132,27 +1133,35 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
-                                                <tableCellView id="Lgz-bK-qFb">
-                                                    <rect key="frame" x="1" y="1" width="212" height="17"/>
+                                                <tableCellView identifier="formulaCellIdentifier" id="Lgz-bK-qFb" customClass="FormulaTableCellView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
+                                                    <rect key="frame" x="1" y="1" width="212" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-F6-gCy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="212" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="wcr-D1-Enf">
+                                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCK-A6-4pF">
+                                                            <rect key="frame" x="6" y="19" width="22" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="13i-1e-e8H">
+                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                        </textField>
+                                                            </buttonCell>
+                                                        </button>
+                                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7Z-7H-mOf" customClass="MTMathUILabel">
+                                                            <rect key="frame" x="34" y="3" width="162" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        </customView>
                                                     </subviews>
                                                     <connections>
-                                                        <outlet property="textField" destination="XxZ-F6-gCy" id="6vg-O3-TgF"/>
+                                                        <outlet property="enabledCheckbox" destination="QCK-A6-4pF" id="fiP-Nt-IJz"/>
+                                                        <outlet property="formulaView" destination="X7Z-7H-mOf" id="HyO-xU-6iz"/>
                                                     </connections>
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="Voe-Tx-rLC" id="8za-DQ-Tcb"/>
+                                        <outlet property="delegate" destination="Voe-Tx-rLC" id="YhL-FJ-Fzq"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                         </clipView>
@@ -1192,6 +1201,9 @@
                                         </segment>
                                     </segments>
                                 </segmentedCell>
+                                <connections>
+                                    <action selector="userDidSelectFormulaSegControl:" target="Voe-Tx-rLC" id="6fQ-uN-8yY"/>
+                                </connections>
                             </segmentedControl>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vhl-i8-jQM">
                                 <rect key="frame" x="51" y="-1" width="164" height="23"/>
