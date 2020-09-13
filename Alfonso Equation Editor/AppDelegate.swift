@@ -292,8 +292,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // 185 va bene con 800%
         // 218.2 va bene con 1600%
         var ctr = 0.0
+        var safetyCounter = 0
         
-        if self.horizontalScroller!.isEnabled, self.verticalScroller!.isEnabled {
+        if self.verticalScroller!.isEnabled {
             
         ctr = 50.0
         
@@ -302,23 +303,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let center2 = CGPoint(x: 0, y: ctr)
             docView.scroll(center2)
             
+            safetyCounter += 1
             
+            if safetyCounter > 10000 {
+                break
+            }
             
         }
             
         }
-         if self.horizontalScroller!.isEnabled, self.verticalScroller!.isEnabled {
+         if self.horizontalScroller!.isEnabled {
         let verticalScrollerFoundPosition = ctr
         
         ctr = 50.0
         
-        while self.horizontalScroller!.doubleValue < 0.4999 || self.horizontalScroller!.doubleValue > 0.5001{
+            safetyCounter = 0
             
+        while self.horizontalScroller!.doubleValue < 0.4999 || self.horizontalScroller!.doubleValue > 0.5001{
+            //print("\(self.horizontalScroller!.doubleValue)")
             ctr += 0.05
             let center2 = CGPoint(x: ctr, y: verticalScrollerFoundPosition)
             docView.scroll(center2)
             
+            safetyCounter += 1
             
+            if safetyCounter > 10000 {
+                break
+            }
             
         }
         

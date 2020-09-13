@@ -118,7 +118,6 @@ NSLocalizedStringFromTable(@"1600%", @"SKTZoomingScrollView", @"A level of zoomi
     
     
     NSView *clipView = [[self documentView] superview];
-    double currentValue = self.horizontalScroller.doubleValue;
     NSSize clipViewFrameSize = [clipView frame].size;
     [clipView setBoundsSize:NSMakeSize((clipViewFrameSize.width / factor), (clipViewFrameSize.height / factor))];
    
