@@ -40,7 +40,11 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <connections>
+                                    <action selector="userDidSelectPreferencesMenuItem:" target="Voe-Tx-rLC" id="IRt-s7-Rt8"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -796,7 +800,7 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="-2" y="20" width="71" height="64"/>
+                                <rect key="frame" x="-20" y="20" width="89" height="64"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
                                         <rect key="frame" x="-2" y="48" width="75" height="18"/>
@@ -829,7 +833,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-Hr-cF9">
-                                        <rect key="frame" x="-2" y="-2" width="52" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="85H-Fq-dlJ"/>
                                             <constraint firstAttribute="width" constant="89" id="zbW-w4-1Z0"/>
@@ -890,7 +894,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="93" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
                                             <constraint firstAttribute="width" constant="89" id="qBM-Nk-KUq"/>
@@ -905,7 +909,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-27" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="89" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>

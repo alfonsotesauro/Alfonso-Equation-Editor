@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SingleAttributeViewController">
+            <connections>
+                <outlet property="attributeColorWell" destination="Ie2-A1-Ntj" id="VEm-e0-k2W"/>
+                <outlet property="view" destination="duE-nU-zpI" id="ScZ-Uy-xSs"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" id="duE-nU-zpI">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="23"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Ie2-A1-Ntj">
+                    <rect key="frame" x="0.0" y="0.0" width="62" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="st2-eC-7A9"/>
+                        <constraint firstAttribute="width" constant="62" id="x0O-kc-NQ7"/>
+                    </constraints>
+                    <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="userDidSelectColorWell:" target="-2" id="d0D-BF-8sl"/>
+                        <binding destination="-2" name="value" keyPath="attributeColor" id="d1a-bm-Zra">
+                            <dictionary key="options">
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZT5-Vw-FaQ">
+                    <rect key="frame" x="80" y="4" width="169" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="aJg-RR-Ait"/>
+                        <constraint firstAttribute="width" constant="165" id="ohj-c3-ilC"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Text:" id="OHf-y8-l8W">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="attributeName" id="b8O-68-Zty"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <visibilityPriorities>
+                <integer value="1000"/>
+                <integer value="1000"/>
+            </visibilityPriorities>
+            <customSpacing>
+                <real value="3.4028234663852886e+38"/>
+                <real value="3.4028234663852886e+38"/>
+            </customSpacing>
+            <point key="canvasLocation" x="183" y="142"/>
+        </stackView>
+        <userDefaultsController representsSharedInstance="YES" id="xy4-DO-fCv"/>
+    </objects>
+</document>

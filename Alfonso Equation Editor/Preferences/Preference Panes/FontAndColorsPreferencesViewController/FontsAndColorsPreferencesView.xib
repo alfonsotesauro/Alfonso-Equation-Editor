@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FontAndColorsPreferencesViewController">
+            <connections>
+                <outlet property="allAttributesStackView" destination="zj1-M0-C8e" id="2gd-YM-chN"/>
+                <outlet property="allAttributesStackView2" destination="lru-7d-Nen" id="UH3-Nc-O5K"/>
+                <outlet property="allAttributesStackView3" destination="ZMV-B3-rZ9" id="1tX-h9-pCS"/>
+                <outlet property="view" destination="1" id="2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="1">
+            <rect key="frame" x="0.0" y="0.0" width="864" height="380"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <box title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Rp9-oR-5TK">
+                    <rect key="frame" x="17" y="16" width="830" height="305"/>
+                    <view key="contentView" id="drZ-3S-84W">
+                        <rect key="frame" x="3" y="3" width="824" height="299"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-y8-HCz">
+                                <rect key="frame" x="20" y="20" width="783" height="200"/>
+                                <subviews>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zj1-M0-C8e">
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="200"/>
+                                    </stackView>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lru-7d-Nen">
+                                        <rect key="frame" x="265" y="0.0" width="253" height="200"/>
+                                    </stackView>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMV-B3-rZ9">
+                                        <rect key="frame" x="530" y="0.0" width="253" height="200"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lru-7d-Nen" firstAttribute="top" secondItem="0b0-y8-HCz" secondAttribute="top" id="E8n-G7-70U"/>
+                                    <constraint firstItem="lru-7d-Nen" firstAttribute="top" secondItem="zj1-M0-C8e" secondAttribute="top" id="RCg-KO-Gzt"/>
+                                    <constraint firstItem="lru-7d-Nen" firstAttribute="top" secondItem="ZMV-B3-rZ9" secondAttribute="top" id="eme-AU-SEi"/>
+                                    <constraint firstItem="lru-7d-Nen" firstAttribute="leading" secondItem="0b0-y8-HCz" secondAttribute="leading" constant="265" id="ivY-wN-nMn"/>
+                                    <constraint firstItem="lru-7d-Nen" firstAttribute="centerX" secondItem="0b0-y8-HCz" secondAttribute="centerX" id="lE2-qd-7ih"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q27-e2-qna">
+                                <rect key="frame" x="20" y="256" width="99" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="0P9-Y8-Obq"/>
+                                    <constraint firstAttribute="width" constant="99" id="8wo-Yh-rkt"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundTextured" title="Reset Colours" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9bt-7q-4LQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="userDidSelectResetColorsButton:" target="-2" id="vcg-jw-6CE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0b0-y8-HCz" firstAttribute="leading" secondItem="drZ-3S-84W" secondAttribute="leading" constant="20" id="0eN-9e-6Ea"/>
+                            <constraint firstItem="Q27-e2-qna" firstAttribute="leading" secondItem="drZ-3S-84W" secondAttribute="leading" constant="20" id="FWA-H0-Va2"/>
+                            <constraint firstItem="Q27-e2-qna" firstAttribute="top" secondItem="drZ-3S-84W" secondAttribute="top" constant="20" id="MQe-Q1-Wh9"/>
+                            <constraint firstAttribute="bottom" secondItem="0b0-y8-HCz" secondAttribute="bottom" constant="20" id="Oix-Pe-3qR"/>
+                            <constraint firstItem="0b0-y8-HCz" firstAttribute="top" secondItem="Q27-e2-qna" secondAttribute="bottom" constant="37" id="SDd-cb-bQT"/>
+                            <constraint firstAttribute="trailing" secondItem="0b0-y8-HCz" secondAttribute="trailing" constant="21" id="zJD-5k-oqL"/>
+                        </constraints>
+                    </view>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Rp9-oR-5TK" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="Gc6-m6-ccc"/>
+                <constraint firstAttribute="bottom" secondItem="Rp9-oR-5TK" secondAttribute="bottom" constant="20" id="k32-5a-h6J"/>
+                <constraint firstAttribute="trailing" secondItem="Rp9-oR-5TK" secondAttribute="trailing" constant="20" id="tv2-kT-nGV"/>
+                <constraint firstItem="Rp9-oR-5TK" firstAttribute="top" secondItem="1" secondAttribute="top" constant="61" id="xc8-ft-Rfr"/>
+            </constraints>
+            <point key="canvasLocation" x="61" y="50"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="hdn-A8-QL2"/>
+    </objects>
+</document>

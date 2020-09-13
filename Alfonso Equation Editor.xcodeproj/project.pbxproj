@@ -40,6 +40,17 @@
 		D78E739E2505335C0044682C /* Folio-Std-Light.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7391250531E50044682C /* Folio-Std-Light.ttf */; };
 		D78E739F2505335C0044682C /* Folio-Std-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = D78E7393250531E50044682C /* Folio-Std-Medium.ttf */; };
 		D7A1565B250E5ECC00F4B8A3 /* CrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1565A250E5ECC00F4B8A3 /* CrossView.swift */; };
+		D7A15664250E8A7100F4B8A3 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A15660250E8A7100F4B8A3 /* MASPreferencesWindow.xib */; };
+		D7A15665250E8A7100F4B8A3 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A15663250E8A7100F4B8A3 /* MASPreferencesWindowController.m */; };
+		D7A1567C250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A15668250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.m */; };
+		D7A1567F250E8A7C00F4B8A3 /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A1566F250E8A7C00F4B8A3 /* GeneralPreferencesView.xib */; };
+		D7A15680250E8A7C00F4B8A3 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A15671250E8A7C00F4B8A3 /* GeneralPreferencesViewController.m */; };
+		D7A15681250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A15673250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.m */; };
+		D7A15682250E8A7C00F4B8A3 /* FontsAndColorsPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A15674250E8A7C00F4B8A3 /* FontsAndColorsPreferencesView.xib */; };
+		D7A15683250E8A7C00F4B8A3 /* SingleAttributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A15676250E8A7C00F4B8A3 /* SingleAttributeViewController.m */; };
+		D7A15684250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A15677250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib */; };
+		D7A15685250E8A7C00F4B8A3 /* SingleAttributeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A15678250E8A7C00F4B8A3 /* SingleAttributeViewController.xib */; };
+		D7A15686250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A1567A250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC7250563CF0084C2C9 /* CosinusView.swift */; };
 		D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC9250564650084C2C9 /* TangentView.swift */; };
@@ -133,6 +144,24 @@
 		D78E7393250531E50044682C /* Folio-Std-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Medium.ttf"; sourceTree = "<group>"; };
 		D78E7394250531E50044682C /* Folio-Std-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Folio-Std-Bold.ttf"; sourceTree = "<group>"; };
 		D7A1565A250E5ECC00F4B8A3 /* CrossView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossView.swift; sourceTree = "<group>"; };
+		D7A1565F250E8A7100F4B8A3 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		D7A15660250E8A7100F4B8A3 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		D7A15661250E8A7100F4B8A3 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		D7A15662250E8A7100F4B8A3 /* MASPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferences.h; sourceTree = "<group>"; };
+		D7A15663250E8A7100F4B8A3 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		D7A15668250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFieldEnabledValueTransformer.m; sourceTree = "<group>"; };
+		D7A15669250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFieldEnabledValueTransformer.h; sourceTree = "<group>"; };
+		D7A1566F250E8A7C00F4B8A3 /* GeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesView.xib; sourceTree = "<group>"; };
+		D7A15670250E8A7C00F4B8A3 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
+		D7A15671250E8A7C00F4B8A3 /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		D7A15673250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAndColorsPreferencesViewController.m; sourceTree = "<group>"; };
+		D7A15674250E8A7C00F4B8A3 /* FontsAndColorsPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontsAndColorsPreferencesView.xib; sourceTree = "<group>"; };
+		D7A15676250E8A7C00F4B8A3 /* SingleAttributeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleAttributeViewController.m; sourceTree = "<group>"; };
+		D7A15677250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleAttributeViewControllerWithStyle.xib; sourceTree = "<group>"; };
+		D7A15678250E8A7C00F4B8A3 /* SingleAttributeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleAttributeViewController.xib; sourceTree = "<group>"; };
+		D7A15679250E8A7C00F4B8A3 /* SingleAttributeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleAttributeViewController.h; sourceTree = "<group>"; };
+		D7A1567A250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontsAndColorsPreferencesViewComplete.xib; sourceTree = "<group>"; };
+		D7A1567B250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAndColorsPreferencesViewController.h; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7C38FC7250563CF0084C2C9 /* CosinusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosinusView.swift; sourceTree = "<group>"; };
 		D7C38FC9250564650084C2C9 /* TangentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangentView.swift; sourceTree = "<group>"; };
@@ -232,6 +261,7 @@
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
 				D7F5E5AB24FD269E003ABD52 /* NumbersView.swift */,
 				D75705BC2507A7A600E9D2CE /* Credits.rtf */,
+				D7A1565C250E8A3F00F4B8A3 /* Preferences */,
 				D78E738F250531D70044682C /* Fonts */,
 				D75E7939239B187600EC8111 /* ParabolaView.swift */,
 				D77DB411250AA1D5002B50EF /* PowerOfThreeView.swift */,
@@ -288,6 +318,79 @@
 				D78E7393250531E50044682C /* Folio-Std-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D7A1565C250E8A3F00F4B8A3 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				D7A1565E250E8A7100F4B8A3 /* MASPreferences */,
+				D7A15666250E8A7C00F4B8A3 /* Preference Panes */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		D7A1565E250E8A7100F4B8A3 /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				D7A1565F250E8A7100F4B8A3 /* MASPreferencesViewController.h */,
+				D7A15660250E8A7100F4B8A3 /* MASPreferencesWindow.xib */,
+				D7A15661250E8A7100F4B8A3 /* MASPreferencesWindowController.h */,
+				D7A15662250E8A7100F4B8A3 /* MASPreferences.h */,
+				D7A15663250E8A7100F4B8A3 /* MASPreferencesWindowController.m */,
+			);
+			path = MASPreferences;
+			sourceTree = "<group>";
+		};
+		D7A15666250E8A7C00F4B8A3 /* Preference Panes */ = {
+			isa = PBXGroup;
+			children = (
+				D7A15667250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer */,
+				D7A1566E250E8A7C00F4B8A3 /* GeneralPreferencesViewController */,
+				D7A15672250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController */,
+			);
+			path = "Preference Panes";
+			sourceTree = "<group>";
+		};
+		D7A15667250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				D7A15668250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.m */,
+				D7A15669250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.h */,
+			);
+			path = SearchFieldEnabledValueTransformer;
+			sourceTree = "<group>";
+		};
+		D7A1566E250E8A7C00F4B8A3 /* GeneralPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7A1566F250E8A7C00F4B8A3 /* GeneralPreferencesView.xib */,
+				D7A15670250E8A7C00F4B8A3 /* GeneralPreferencesViewController.h */,
+				D7A15671250E8A7C00F4B8A3 /* GeneralPreferencesViewController.m */,
+			);
+			path = GeneralPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		D7A15672250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7A1567B250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.h */,
+				D7A15673250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.m */,
+				D7A15674250E8A7C00F4B8A3 /* FontsAndColorsPreferencesView.xib */,
+				D7A15675250E8A7C00F4B8A3 /* SingleAttributeViewController */,
+				D7A1567A250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib */,
+			);
+			path = FontAndColorsPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		D7A15675250E8A7C00F4B8A3 /* SingleAttributeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7A15676250E8A7C00F4B8A3 /* SingleAttributeViewController.m */,
+				D7A15677250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib */,
+				D7A15678250E8A7C00F4B8A3 /* SingleAttributeViewController.xib */,
+				D7A15679250E8A7C00F4B8A3 /* SingleAttributeViewController.h */,
+			);
+			path = SingleAttributeViewController;
 			sourceTree = "<group>";
 		};
 		D7C38FD1250579990084C2C9 /* Images From Grapher */ = {
@@ -413,12 +516,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75E790C239AD9F800EC8111 /* Assets.xcassets in Resources */,
+				D7A15684250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib in Resources */,
 				D78E7397250531E50044682C /* Folio-Std-Extra-Bold.ttf in Resources */,
 				D7C38FD0250579940084C2C9 /* Arrow.pdf in Resources */,
 				D78E7396250531E50044682C /* Folio-Std-Light.ttf in Resources */,
+				D7A15686250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib in Resources */,
 				D75E790F239AD9F800EC8111 /* MainMenu.xib in Resources */,
 				D78E7399250531E50044682C /* Folio-Std-Bold.ttf in Resources */,
 				D7C38FCD2505797D0084C2C9 /* Zoom.pdf in Resources */,
+				D7A1567F250E8A7C00F4B8A3 /* GeneralPreferencesView.xib in Resources */,
+				D7A15685250E8A7C00F4B8A3 /* SingleAttributeViewController.xib in Resources */,
+				D7A15664250E8A7100F4B8A3 /* MASPreferencesWindow.xib in Resources */,
+				D7A15682250E8A7C00F4B8A3 /* FontsAndColorsPreferencesView.xib in Resources */,
 				D75705BD2507A7A600E9D2CE /* Credits.rtf in Resources */,
 				D7C38FCE2505797D0084C2C9 /* Move.pdf in Resources */,
 				D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */,
@@ -555,7 +664,10 @@
 				D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */,
 				D7EA41C7250D392B006A220A /* CartesianBezierPath.swift in Sources */,
 				D77DB412250AA1D5002B50EF /* PowerOfThreeView.swift in Sources */,
+				D7A15683250E8A7C00F4B8A3 /* SingleAttributeViewController.m in Sources */,
+				D7A15665250E8A7100F4B8A3 /* MASPreferencesWindowController.m in Sources */,
 				D7F5E5AA24FD1FBF003ABD52 /* TicksView.swift in Sources */,
+				D7A15680250E8A7C00F4B8A3 /* GeneralPreferencesViewController.m in Sources */,
 				D7C38FD5250585D00084C2C9 /* PowerOfFourView.swift in Sources */,
 				D75E790A239AD9F700EC8111 /* Alfonso_Equation_Editor.xcdatamodeld in Sources */,
 				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
@@ -565,9 +677,11 @@
 				D7A1565B250E5ECC00F4B8A3 /* CrossView.swift in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
 				D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */,
+				D7A15681250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.m in Sources */,
 				D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */,
 				D77DB414250AA30A002B50EF /* RettaView.swift in Sources */,
 				D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */,
+				D7A1567C250E8A7C00F4B8A3 /* SearchFieldEnabledValueTransformer.m in Sources */,
 				D76639A32503631D0044AFA1 /* GridView.swift in Sources */,
 				D711B50E250842FA00D1B510 /* CenteringClipView.swift in Sources */,
 				D77DB410250A8D30002B50EF /* OrangeCenterView.swift in Sources */,

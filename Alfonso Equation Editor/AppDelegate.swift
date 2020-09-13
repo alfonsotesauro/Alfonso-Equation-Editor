@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var scrollView: SKTZoomingScrollView!
     @IBOutlet weak var equationView: SinusView!
     @IBOutlet weak var window: NSWindow!
-    
+    var preferencesWindowController: MASPreferencesWindowController!
     @IBOutlet weak var mathLabel: MTMathUILabel!
     @IBOutlet weak var toolsSegmentedControl: NSSegmentedControl!
     
@@ -117,6 +117,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+    @IBAction func userDidSelectPreferencesMenuItem(_ sender: NSMenuItem) {
+        
+        if self.preferencesWindowController == nil {
+        
+        let generalPreferencesVC = GeneralPreferencesViewController()
+        let fontsAndColorsPreferencesVC = FontAndColorsPreferencesViewController()
+        
+        self.preferencesWindowController = MASPreferencesWindowController(viewControllers: [generalPreferencesVC, fontsAndColorsPreferencesVC])
+        
+        }
+        
+        self.preferencesWindowController.showWindow(self)
+        
     }
     
     @IBAction func userDidSelectOneOfTheCheckBoxes(_ sender: NSButton) {
