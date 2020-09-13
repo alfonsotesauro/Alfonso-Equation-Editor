@@ -18,60 +18,37 @@ class ParabolaView: NumbersView {
         
         // Drawing code here.
         
-    
-        
-        
-        let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
-        
-        
-        var ctr = -Double(width / 2) // -10000 is the original
+        var ctr = -5.0 // -10000 is the original
         
         let finalValue = fabs(ctr)
         
 
         if self.appDelegate!.shouldDrawParabola {
-            let currentSegment = NSBezierPath.init()
+            let currentSegment = CartesianBezierPath(cartesianPlanView: self)
             currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
             
-            var firstCorrectY = self.transformXIntoY(Double(ctr * distanceBetweenVerticalLines))
+            let howManyPixelsInUnit = appDelegate.numberOfPixelsInUnit
             
-            firstCorrectY = firstCorrectY + Double(height / 2)
+            let firstCorrectY = self.transformXIntoY(Double(ctr)) * howManyPixelsInUnit
             
-            currentSegment.move(to: NSPoint.init(x: 0, y: firstCorrectY))
+            
+            currentSegment.move(to: NSPoint.init(x: ctr * howManyPixelsInUnit, y: firstCorrectY))
             
             repeat {
                 
                 
-                let correctX = ctr + Double(width / 2)
-                var correctY = ctr + Double(height / 2)
+                let correctX = ctr * howManyPixelsInUnit
+                var correctY = ctr
                 
-               
-                
-                    correctY = self.transformXIntoY(Double(ctr)) / self.appDelegate.thirdSliderDoubleValue
-                    
-              
-                
-                correctY = correctY + Double(height / 2)
-                
-                
-                
-                
-                // currentSegment.line(to: NSPoint.init(x: Int(correctX + 3.0), y: correctY))
+                correctY = self.transformXIntoY(Double(ctr)) * howManyPixelsInUnit
+                                    
                 currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                 
-                
-                
-                ctr += 3.0
+                ctr += 0.01
             } while(ctr < finalValue)
             NSColor.red.set()
             currentSegment.stroke()
         }
-        
-      
-        
-      
-        
-        
         
     }
     func transformXIntoY(_ x: Double) -> Double {

@@ -27,10 +27,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc dynamic var firstSliderDoubleValue: Double = 1
     @objc dynamic var secondSliderDoubleValue: Double = 30
-    @objc dynamic var thirdSliderDoubleValue: Double = 168.771
+    @objc dynamic var thirdSliderDoubleValue: Double = 10
     @objc dynamic var fourthSliderDoubleValue: Double = 1.0
     @objc dynamic var fifthSliderDoubleValue: Double = 1.0
     @objc dynamic var sixthSliderDoubleValue: Double = 0.0
+    @objc dynamic var numberOfPixelsInUnit: Double = 80.0 {
+        didSet {
+           self.equationView.setNeedsDisplay(self.equationView.bounds)
+        }
+    }
     @objc dynamic var shouldUseSquareGrid: Bool = true
     @objc dynamic var shouldDrawGrid: Bool = true
     @objc dynamic var shouldDrawAxes: Bool = true
