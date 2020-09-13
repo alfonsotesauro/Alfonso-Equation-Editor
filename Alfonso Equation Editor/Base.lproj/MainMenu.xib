@@ -704,13 +704,13 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y01-0e-G7E">
-                        <rect key="frame" x="966" y="599" width="89" height="64"/>
+                        <rect key="frame" x="975" y="599" width="80" height="64"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aWN-C4-7S3">
                                 <rect key="frame" x="-2" y="48" width="84" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="OZh-hr-5gb"/>
-                                    <constraint firstAttribute="width" constant="80" id="W1i-w0-nOU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="W1i-w0-nOU"/>
                                 </constraints>
                                 <buttonCell key="cell" type="check" title="Numbers" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Yo0-Nd-LdC">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -722,10 +722,10 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-mX-OZh">
-                                <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                <rect key="frame" x="-2" y="23" width="74" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="bBM-fy-ClH"/>
-                                    <constraint firstAttribute="width" constant="62" id="uNI-R5-SPX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="uNI-R5-SPX"/>
                                 </constraints>
                                 <buttonCell key="cell" type="check" title="x^3" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qU5-3W-n8M">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -737,9 +737,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XBn-4o-JRM">
-                                <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                <rect key="frame" x="-2" y="-2" width="74" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="gVb-BT-Joz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gVb-BT-Joz"/>
                                     <constraint firstAttribute="height" constant="14" id="rAP-DH-q5C"/>
                                 </constraints>
                                 <buttonCell key="cell" type="check" title="x^4" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Idr-J9-I9G">
@@ -764,13 +764,13 @@
                         </customSpacing>
                     </stackView>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-Vu-dcM" customClass="SKTZoomingScrollView">
-                        <rect key="frame" x="19" y="20" width="899" height="533"/>
+                        <rect key="frame" x="19" y="20" width="1025" height="533"/>
                         <clipView key="contentView" id="3X5-MS-Mu5" customClass="DraggableClipView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                            <rect key="frame" x="1" y="1" width="882" height="516"/>
+                            <rect key="frame" x="1" y="1" width="1008" height="516"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="879" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1005" height="502"/>
                                 </customView>
                             </subviews>
                             <constraints>
@@ -781,11 +781,11 @@
                             </constraints>
                         </clipView>
                         <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fBV-Iz-Hym">
-                            <rect key="frame" x="1" y="517" width="882" height="15"/>
+                            <rect key="frame" x="1" y="517" width="1008" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKB-d8-W6y">
-                            <rect key="frame" x="883" y="1" width="15" height="516"/>
+                            <rect key="frame" x="1009" y="1" width="15" height="516"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -800,13 +800,13 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="-20" y="20" width="89" height="64"/>
+                                <rect key="frame" x="0.0" y="8" width="80" height="89"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="73" width="75" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="dDt-Zc-4c8"/>
-                                            <constraint firstAttribute="width" constant="71" id="sDm-ve-Y3a"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="sDm-ve-Y3a"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="Grid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zxN-6o-SNk">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -818,9 +818,9 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o2H-jn-v2A">
-                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="66" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="OE5-4H-oIU"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="OE5-4H-oIU"/>
                                             <constraint firstAttribute="height" constant="14" id="b28-th-eCK"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="Letters" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tdk-wG-xms">
@@ -833,10 +833,10 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-Hr-cF9">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="85H-Fq-dlJ"/>
-                                            <constraint firstAttribute="width" constant="89" id="zbW-w4-1Z0"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="zbW-w4-1Z0"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="Axes" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="2OD-Cm-fyK">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -847,13 +847,30 @@
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawAxes" id="PWF-yI-Tte"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WNY-gF-hTv">
+                                        <rect key="frame" x="-2" y="-2" width="84" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Qol-bB-hen"/>
+                                            <constraint firstAttribute="height" constant="14" id="iS2-2c-4ev"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="mm paper" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tlz-4p-hnc">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="Ipa-Fu-ZGU"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawMillimeterPaper" id="B9s-zN-bdd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -864,9 +881,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
-                                        <rect key="frame" x="-2" y="48" width="66" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="W1f-Ee-Ptc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="W1f-Ee-Ptc"/>
                                             <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="Retta" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LNP-Pr-8vQ">
@@ -881,7 +898,7 @@
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
                                         <rect key="frame" x="-2" y="23" width="75" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="71" id="0oQ-s1-i6A"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0oQ-s1-i6A"/>
                                             <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="Parabola" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DuQ-iG-5T6">
@@ -894,10 +911,10 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="23" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
-                                            <constraint firstAttribute="width" constant="89" id="qBM-Nk-KUq"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="qBM-Nk-KUq"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="abs |x|" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jtn-Bb-7pi">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -909,9 +926,9 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="-27" width="74" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="89" id="BJW-3f-LCB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="Cross" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8h3-Vf-eI2">
@@ -942,10 +959,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-67-IKC">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="FHo-29-In3"/>
-                                            <constraint firstAttribute="width" constant="71" id="gce-Mg-Q3D"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gce-Mg-Q3D"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="sin" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4Jk-Ci-oWd">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -957,9 +974,9 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-ar-Fbg">
-                                        <rect key="frame" x="-2" y="23" width="66" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="2qG-Wk-l9h"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="2qG-Wk-l9h"/>
                                             <constraint firstAttribute="height" constant="14" id="ftf-e5-4ZJ"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="cos" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1jA-pt-Whd">
@@ -972,10 +989,10 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-ON-ocR">
-                                        <rect key="frame" x="-2" y="-2" width="93" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="V6N-nd-cRd"/>
-                                            <constraint firstAttribute="width" constant="89" id="sf1-RD-jsZ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="sf1-RD-jsZ"/>
                                         </constraints>
                                         <buttonCell key="cell" type="check" title="tan" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gXa-DY-NdI">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1010,465 +1027,76 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
-                    <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCW-0K-gi3">
-                        <rect key="frame" x="938" y="87" width="192" height="530"/>
+                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1or-p5-XVI">
+                        <rect key="frame" x="1090" y="20" width="66" height="533"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1or-p5-XVI">
-                                <rect key="frame" x="0.0" y="0.0" width="66" height="515"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F26-JF-HOO">
-                                        <rect key="frame" x="-2" y="499" width="70" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="66" id="NXd-Qq-dBJ"/>
-                                            <constraint firstAttribute="height" constant="16" id="fvK-lQ-b1r"/>
-                                        </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="RBH-oZ-bwP">
-                                            <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="s9s-wA-QHH"/>
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <connections>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfPixelsInUnit" id="QME-dn-0kM"/>
-                                        </connections>
-                                    </textField>
-                                    <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uTx-hF-I2F">
-                                        <rect key="frame" x="-2" y="-3" width="19" height="504"/>
-                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="500" doubleValue="80" tickMarkPosition="right" sliderType="linear" id="bUB-Cz-xWt"/>
-                                        <connections>
-                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfPixelsInUnit" id="UT3-UN-kci"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moN-th-iCr">
-                                <rect key="frame" x="76" y="0.0" width="116" height="530"/>
-                                <subviews>
-                                    <segmentedControl verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-7z-BWn">
-                                        <rect key="frame" x="6" y="497" width="104" height="34"/>
-                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="zym-6s-52y">
-                                            <font key="font" metaFont="system"/>
-                                            <segments>
-                                                <segment image="Selection" width="32" selected="YES"/>
-                                                <segment image="Move" width="32" tag="1"/>
-                                                <segment image="Zoom" width="32">
-                                                    <nil key="label"/>
-                                                </segment>
-                                            </segments>
-                                        </segmentedCell>
-                                    </segmentedControl>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-Tf-kl5">
-                                        <rect key="frame" x="12" y="460" width="93" height="23"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Center Scroll" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hfJ-gq-1I3">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectScrollButton:" target="Voe-Tx-rLC" id="cTe-dG-4D8"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6v-8V-J8W">
-                                        <rect key="frame" x="14" y="422" width="89" height="23"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Reset to Def" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zsh-PK-kdc">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="userDidSelectResetToDefaults:" target="Voe-Tx-rLC" id="4Fq-vJ-2dF"/>
-                                        </connections>
-                                    </button>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x07-KO-vzw">
-                                        <rect key="frame" x="0.0" y="359" width="116" height="48"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AiE-rJ-gjC">
-                                                <rect key="frame" x="8" y="32" width="100" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Grid Spacing" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zOk-jE-LQC">
-                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldApplyGridSpacing" id="U5J-2e-LPv"/>
-                                                </connections>
-                                            </button>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3w-qR-zQU">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="19" id="XF9-m5-P1Y"/>
-                                                    <constraint firstAttribute="width" constant="116" id="mfT-g6-myj"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="10" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="F1S-iC-1EU"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="8oK-qs-cIo"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="firstSliderDoubleValue" id="XxK-LJ-jlS"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z0A-fu-rWC">
-                                                <rect key="frame" x="31" y="0.0" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="YqY-0Y-ppU"/>
-                                                    <constraint firstAttribute="height" constant="15" id="s34-Qd-LPj"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="NLl-rm-itq">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="firstSliderDoubleValue" id="RPK-0O-Z2Y"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j89-NJ-183">
-                                        <rect key="frame" x="0.0" y="309" width="116" height="34"/>
-                                        <subviews>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-bX-2E0">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="19" id="4zv-Pc-b9m"/>
-                                                    <constraint firstAttribute="width" constant="116" id="BJC-bx-etK"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="20" maxValue="70" doubleValue="30" tickMarkPosition="above" sliderType="linear" id="7oo-Wy-xVV"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="P0X-Tu-Jth"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="secondSliderDoubleValue" id="M6u-hT-NWA"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-Oj-bwD">
-                                                <rect key="frame" x="31" y="0.0" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="88H-9Q-zQN"/>
-                                                    <constraint firstAttribute="width" constant="50" id="Icg-AH-xA1"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="suf-cW-eC2">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="secondSliderDoubleValue" id="xS8-yu-dwy"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHy-gx-6s0">
-                                        <rect key="frame" x="0.0" y="245" width="116" height="48"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FWP-QF-DpI">
-                                                <rect key="frame" x="17" y="32" width="83" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Parabola /" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="oYZ-lM-RO1">
-                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldApplyParabolaDivisor" id="44S-K8-IQs"/>
-                                                </connections>
-                                            </button>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-uN-JUZ">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="19" id="iXJ-Ip-cYL"/>
-                                                    <constraint firstAttribute="width" constant="116" id="oFn-Oy-LCr"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="100" doubleValue="100" tickMarkPosition="above" sliderType="linear" id="uqG-P8-z3I"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="HUx-n5-qIo"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="thirdSliderDoubleValue" id="6xS-k6-UHA"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="euW-Pf-8c6">
-                                                <rect key="frame" x="31" y="0.0" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="Dg6-k9-roZ"/>
-                                                    <constraint firstAttribute="width" constant="50" id="reu-Ks-nXe"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="biZ-Nw-hsW">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="thirdSliderDoubleValue" id="lgU-p1-VRp"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSR-8l-zIN">
-                                        <rect key="frame" x="0.0" y="180" width="116" height="49"/>
-                                        <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qHf-QD-UX2">
-                                                <rect key="frame" x="6" y="34" width="104" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="gUP-ty-LcN"/>
-                                                    <constraint firstAttribute="width" constant="100" id="mZt-rY-Fx3"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Line Width" id="i69-jH-lXJ">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Urv-Mf-BR7">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="62o-g4-0sW"/>
-                                                    <constraint firstAttribute="height" constant="19" id="93e-Ys-oio"/>
-                                                    <constraint firstAttribute="width" constant="116" id="Eam-KU-B4V"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="Twe-hE-r2w"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.25" maxValue="5" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Py0-mt-4fx"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="DNY-Vc-tiZ"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="fourthSliderDoubleValue" id="xgq-rU-BgM"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X6j-w1-aMj">
-                                                <rect key="frame" x="31" y="0.0" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="0Sl-MW-xPD"/>
-                                                    <constraint firstAttribute="height" constant="15" id="2Yn-h2-O5D"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="ONC-R2-Slj">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="fourthSliderDoubleValue" id="9hk-GN-DsM"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAJ-ta-HDV">
-                                        <rect key="frame" x="0.0" y="115" width="116" height="49"/>
-                                        <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1pY-Km-OwW">
-                                                <rect key="frame" x="31" y="34" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="Lg4-g4-4x3"/>
-                                                    <constraint firstAttribute="width" constant="50" id="k3Z-5e-jqZ"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Zoom" id="DNO-0d-Pr3">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lSR-Ey-uDP">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="116" id="Jsn-G5-KAH"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="YQp-F1-nVz"/>
-                                                    <constraint firstAttribute="height" constant="19" id="Zai-Bd-HUk"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="tXS-Hs-gvI"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.10000000000000001" maxValue="16" doubleValue="2.5" tickMarkPosition="above" sliderType="linear" id="PT3-eZ-dgu"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSliders:" target="Voe-Tx-rLC" id="N1c-Rh-Sff"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="fifthSliderDoubleValue" id="jnK-z3-oEC"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v5a-E1-Ttr">
-                                                <rect key="frame" x="31" y="0.0" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="m6H-7Y-vQO"/>
-                                                    <constraint firstAttribute="width" constant="50" id="wWy-ub-dCY"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="6dt-AT-drZ">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="fifthSliderDoubleValue" id="8PH-WV-2PC"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNH-0b-9hz">
-                                        <rect key="frame" x="0.0" y="65" width="116" height="34"/>
-                                        <subviews>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-QL-HbQ">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="VyY-XH-Nvh"/>
-                                                    <constraint firstAttribute="width" constant="116" id="jae-sX-FaP"/>
-                                                    <constraint firstAttribute="height" constant="19" id="qI4-li-wma"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="wuF-QL-zIB"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="9dj-c1-F59"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="M5w-QU-U0F"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="sixthSliderDoubleValue" id="I3g-zi-nyw"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fah-OR-1VW">
-                                                <rect key="frame" x="31" y="0.0" width="54" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="Jcv-gA-0mn"/>
-                                                    <constraint firstAttribute="height" constant="15" id="wN3-Pk-u4o"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="N3g-w8-v6d">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="sixthSliderDoubleValue" id="JUI-6l-Hdf"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bu4-OY-HJP">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="49"/>
-                                        <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YFn-JC-wLC">
-                                                <rect key="frame" x="6" y="34" width="104" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="0vv-ld-MGn"/>
-                                                    <constraint firstAttribute="height" constant="15" id="hzb-vt-TN7"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Global Steps" id="TkB-Q6-kZB">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-bb-BQj">
-                                                <rect key="frame" x="-2" y="13" width="120" height="23"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="1h6-Fr-EiS"/>
-                                                    <constraint firstAttribute="height" constant="19" id="7nh-Ju-fJf"/>
-                                                    <constraint firstAttribute="width" constant="116" id="Ttb-fU-Gvh"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="ncc-Lv-96P"/>
-                                                </constraints>
-                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="100" maxValue="300" doubleValue="170" tickMarkPosition="above" sliderType="linear" id="zwj-Ol-T9q"/>
-                                                <connections>
-                                                    <action selector="userDidSelectOneOfTheSlidersAndActImmediately:" target="Voe-Tx-rLC" id="JwI-Fr-WtN"/>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfSteps" id="Aqf-GF-XG4"/>
-                                                </connections>
-                                            </slider>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="szU-I1-JjJ">
-                                                <rect key="frame" x="8" y="0.0" width="100" height="15"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="SHU-vT-ptQ"/>
-                                                    <constraint firstAttribute="width" constant="100" id="u8X-ba-QIP"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="center" title="Steps" drawsBackground="YES" id="2lX-0n-L2X">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <connections>
-                                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfSteps" id="hca-4R-Yc3"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                </subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F26-JF-HOO">
+                                <rect key="frame" x="-2" y="517" width="70" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="Edy-YV-Ubw"/>
-                                    <constraint firstAttribute="height" constant="530" id="g9m-gT-Z2J"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="NXd-Qq-dBJ"/>
+                                    <constraint firstAttribute="height" constant="16" id="fvK-lQ-b1r"/>
                                 </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="RBH-oZ-bwP">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="s9s-wA-QHH"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfPixelsInUnit" id="QME-dn-0kM"/>
+                                </connections>
+                            </textField>
+                            <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uTx-hF-I2F">
+                                <rect key="frame" x="24" y="-3" width="19" height="504"/>
+                                <sliderCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="500" doubleValue="80" tickMarkPosition="right" sliderType="linear" id="bUB-Cz-xWt"/>
+                                <connections>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfPixelsInUnit" id="UT3-UN-kci"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
+                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="95" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-Jf-Yo4">
+                        <rect key="frame" x="444" y="561" width="288" height="31"/>
+                        <subviews>
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-7z-BWn">
+                                <rect key="frame" x="-2" y="-2" width="104" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="FN0-1q-SSB"/>
+                                    <constraint firstAttribute="width" constant="100" id="gw8-Bj-EBX"/>
+                                </constraints>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="zym-6s-52y">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment image="Selection" width="32" selected="YES"/>
+                                        <segment image="Move" width="32" tag="1"/>
+                                        <segment image="Zoom" width="32">
+                                            <nil key="label"/>
+                                        </segment>
+                                    </segments>
+                                </segmentedCell>
+                            </segmentedControl>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-Tf-kl5">
+                                <rect key="frame" x="195" y="4" width="93" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="TNs-xN-ma1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="UjC-eQ-ZbD"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundTextured" title="Center Scroll" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hfJ-gq-1I3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="userDidSelectScrollButton:" target="Voe-Tx-rLC" id="cTe-dG-4D8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <visibilityPriorities>
                             <integer value="1000"/>
@@ -1481,18 +1109,21 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="1or-p5-XVI" firstAttribute="height" secondItem="6Kg-Vu-dcM" secondAttribute="height" id="13G-el-cvn"/>
+                    <constraint firstItem="Y3C-Jf-Yo4" firstAttribute="top" secondItem="zq5-oO-ujc" secondAttribute="bottom" constant="7" id="1TR-Je-Z7P"/>
                     <constraint firstItem="bWt-K0-gcY" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="28" id="9jy-lc-pt4"/>
-                    <constraint firstAttribute="trailing" secondItem="zCW-0K-gi3" secondAttribute="trailing" constant="46" id="DBT-yh-hiU"/>
+                    <constraint firstItem="1or-p5-XVI" firstAttribute="leading" secondItem="6Kg-Vu-dcM" secondAttribute="trailing" constant="46" id="LGT-bV-1ss"/>
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="NrU-Ld-fKh"/>
                     <constraint firstAttribute="bottom" secondItem="6Kg-Vu-dcM" secondAttribute="bottom" constant="20" id="OH4-VV-kCF"/>
-                    <constraint firstItem="zCW-0K-gi3" firstAttribute="leading" secondItem="6Kg-Vu-dcM" secondAttribute="trailing" constant="20" id="SYy-uH-SS9"/>
+                    <constraint firstAttribute="trailing" secondItem="1or-p5-XVI" secondAttribute="trailing" constant="20" id="RY5-pF-q0O"/>
                     <constraint firstItem="Y01-0e-G7E" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VXA-ya-73o"/>
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VxC-1R-EUf"/>
                     <constraint firstItem="bWt-K0-gcY" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="YyT-FJ-v02"/>
+                    <constraint firstAttribute="bottom" secondItem="1or-p5-XVI" secondAttribute="bottom" constant="20" id="ay0-m3-5YT"/>
                     <constraint firstAttribute="trailing" secondItem="Y01-0e-G7E" secondAttribute="trailing" constant="121" id="bks-97-3Xe"/>
                     <constraint firstItem="6Kg-Vu-dcM" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="19" id="cMr-Ka-t6s"/>
-                    <constraint firstItem="zCW-0K-gi3" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="kCA-hh-6Zn"/>
-                    <constraint firstItem="6Kg-Vu-dcM" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="151" id="nnC-4D-9zA"/>
+                    <constraint firstItem="6Kg-Vu-dcM" firstAttribute="top" secondItem="Y3C-Jf-Yo4" secondAttribute="bottom" constant="8" id="i30-ns-2Pn"/>
+                    <constraint firstItem="Y3C-Jf-Yo4" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="yzl-eV-cht"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="536" y="4"/>
