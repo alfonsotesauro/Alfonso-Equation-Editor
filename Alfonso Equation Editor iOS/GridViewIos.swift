@@ -6,33 +6,31 @@
 //  Copyright © 2019 Alfonso Maria Tesauro. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class GridView: CartesianBackgroundView {
+class GridView: UIView {
     
-    
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
+    override func draw(_ rect: CGRect) {
+        
+        super.draw(rect)
         
         // Checkbox can disable grid drawing.
-        if !appDelegate!.shouldDrawGrid {
-            return
-        }
         
-        let color = NSColor.black
+        let color = UIColor.black
         color.set()
         
         
-        let contourPath = NSBezierPath(rect: bounds)
+        let contourPath = UIBezierPath(rect: bounds)
         
         contourPath.stroke()
         
-        var verticalLines: [NSBezierPath] = [NSBezierPath]()
+        var verticalLines: [UIBezierPath] = [UIBezierPath]()
         
         var ctr = 0.0
         
 
-        let distanceBetweenVerticalLines = appDelegate.numberOfPixelsInUnit / 5
+        let distanceBetweenVerticalLines = 130
+        
         repeat {
     let path = CartesianBezierPath(cartesianPlanView: self)
             
@@ -66,7 +64,11 @@ class GridView: CartesianBackgroundView {
             item.stroke()
         }
     }
+
     
+    
+    
+
 }
 
 precedencegroup PowerPrecedence { higherThan: MultiplicationPrecedence }

@@ -11,7 +11,6 @@
 		5733154547F1971A8425DD74 /* Pods_Alfonso_Equation_EditorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66317F13004906B686B22A /* Pods_Alfonso_Equation_EditorTests.framework */; };
 		D711B50E250842FA00D1B510 /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D711B50D250842FA00D1B510 /* CenteringClipView.swift */; };
 		D731082E24FD44FE00FA86BD /* SKTZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D731082C24FD44FE00FA86BD /* SKTZoomingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D731082F24FD450C00FA86BD /* SKTCenteringClipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731085E24FD756300FA86BD /* DraggableClipView.swift */; };
 		D75705BD2507A7A600E9D2CE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D75705BC2507A7A600E9D2CE /* Credits.rtf */; };
 		D75E7907239AD9F700EC8111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E7906239AD9F700EC8111 /* AppDelegate.swift */; };
@@ -51,6 +50,13 @@
 		D7A15684250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A15677250E8A7C00F4B8A3 /* SingleAttributeViewControllerWithStyle.xib */; };
 		D7A15685250E8A7C00F4B8A3 /* SingleAttributeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A15678250E8A7C00F4B8A3 /* SingleAttributeViewController.xib */; };
 		D7A15686250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A1567A250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib */; };
+		D7A1568E250E97C100F4B8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1568D250E97C100F4B8A3 /* AppDelegate.swift */; };
+		D7A15690250E97C100F4B8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1568F250E97C100F4B8A3 /* SceneDelegate.swift */; };
+		D7A15692250E97C100F4B8A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A15691250E97C100F4B8A3 /* ViewController.swift */; };
+		D7A15695250E97C100F4B8A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A15693250E97C100F4B8A3 /* Main.storyboard */; };
+		D7A15697250E97C100F4B8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A15696250E97C100F4B8A3 /* Assets.xcassets */; };
+		D7A1569A250E97C100F4B8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A15698250E97C100F4B8A3 /* LaunchScreen.storyboard */; };
+		D7A156A0250E97FA00F4B8A3 /* GridViewIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7C38FC8250563CF0084C2C9 /* CosinusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC7250563CF0084C2C9 /* CosinusView.swift */; };
 		D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C38FC9250564650084C2C9 /* TangentView.swift */; };
@@ -162,6 +168,15 @@
 		D7A15679250E8A7C00F4B8A3 /* SingleAttributeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleAttributeViewController.h; sourceTree = "<group>"; };
 		D7A1567A250E8A7C00F4B8A3 /* FontsAndColorsPreferencesViewComplete.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontsAndColorsPreferencesViewComplete.xib; sourceTree = "<group>"; };
 		D7A1567B250E8A7C00F4B8A3 /* FontAndColorsPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAndColorsPreferencesViewController.h; sourceTree = "<group>"; };
+		D7A1568B250E97C100F4B8A3 /* Alfonso Equation Editor iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alfonso Equation Editor iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A1568D250E97C100F4B8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7A1568F250E97C100F4B8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D7A15691250E97C100F4B8A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7A15694250E97C100F4B8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7A15696250E97C100F4B8A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7A15699250E97C100F4B8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7A1569B250E97C100F4B8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewIos.swift; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7C38FC7250563CF0084C2C9 /* CosinusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosinusView.swift; sourceTree = "<group>"; };
 		D7C38FC9250564650084C2C9 /* TangentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangentView.swift; sourceTree = "<group>"; };
@@ -201,6 +216,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7A15688250E97C100F4B8A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -233,6 +255,7 @@
 				D75E7905239AD9F700EC8111 /* Alfonso Equation Editor */,
 				D75E7919239AD9F800EC8111 /* Alfonso Equation EditorTests */,
 				D75E7924239AD9F800EC8111 /* Alfonso Equation EditorUITests */,
+				D7A1568C250E97C100F4B8A3 /* Alfonso Equation Editor iOS */,
 				D75E7904239AD9F700EC8111 /* Products */,
 				CD6C93DBD8033C9700663AD7 /* Pods */,
 				9C9E1325FCC5928D9EC686ED /* Frameworks */,
@@ -245,6 +268,7 @@
 				D75E7903239AD9F700EC8111 /* Alfonso Equation Editor.app */,
 				D75E7916239AD9F800EC8111 /* Alfonso Equation EditorTests.xctest */,
 				D75E7921239AD9F800EC8111 /* Alfonso Equation EditorUITests.xctest */,
+				D7A1568B250E97C100F4B8A3 /* Alfonso Equation Editor iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +417,21 @@
 			path = SingleAttributeViewController;
 			sourceTree = "<group>";
 		};
+		D7A1568C250E97C100F4B8A3 /* Alfonso Equation Editor iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7A1568D250E97C100F4B8A3 /* AppDelegate.swift */,
+				D7A1568F250E97C100F4B8A3 /* SceneDelegate.swift */,
+				D7A15691250E97C100F4B8A3 /* ViewController.swift */,
+				D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */,
+				D7A15693250E97C100F4B8A3 /* Main.storyboard */,
+				D7A15696250E97C100F4B8A3 /* Assets.xcassets */,
+				D7A15698250E97C100F4B8A3 /* LaunchScreen.storyboard */,
+				D7A1569B250E97C100F4B8A3 /* Info.plist */,
+			);
+			path = "Alfonso Equation Editor iOS";
+			sourceTree = "<group>";
+		};
 		D7C38FD1250579990084C2C9 /* Images From Grapher */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,13 +505,30 @@
 			productReference = D75E7921239AD9F800EC8111 /* Alfonso Equation EditorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D7A1568A250E97C100F4B8A3 /* Alfonso Equation Editor iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7A1569C250E97C100F4B8A3 /* Build configuration list for PBXNativeTarget "Alfonso Equation Editor iOS" */;
+			buildPhases = (
+				D7A15687250E97C100F4B8A3 /* Sources */,
+				D7A15688250E97C100F4B8A3 /* Frameworks */,
+				D7A15689250E97C100F4B8A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alfonso Equation Editor iOS";
+			productName = "Alfonso Equation Editor iOS";
+			productReference = D7A1568B250E97C100F4B8A3 /* Alfonso Equation Editor iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D75E78FB239AD9F700EC8111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Alfonso Maria Tesauro";
 				TargetAttributes = {
@@ -487,6 +543,9 @@
 					D75E7920239AD9F800EC8111 = {
 						CreatedOnToolsVersion = 11.2.1;
 						TestTargetID = D75E7902239AD9F700EC8111;
+					};
+					D7A1568A250E97C100F4B8A3 = {
+						CreatedOnToolsVersion = 11.7;
 					};
 				};
 			};
@@ -504,6 +563,7 @@
 			projectRoot = "";
 			targets = (
 				D75E7902239AD9F700EC8111 /* Alfonso Equation Editor */,
+				D7A1568A250E97C100F4B8A3 /* Alfonso Equation Editor iOS */,
 				D75E7915239AD9F800EC8111 /* Alfonso Equation EditorTests */,
 				D75E7920239AD9F800EC8111 /* Alfonso Equation EditorUITests */,
 			);
@@ -547,6 +607,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7A15689250E97C100F4B8A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A1569A250E97C100F4B8A3 /* LaunchScreen.storyboard in Resources */,
+				D7A15697250E97C100F4B8A3 /* Assets.xcassets in Resources */,
+				D7A15695250E97C100F4B8A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +743,6 @@
 				D75E7938239B12D100EC8111 /* Sinus.swift in Sources */,
 				D75E793A239B187600EC8111 /* ParabolaView.swift in Sources */,
 				D731085F24FD756300FA86BD /* DraggableClipView.swift in Sources */,
-				D731083124FD450C00FA86BD /* SKTCenteringClipView.m in Sources */,
 				D7A1565B250E5ECC00F4B8A3 /* CrossView.swift in Sources */,
 				D76639A12503506F0044AFA1 /* AbstractEquationView.swift in Sources */,
 				D7C38FCA250564650084C2C9 /* TangentView.swift in Sources */,
@@ -707,6 +776,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7A15687250E97C100F4B8A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A156A0250E97FA00F4B8A3 /* GridViewIos.swift in Sources */,
+				D7A15692250E97C100F4B8A3 /* ViewController.swift in Sources */,
+				D7A1568E250E97C100F4B8A3 /* AppDelegate.swift in Sources */,
+				D7A15690250E97C100F4B8A3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -729,6 +809,22 @@
 				D75E790E239AD9F800EC8111 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D7A15693250E97C100F4B8A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7A15694250E97C100F4B8A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7A15698250E97C100F4B8A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7A15699250E97C100F4B8A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -982,6 +1078,47 @@
 			};
 			name = Release;
 		};
+		D7A1569D250E97C100F4B8A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				INFOPLIST_FILE = "Alfonso Equation Editor iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-Editor-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7A1569E250E97C100F4B8A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65G6AG8SA4;
+				INFOPLIST_FILE = "Alfonso Equation Editor iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfonsotesauro.Alfonso-Equation-Editor-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1017,6 +1154,15 @@
 			buildConfigurations = (
 				D75E7931239AD9F800EC8111 /* Debug */,
 				D75E7932239AD9F800EC8111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7A1569C250E97C100F4B8A3 /* Build configuration list for PBXNativeTarget "Alfonso Equation Editor iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7A1569D250E97C100F4B8A3 /* Debug */,
+				D7A1569E250E97C100F4B8A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

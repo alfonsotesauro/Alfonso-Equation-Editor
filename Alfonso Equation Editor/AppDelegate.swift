@@ -287,6 +287,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func scrollToCenter() {
         let docView = contentView
         
+        
+        self.verticalScroller!.willChangeValue(forKey: "doubleValue")
+        self.verticalScroller!.doubleValue = 0.5
+        self.verticalScroller!.didChangeValue(forKey: "doubleValue")
+        
+        return;
+        
         // 90 va bene con 400%
         // 120 va bene con 400%
         // 185 va bene con 800%
