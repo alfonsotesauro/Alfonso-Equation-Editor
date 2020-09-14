@@ -1,32 +1,33 @@
 //
-//  ParabolaView.swift
+//  GeneralEquationView.swift
 //  Alfonso Equation Editor
 //
-//  Created by Alfonso Maria Tesauro on 06/12/2019.
+//  Created by Alfonso Maria Tesauro on 07/12/2019.
 //  Copyright © 2019 Alfonso Maria Tesauro. All rights reserved.
 //
 
 import Cocoa
 
-class CosinusView: OneOverXView {
+
+class OneOverXView: CrossView {
+    
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
         // Drawing code here.
         
-        var ctr = -50.0 // -10000 is the original
+        var ctr = -5.0 // -10000 is the original
         
         let finalValue = fabs(ctr)
-        
-
-        if self.appDelegate!.shouldDrawCos {
+    
+        if self.appDelegate!.shouldDrawOneOverX {
             let currentSegment = CartesianBezierPath(cartesianPlanView: self)
             currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
             
             let howManyPixelsInUnit = appDelegate.numberOfPixelsInUnit
             
-            let firstCorrectY = self.performCosinus(Double(ctr)) * howManyPixelsInUnit
+            let firstCorrectY = self.performOneOverX(Double(ctr)) * howManyPixelsInUnit
             
             
             currentSegment.move(to: NSPoint.init(x: ctr * howManyPixelsInUnit, y: firstCorrectY))
@@ -37,23 +38,21 @@ class CosinusView: OneOverXView {
                 let correctX = ctr * howManyPixelsInUnit
                 var correctY = ctr
                 
-                correctY = self.performCosinus(Double(ctr)) * howManyPixelsInUnit
-                                    
+                correctY = self.performOneOverX(Double(ctr)) * howManyPixelsInUnit
+                
                 currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                 
                 ctr += 0.01
             } while(ctr < finalValue)
-            NSColor.red.set()
+            NSColor.blue.set()
             currentSegment.stroke()
         }
-        
-    }
 
-    func performCosinus(_ x: Double) -> Double {
-        
-        return cos(x)
-        
+    }
+    
+    func performOneOverX(_ x: Double) -> Double {
+    
+        return 1 / x
+    
     }
 }
-
-

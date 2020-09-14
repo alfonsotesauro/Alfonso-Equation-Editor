@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     @objc dynamic var shouldUseSquareGrid: Bool = true
     @objc dynamic var shouldDrawGrid: Bool = true
+    @objc dynamic var shouldDrawOneOverX: Bool = false
     @objc dynamic var shouldDrawAxes: Bool = true
     @objc dynamic var shouldDrawBasicLetters: Bool = true
     @objc dynamic var shouldDrawParabola: Bool = true

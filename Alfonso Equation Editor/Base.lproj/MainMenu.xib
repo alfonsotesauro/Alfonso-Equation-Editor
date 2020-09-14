@@ -801,10 +801,10 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="0.0" y="8" width="80" height="89"/>
+                                <rect key="frame" x="-11" y="8" width="80" height="89"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
-                                        <rect key="frame" x="-2" y="73" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="73" width="48" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="dDt-Zc-4c8"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="sDm-ve-Y3a"/>
@@ -882,7 +882,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
-                                        <rect key="frame" x="-2" y="73" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="W1f-Ee-Ptc"/>
                                             <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
@@ -897,7 +897,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="75" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0oQ-s1-i6A"/>
                                             <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
@@ -912,7 +912,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="qBM-Nk-KUq"/>
@@ -927,7 +927,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="-27" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>
@@ -1004,13 +1004,30 @@
                                             <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawTan" id="XtT-Id-I3j"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-th-dZL">
+                                        <rect key="frame" x="-2" y="-27" width="85" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="JGA-Jy-J69"/>
+                                            <constraint firstAttribute="height" constant="14" id="tJA-RJ-P8X"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="OneOverX" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3ga-cb-aHB">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userDidSelectOneOfTheCheckBoxes:" target="Voe-Tx-rLC" id="eCZ-Zw-1b6"/>
+                                            <binding destination="Voe-Tx-rLC" name="value" keyPath="shouldDrawOneOverX" id="JMa-fv-88q"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>

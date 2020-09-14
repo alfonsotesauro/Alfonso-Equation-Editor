@@ -128,14 +128,14 @@
 		12B8D67148C34A799E2DC2608A95682F /* MTMathListDisplay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTMathListDisplay.m; path = iosMath/render/MTMathListDisplay.m; sourceTree = "<group>"; };
 		13628406ED596F80767A3EE797E19756 /* iosMath.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iosMath.modulemap; sourceTree = "<group>"; };
 		160696504E8F66E8AB47732B1DD5DEB2 /* UIColor+HexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "iosMath/render/UIColor+HexString.m"; sourceTree = "<group>"; };
-		1878C68B4BE0A1E50C7FC394F42F9FC8 /* Expression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Expression.framework; path = Expression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1878C68B4BE0A1E50C7FC394F42F9FC8 /* Expression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CC7B43706C88C9CD57A3D359F2A9C1 /* Expression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Expression.modulemap; sourceTree = "<group>"; };
 		1D6047445211B3405BD26D2E0BA5E4A7 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-umbrella.h"; sourceTree = "<group>"; };
 		1DB88107C5E570C0E4709F2EE45A2E9B /* Expression-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Expression-dummy.m"; sourceTree = "<group>"; };
 		1E7A3D8E3012A4BAB5CFD64A06DF1E99 /* latinmodern-math.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "latinmodern-math.plist"; path = "fonts/latinmodern-math.plist"; sourceTree = "<group>"; };
 		254D6552BF13A00221512A41AE87029B /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		26D44BFEA0A902CF3AA183D8766625D8 /* Pods-Alfonso Equation EditorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alfonso Equation EditorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2915E6EB9CE9D11CDC6EBB2402899731 /* xits-math.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = "xits-math.otf"; path = "fonts/xits-math.otf"; sourceTree = "<group>"; };
+		2915E6EB9CE9D11CDC6EBB2402899731 /* xits-math.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "xits-math.otf"; path = "fonts/xits-math.otf"; sourceTree = "<group>"; };
 		2B4875F46D322DF5161C795A549E58B4 /* iosMath-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iosMath-Info.plist"; sourceTree = "<group>"; };
 		2B7AE646B92BA3960F2D0C38AFC0AF86 /* AnyExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyExpression.swift; path = Sources/AnyExpression.swift; sourceTree = "<group>"; };
 		2BB8880D8CE560A7837E041C46F9387E /* Pods-Alfonso Equation Editor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alfonso Equation Editor-umbrella.h"; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		2DDA77FA55E5D8D403B1A4EC7F4C1C8A /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2EA494B8336A33939784464A28095351 /* Pods-Alfonso Equation Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alfonso Equation Editor.release.xcconfig"; sourceTree = "<group>"; };
 		30E3D7585ECD3EEA920D45DDA56AB3B9 /* NSColor+HexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSColor+HexString.h"; path = "iosMath/render/NSColor+HexString.h"; sourceTree = "<group>"; };
-		345B0AD7DFDB71AD812301106CE76367 /* texgyretermes-math.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = "texgyretermes-math.otf"; path = "fonts/texgyretermes-math.otf"; sourceTree = "<group>"; };
+		345B0AD7DFDB71AD812301106CE76367 /* texgyretermes-math.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "texgyretermes-math.otf"; path = "fonts/texgyretermes-math.otf"; sourceTree = "<group>"; };
 		361D2D28E7ACB7189707A06B1DEED445 /* Pods-Alfonso Equation EditorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alfonso Equation EditorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		37E39EE08D853046EE0E902BFC89B7D5 /* Expression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expression.release.xcconfig; sourceTree = "<group>"; };
 		38E3739DB990FA8DC039223DAA187CFA /* Pods-Alfonso Equation Editor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alfonso Equation Editor.modulemap"; sourceTree = "<group>"; };
@@ -163,13 +163,13 @@
 		616D700267E5DB26D86A55F35E509E72 /* iosMath-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iosMath-dummy.m"; sourceTree = "<group>"; };
 		61A7396C4B4CC4D11FF37329A9BFDAA3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		6752AA30330B2D53CA6A88004AAB60E8 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-dummy.m"; sourceTree = "<group>"; };
-		6C71DDCC8358C6410CDC826AA1D24188 /* mathFonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = mathFonts.bundle; path = "iosMath-mathFonts.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C71DDCC8358C6410CDC826AA1D24188 /* mathFonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mathFonts.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CC975DD3B3F05B4EC463E8EB9D8560 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		72F39751042FF516AF6D81DBF402D09E /* MTFontManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTFontManager.h; path = iosMath/render/MTFontManager.h; sourceTree = "<group>"; };
 		7A1E1055CA36D4506820EE5ADB3E18C2 /* iosMath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iosMath.release.xcconfig; sourceTree = "<group>"; };
 		8026AAD1CA76EAE3209727B4C24DA957 /* Expression-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Expression-Info.plist"; sourceTree = "<group>"; };
 		83C7C5F686D442E05800776E1029DFDE /* MTFontManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTFontManager.m; path = iosMath/render/MTFontManager.m; sourceTree = "<group>"; };
-		8429D034929885C7B7D306A02BC570E8 /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8429D034929885C7B7D306A02BC570E8 /* Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_Editor_Alfonso_Equation_EditorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84931A5B9D9D529CB48947F61C185A7D /* MTLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLabel.m; path = iosMath/render/MTLabel.m; sourceTree = "<group>"; };
 		85DDD948E08CC685B443DB3A91509B41 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.modulemap"; sourceTree = "<group>"; };
 		86A6F8FBD02DE21795EDE35227D5DBFF /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 		8BEB758BBEC0CD0E09D6BBA921B153A9 /* MTMathUILabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTMathUILabel.m; path = iosMath/render/MTMathUILabel.m; sourceTree = "<group>"; };
 		96999C94C9FCA3B1F2DFDEB56F590EB2 /* MTLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLabel.h; path = iosMath/render/MTLabel.h; sourceTree = "<group>"; };
 		994C84A562BDC10D537246D1D08ECF90 /* Expression-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expression-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2557600C793733CBE5DA4CA2EC137BB /* iosMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iosMath.framework; path = iosMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2557600C793733CBE5DA4CA2EC137BB /* iosMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iosMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CE5AFBF4759BBBC8CA4D7FB727CAE7 /* Expression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expression-prefix.pch"; sourceTree = "<group>"; };
 		A730B5A3744A3840D1350F22CADB9F02 /* MTMathAtomFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTMathAtomFactory.m; path = iosMath/lib/MTMathAtomFactory.m; sourceTree = "<group>"; };
 		AC434F0DD00838E378C655BA1ECA0226 /* iosMath-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iosMath-prefix.pch"; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		CFAC7FDB003E9C376CF5EC93CF38E878 /* MTMathListBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTMathListBuilder.h; path = iosMath/lib/MTMathListBuilder.h; sourceTree = "<group>"; };
 		D0442CE881ACAE5CED3F253541DC6CD4 /* Expression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Expression.h; path = Sources/Expression.h; sourceTree = "<group>"; };
 		D0830808C6C2E03D5547C202BBF61003 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		D221244745C5ABBCE77228FC94C01BA5 /* latinmodern-math.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = "latinmodern-math.otf"; path = "fonts/latinmodern-math.otf"; sourceTree = "<group>"; };
+		D221244745C5ABBCE77228FC94C01BA5 /* latinmodern-math.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "latinmodern-math.otf"; path = "fonts/latinmodern-math.otf"; sourceTree = "<group>"; };
 		D2FC43665F64F24A1770EE9629C35E23 /* Pods-Alfonso Equation Editor-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alfonso Equation Editor-acknowledgements.plist"; sourceTree = "<group>"; };
 		D5362EAC5A775F7A9804078DE25868B2 /* UIColor+HexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "iosMath/render/UIColor+HexString.h"; sourceTree = "<group>"; };
 		D60DCDF17D7D22C0986FF5DB9FF0579D /* Pods-Alfonso Equation Editor-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Alfonso Equation Editor-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -210,8 +210,8 @@
 		DD3A4B740FE7B8768CFB4CE6375DD5B7 /* MTMathList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTMathList.m; path = iosMath/lib/MTMathList.m; sourceTree = "<group>"; };
 		DD5AE5DD727D39B3FFBB60478CAF9674 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		DF65B40624286DBD8ECC6CC8F75B7B0B /* MTUnicode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTUnicode.h; path = iosMath/lib/MTUnicode.h; sourceTree = "<group>"; };
-		E7AD9AEA3A4F2EE63ECFF4216A839D42 /* Pods_Alfonso_Equation_Editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Alfonso_Equation_Editor.framework; path = "Pods-Alfonso Equation Editor.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9CF3F73F8AD04921ECCEBE132D8BAC9 /* Pods_Alfonso_Equation_EditorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Alfonso_Equation_EditorTests.framework; path = "Pods-Alfonso Equation EditorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AD9AEA3A4F2EE63ECFF4216A839D42 /* Pods_Alfonso_Equation_Editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_Editor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CF3F73F8AD04921ECCEBE132D8BAC9 /* Pods_Alfonso_Equation_EditorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfonso_Equation_EditorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3009A70C0C07FB0012A7E9DF0B0499 /* Expression.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expression.debug.xcconfig; sourceTree = "<group>"; };
 		EC6E478337422CFADEB9D97CCA760C0C /* IosMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IosMath.h; path = iosMath/IosMath.h; sourceTree = "<group>"; };
 		F89D346D73E155DD50EB2FF63C74FE08 /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -352,7 +352,6 @@
 				D3B8F44C2775B71123C555205B74F78F /* Resources */,
 				84724EF6AD4B9A36CE2F000F8C3D779F /* Support Files */,
 			);
-			name = iosMath;
 			path = iosMath;
 			sourceTree = "<group>";
 		};
@@ -405,7 +404,6 @@
 				BB5347B34878140E8102845722834810 /* Expression.swift */,
 				F277E62EEB8996ED1497DD308D8E4F15 /* Support Files */,
 			);
-			name = Expression;
 			path = Expression;
 			sourceTree = "<group>";
 		};
@@ -677,7 +675,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1170;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -926,7 +924,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37E39EE08D853046EE0E902BFC89B7D5 /* Expression.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -964,7 +961,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A1E1055CA36D4506820EE5ADB3E18C2 /* iosMath.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1020,7 +1016,6 @@
 			baseConfigurationReference = C0FE4F848E4C01691C81B5169F174601 /* Pods-Alfonso Equation EditorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1124,7 +1119,6 @@
 			baseConfigurationReference = 86A6F8FBD02DE21795EDE35227D5DBFF /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1164,7 +1158,6 @@
 			baseConfigurationReference = 2EA494B8336A33939784464A28095351 /* Pods-Alfonso Equation Editor.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1222,7 +1215,6 @@
 			baseConfigurationReference = B09A9C7CB4BDC3DF182955A82BFAF889 /* Pods-Alfonso Equation Editor.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1262,7 +1254,6 @@
 			baseConfigurationReference = 361D2D28E7ACB7189707A06B1DEED445 /* Pods-Alfonso Equation EditorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1301,7 +1292,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA3009A70C0C07FB0012A7E9DF0B0499 /* Expression.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1339,7 +1329,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 453A034AFC7E6970C60C1D827291492C /* iosMath.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1377,7 +1366,6 @@
 			baseConfigurationReference = 2DDA77FA55E5D8D403B1A4EC7F4C1C8A /* Pods-Alfonso Equation Editor-Alfonso Equation EditorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
