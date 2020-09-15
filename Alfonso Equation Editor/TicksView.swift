@@ -30,7 +30,7 @@ class TicksView: AxesView {
         let distanceBetweenVerticalLines = self.distanceBetweenVerticalLines * multiplyFactor
         
         if distanceBetweenVerticalLines == 0 {
-            print("Eccoci")
+           // print("Eccoci")
         }
         
         // Draw X axis positive Ticks

@@ -801,7 +801,7 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="-11" y="8" width="80" height="89"/>
+                                <rect key="frame" x="0.0" y="8" width="80" height="89"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
                                         <rect key="frame" x="-2" y="73" width="48" height="18"/>
@@ -882,7 +882,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
-                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="73" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="W1f-Ee-Ptc"/>
                                             <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
@@ -897,7 +897,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
-                                        <rect key="frame" x="-2" y="23" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0oQ-s1-i6A"/>
                                             <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
@@ -912,7 +912,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="qBM-Nk-KUq"/>
@@ -927,7 +927,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-27" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>
@@ -960,7 +960,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-67-IKC">
-                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="73" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="FHo-29-In3"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gce-Mg-Q3D"/>
@@ -975,7 +975,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-ar-Fbg">
-                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="2qG-Wk-l9h"/>
                                             <constraint firstAttribute="height" constant="14" id="ftf-e5-4ZJ"/>
@@ -990,7 +990,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-ON-ocR">
-                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="V6N-nd-cRd"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="sf1-RD-jsZ"/>
@@ -1005,7 +1005,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-th-dZL">
-                                        <rect key="frame" x="-2" y="-27" width="85" height="18"/>
+                                        <rect key="frame" x="-2" y="-2" width="85" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="JGA-Jy-J69"/>
                                             <constraint firstAttribute="height" constant="14" id="tJA-RJ-P8X"/>
@@ -1163,9 +1163,14 @@
                                                             </buttonCell>
                                                         </button>
                                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7Z-7H-mOf" customClass="MTMathUILabel">
-                                                            <rect key="frame" x="34" y="3" width="162" height="50"/>
+                                                            <rect key="frame" x="34" y="3" width="144" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         </customView>
+                                                        <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-7A-UaE">
+                                                            <rect key="frame" x="186" y="16" width="23" height="23"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </colorWell>
                                                     </subviews>
                                                     <connections>
                                                         <outlet property="enabledCheckbox" destination="QCK-A6-4pF" id="fiP-Nt-IJz"/>

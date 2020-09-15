@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     @objc dynamic var shouldUseSquareGrid: Bool = true
     @objc dynamic var shouldDrawGrid: Bool = true
-    @objc dynamic var shouldDrawOneOverX: Bool = false
+    @objc dynamic var shouldDrawOneOverX: Bool = true
     @objc dynamic var shouldDrawAxes: Bool = true
     @objc dynamic var shouldDrawBasicLetters: Bool = true
     @objc dynamic var shouldDrawParabola: Bool = true
@@ -184,7 +184,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
         } else {
             let row = self.formulasTableView.selectedRow
-            
+            guard row >= 0 else { return }
             self.formulas.remove(at: row)
         }
     }

@@ -17,8 +17,7 @@ class OneOverXView: CrossView {
         
         // Drawing code here.
         
-        var ctr = -5.0 // -10000 is the original
-        
+var ctr: Double = Double(-self.maximumCoordinate)
         let finalValue = fabs(ctr)
     
         if self.appDelegate!.shouldDrawOneOverX {
@@ -39,6 +38,15 @@ class OneOverXView: CrossView {
                 var correctY = ctr
                 
                 correctY = self.performOneOverX(Double(ctr)) * howManyPixelsInUnit
+                
+                if ctr > -0.1 && ctr < 0.1 {
+                    
+                    currentSegment.move(to: NSPoint.init(x: correctX, y: correctY))
+                    
+                    
+                    ctr += 0.01
+                    continue
+                }
                 
                 currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
                 

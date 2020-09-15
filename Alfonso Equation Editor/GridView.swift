@@ -32,7 +32,7 @@ class GridView: CartesianBackgroundView {
         var ctr = 0.0
         
 
-        let distanceBetweenVerticalLines = appDelegate.numberOfPixelsInUnit / 5
+        let distanceBetweenVerticalLines = appDelegate.numberOfPixelsInUnit / 6
         repeat {
     let path = CartesianBezierPath(cartesianPlanView: self)
             
@@ -57,7 +57,7 @@ class GridView: CartesianBackgroundView {
         } while ctr < 200
         
         for (index, item) in verticalLines.enumerated() {
-            if index % 5 == 0, index != 0 {
+            if index % 6 == 0, index != 0 {
                 NSColor.black.set()
             } else {
                 NSColor.lightGray.set()

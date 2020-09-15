@@ -23,6 +23,7 @@ class AbstractEquationView: NSView {
     var distanceBetweenHorizontalLines: Double!
     var halfWidth: CGFloat!
     var halfHeight: CGFloat!
+    var maximumCoordinate: CGFloat!
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -49,7 +50,7 @@ class AbstractEquationView: NSView {
 
     }
     
-    fileprivate func setUpUI() {
+    func setUpUI() {
         
         //steps = appDelegate.numberOfSteps
         
@@ -72,6 +73,10 @@ class AbstractEquationView: NSView {
         } else {
             multiplyFactor = 1.0
         }
+        
+        self.maximumCoordinate = self.halfWidth / CGFloat(appDelegate.numberOfPixelsInUnit)
+        
+        //print("Eccoci")
     }
     
 

@@ -15,7 +15,7 @@ class CosinusView: OneOverXView {
         
         // Drawing code here.
         
-        var ctr = -50.0 // -10000 is the original
+        var ctr: Double = Double(-self.maximumCoordinate) // -10000 is the original
         
         let finalValue = fabs(ctr)
         

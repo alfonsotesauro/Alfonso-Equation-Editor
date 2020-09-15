@@ -10,64 +10,84 @@ import Cocoa
 
 class TangentView: PowerOfFourView {
 
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-        
-        if self.appDelegate!.shouldDrawTan {
-            var ctr = Double(width / 2) // -10000 is the original
-            
-            
-            
-            
+     override func draw(_ dirtyRect: NSRect) {
+           super.draw(dirtyRect)
            
-                
-                ctr = 0 // -10000 is the original
-                
-                
-                
-                let currentSegment2 = NSBezierPath.init()
-                var firstCorrectY2 = ctr * distanceBetweenVerticalLines
-                
-                firstCorrectY2 = firstCorrectY2 + Double(height / 2)
-                
-                currentSegment2.move(to: NSPoint.init(x: ctr, y: firstCorrectY2))
-                
-                repeat {
-                    
-                    var correctX = ctr
-                    
-                    correctX = ctr
-                    
-                    let toCalc = (ctr - (Double(width / 2)))
-                    
-                    let valueToComputeTangentWith = toCalc / self.steps
-                    
+           // Drawing code here.
+           
+var ctr: Double = Double(-self.maximumCoordinate)
+           let finalValue = fabs(ctr)
+           
+
+           if self.appDelegate!.shouldDrawTan {
+               let currentSegment = CartesianBezierPath(cartesianPlanView: self)
+               currentSegment.lineWidth = CGFloat(self.appDelegate.fourthSliderDoubleValue)
+               
+               let howManyPixelsInUnit = appDelegate.numberOfPixelsInUnit
+               
+               let firstCorrectY = self.performTangent(Double(ctr)) * howManyPixelsInUnit
+               
+               
+               currentSegment.move(to: NSPoint.init(x: ctr * howManyPixelsInUnit, y: firstCorrectY))
+               
+               repeat {
                    
+                   
+                   let correctX = ctr * howManyPixelsInUnit
+                   var correctY = ctr
+                   
+                   correctY = self.performTangent(Double(ctr)) * howManyPixelsInUnit
                     
-                    var correctY = tan(toCalc / self.steps)
-                    
-                    correctY = correctY * self.steps
-                    
-                    correctY = correctY + Double(height / 2)
-                    
-                    
-                    
-                                            
-                                        
-                    
-                    currentSegment2.curve(to: NSPoint(x: correctX, y: correctY), controlPoint1: NSPoint(x: correctX, y: correctY), controlPoint2: NSPoint(x: correctX, y: correctY))
-                    
-                    
-                    
-                    ctr += 5.0
-                } while(ctr < Double(width))
-                NSColor.red.set()
-                currentSegment2.stroke()
                 
-            }
-        
-        
-    }
+                if ctr > ((Double.pi / 2) - 0.1) && ctr < ((Double.pi / 2) + 0.1) {
+                                   
+                                   currentSegment.move(to: NSPoint.init(x: correctX, y: correctY))
+                                   
+                                   
+                                   ctr += 0.01
+                                   continue
+                               }
+                if ctr > ((Double.pi + Double.pi / 2) - 0.1) && ctr < ((Double.pi + Double.pi / 2) + 0.1) {
+                    
+                    currentSegment.move(to: NSPoint.init(x: correctX, y: correctY))
+                    
+                    
+                    ctr += 0.01
+                    continue
+                }
+                
+                if ctr > (-((Double.pi / 2) + 0.1)) && ctr < (-((Double.pi / 2) - 0.1)) {
+                                                 
+                                                 currentSegment.move(to: NSPoint.init(x: correctX, y: correctY))
+                                                 
+                                                 
+                                                 ctr += 0.01
+                                                 continue
+                    }
+                
+                if ctr > (-((Double.pi + Double.pi / 2) + 0.1)) && ctr < (-((Double.pi + Double.pi / 2) - 0.1)) {
+                                                                
+                                                                currentSegment.move(to: NSPoint.init(x: correctX, y: correctY))
+                                                                
+                                                                
+                                                                ctr += 0.01
+                                                                continue
+                                   }
+                   currentSegment.curve(to: NSPoint.init(x: correctX, y: correctY), controlPoint1: NSPoint.init(x: correctX, y: correctY), controlPoint2: NSPoint.init(x: correctX, y: correctY))
+                   
+                   ctr += 0.01
+               } while(ctr < finalValue)
+               NSColor.red.set()
+               currentSegment.stroke()
+           }
+           
+       }
+
+       func performTangent(_ x: Double) -> Double {
+           
+           return tan(x)
+           
+       }
     
     
 }

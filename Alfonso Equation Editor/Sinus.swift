@@ -36,9 +36,10 @@ class SinusView: TangentView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
+        setUpUI()
         // Drawing code here.
         
-        var ctr = -5.0 // -10000 is the original
+        var ctr: Double = Double(-self.maximumCoordinate)
         
         let finalValue = fabs(ctr)
         

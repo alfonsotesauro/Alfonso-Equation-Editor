@@ -17,8 +17,7 @@ class CrossView: AbsoluteValueView {
         
         // Drawing code here.
         
-        var ctr = -5.0 // -10000 is the original
-        
+var ctr: Double = Double(-self.maximumCoordinate)
         let finalValue = fabs(ctr)
     
         if self.appDelegate!.shouldDrawCross {
