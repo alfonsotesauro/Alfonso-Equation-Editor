@@ -59,6 +59,7 @@
 		D7A1569A250E97C100F4B8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A15698250E97C100F4B8A3 /* LaunchScreen.storyboard */; };
 		D7A156A0250E97FA00F4B8A3 /* GridViewIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */; };
 		D7A156C6250EA1E200F4B8A3 /* MillimeterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A156C5250EA1E200F4B8A3 /* MillimeterGridView.swift */; };
+		D7AA803427455C73008395D4 /* Alice-nel-paese-delle-meraviglie.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AA803327455C73008395D4 /* Alice-nel-paese-delle-meraviglie.png */; };
 		D7C04C4524FA90B100EC9DD6 /* AxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04C4424FA90B100EC9DD6 /* AxesView.swift */; };
 		D7C2CF56250EBE4F000A1B16 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2CF55250EBE4F000A1B16 /* Formula.swift */; };
 		D7C2CF58250EBFFF000A1B16 /* FormulaTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2CF57250EBFFF000A1B16 /* FormulaTableCellView.swift */; };
@@ -183,6 +184,7 @@
 		D7A1569B250E97C100F4B8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A1569F250E97FA00F4B8A3 /* GridViewIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewIos.swift; sourceTree = "<group>"; };
 		D7A156C5250EA1E200F4B8A3 /* MillimeterGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillimeterGridView.swift; sourceTree = "<group>"; };
+		D7AA803327455C73008395D4 /* Alice-nel-paese-delle-meraviglie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alice-nel-paese-delle-meraviglie.png"; sourceTree = "<group>"; };
 		D7C04C4424FA90B100EC9DD6 /* AxesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesView.swift; sourceTree = "<group>"; };
 		D7C2CF53250EB319000A1B16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D7C2CF55250EBE4F000A1B16 /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				D7EA41C6250D392B006A220A /* CartesianBezierPath.swift */,
 				D75E7933239ADA1400EC8111 /* CartesianBackgroundView.swift */,
 				D76639A22503631D0044AFA1 /* GridView.swift */,
+				D7AA803327455C73008395D4 /* Alice-nel-paese-delle-meraviglie.png */,
 				D7A156C5250EA1E200F4B8A3 /* MillimeterGridView.swift */,
 				D7C04C4424FA90B100EC9DD6 /* AxesView.swift */,
 				D7F5E5A924FD1FBF003ABD52 /* TicksView.swift */,
@@ -613,6 +616,7 @@
 				D75705BD2507A7A600E9D2CE /* Credits.rtf in Resources */,
 				D7C38FCE2505797D0084C2C9 /* Move.pdf in Resources */,
 				D78E7395250531E50044682C /* Folio-Std-Bold-Condensed.ttf in Resources */,
+				D7AA803427455C73008395D4 /* Alice-nel-paese-delle-meraviglie.png in Resources */,
 				D78E7398250531E50044682C /* Folio-Std-Medium.ttf in Resources */,
 				D7C38FD325057A250084C2C9 /* Selection.pdf in Resources */,
 			);

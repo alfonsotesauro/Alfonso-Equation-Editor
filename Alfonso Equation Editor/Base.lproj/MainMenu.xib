@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -698,7 +698,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="1019" width="1056" height="704"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="3200" height="1777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="500" height="400"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="1056" height="704"/>
@@ -708,7 +708,7 @@
                         <rect key="frame" x="855" y="599" width="80" height="64"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aWN-C4-7S3">
-                                <rect key="frame" x="-2" y="48" width="84" height="18"/>
+                                <rect key="frame" x="-2" y="49" width="82" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="OZh-hr-5gb"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="W1i-w0-nOU"/>
@@ -723,7 +723,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-mX-OZh">
-                                <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                <rect key="frame" x="-2" y="24" width="72" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="bBM-fy-ClH"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="uNI-R5-SPX"/>
@@ -738,7 +738,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XBn-4o-JRM">
-                                <rect key="frame" x="-2" y="-2" width="74" height="18"/>
+                                <rect key="frame" x="-2" y="-1" width="72" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gVb-BT-Joz"/>
                                     <constraint firstAttribute="height" constant="14" id="rAP-DH-q5C"/>
@@ -765,13 +765,13 @@
                         </customSpacing>
                     </stackView>
                     <scrollView borderType="line" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-Vu-dcM" customClass="SKTZoomingScrollView">
-                        <rect key="frame" x="215" y="23" width="703" height="489"/>
+                        <rect key="frame" x="215" y="23" width="703" height="486"/>
                         <clipView key="contentView" id="3X5-MS-Mu5" customClass="DraggableClipView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                            <rect key="frame" x="1" y="1" width="686" height="472"/>
+                            <rect key="frame" x="1" y="1" width="686" height="469"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="bHt-Ho-ZNa" customClass="SinusView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="683" height="458"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="683" height="455"/>
                                 </customView>
                             </subviews>
                             <constraints>
@@ -782,11 +782,11 @@
                             </constraints>
                         </clipView>
                         <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fBV-Iz-Hym">
-                            <rect key="frame" x="1" y="473" width="686" height="15"/>
+                            <rect key="frame" x="1" y="470" width="686" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKB-d8-W6y">
-                            <rect key="frame" x="687" y="1" width="15" height="472"/>
+                            <rect key="frame" x="687" y="1" width="15" height="469"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -801,10 +801,10 @@
                         <rect key="frame" x="20" y="572" width="307" height="104"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="11" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-Sx-WhK">
-                                <rect key="frame" x="0.0" y="8" width="80" height="89"/>
+                                <rect key="frame" x="-17" y="8" width="86" height="89"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-Ai-QiW">
-                                        <rect key="frame" x="-2" y="73" width="48" height="18"/>
+                                        <rect key="frame" x="-2" y="74" width="52" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="dDt-Zc-4c8"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="sDm-ve-Y3a"/>
@@ -819,7 +819,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o2H-jn-v2A">
-                                        <rect key="frame" x="-2" y="48" width="66" height="18"/>
+                                        <rect key="frame" x="-2" y="49" width="69" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="OE5-4H-oIU"/>
                                             <constraint firstAttribute="height" constant="14" id="b28-th-eCK"/>
@@ -834,7 +834,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-Hr-cF9">
-                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="24" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="85H-Fq-dlJ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="zbW-w4-1Z0"/>
@@ -849,7 +849,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WNY-gF-hTv">
-                                        <rect key="frame" x="-2" y="-2" width="84" height="18"/>
+                                        <rect key="frame" x="-2" y="-1" width="88" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Qol-bB-hen"/>
                                             <constraint firstAttribute="height" constant="14" id="iS2-2c-4ev"/>
@@ -882,7 +882,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yif-ky-v6q">
-                                        <rect key="frame" x="-2" y="73" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="49" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="W1f-Ee-Ptc"/>
                                             <constraint firstAttribute="height" constant="14" id="y2M-QS-zrN"/>
@@ -897,7 +897,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-mJ-xcd">
-                                        <rect key="frame" x="-2" y="48" width="75" height="18"/>
+                                        <rect key="frame" x="-2" y="24" width="79" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0oQ-s1-i6A"/>
                                             <constraint firstAttribute="height" constant="14" id="2pg-7Q-YMc"/>
@@ -912,7 +912,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-ZF-VZ4">
-                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="24" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="mX8-5N-SiG"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="qBM-Nk-KUq"/>
@@ -927,7 +927,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="che-2w-Prd">
-                                        <rect key="frame" x="-2" y="-2" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="-1" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="BJW-3f-LCB"/>
                                             <constraint firstAttribute="height" constant="14" id="D4x-H9-5hC"/>
@@ -960,7 +960,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-67-IKC">
-                                        <rect key="frame" x="-2" y="73" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="49" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="FHo-29-In3"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gce-Mg-Q3D"/>
@@ -975,7 +975,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-ar-Fbg">
-                                        <rect key="frame" x="-2" y="48" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="24" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="2qG-Wk-l9h"/>
                                             <constraint firstAttribute="height" constant="14" id="ftf-e5-4ZJ"/>
@@ -990,7 +990,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-ON-ocR">
-                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                        <rect key="frame" x="-2" y="-1" width="72" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="V6N-nd-cRd"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="sf1-RD-jsZ"/>
@@ -1005,7 +1005,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-th-dZL">
-                                        <rect key="frame" x="-2" y="-2" width="85" height="18"/>
+                                        <rect key="frame" x="-2" y="-1" width="89" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="JGA-Jy-J69"/>
                                             <constraint firstAttribute="height" constant="14" id="tJA-RJ-P8X"/>
@@ -1046,10 +1046,10 @@
                         </customSpacing>
                     </stackView>
                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="95" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-Jf-Yo4">
-                        <rect key="frame" x="384" y="520" width="288" height="62"/>
+                        <rect key="frame" x="384" y="517" width="288" height="65"/>
                         <subviews>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-7z-BWn">
-                                <rect key="frame" x="-2" y="14" width="104" height="34"/>
+                                <rect key="frame" x="-2" y="16" width="104" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="FN0-1q-SSB"/>
                                     <constraint firstAttribute="width" constant="100" id="gw8-Bj-EBX"/>
@@ -1066,7 +1066,7 @@
                                 </segmentedCell>
                             </segmentedControl>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-Tf-kl5">
-                                <rect key="frame" x="195" y="19" width="93" height="23"/>
+                                <rect key="frame" x="194" y="20" width="95" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="TNs-xN-ma1"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="UjC-eQ-ZbD"/>
@@ -1090,10 +1090,10 @@
                         </customSpacing>
                     </stackView>
                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1or-p5-XVI">
-                        <rect key="frame" x="970" y="30" width="66" height="517"/>
+                        <rect key="frame" x="970" y="30" width="66" height="514"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F26-JF-HOO">
-                                <rect key="frame" x="-2" y="501" width="70" height="16"/>
+                                <rect key="frame" x="-2" y="498" width="70" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="NXd-Qq-dBJ"/>
                                     <constraint firstAttribute="height" constant="16" id="fvK-lQ-b1r"/>
@@ -1109,7 +1109,7 @@
                                 </connections>
                             </textField>
                             <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uTx-hF-I2F">
-                                <rect key="frame" x="24" y="-3" width="19" height="504"/>
+                                <rect key="frame" x="21" y="-6" width="24" height="504"/>
                                 <sliderCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="500" doubleValue="80" tickMarkPosition="right" sliderType="linear" id="bUB-Cz-xWt"/>
                                 <connections>
                                     <binding destination="Voe-Tx-rLC" name="value" keyPath="numberOfPixelsInUnit" id="UT3-UN-kci"/>
@@ -1138,7 +1138,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="212" minWidth="40" maxWidth="1000" id="WpV-l8-adR">
+                                        <tableColumn width="183" minWidth="40" maxWidth="1000" id="WpV-l8-adR">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Formulas:">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1151,7 +1151,7 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView identifier="formulaCellIdentifier" id="Lgz-bK-qFb" customClass="FormulaTableCellView" customModule="Alfonso_Equation_Editor" customModuleProvider="target">
-                                                    <rect key="frame" x="1" y="1" width="212" height="56"/>
+                                                    <rect key="frame" x="11" y="1" width="192" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCK-A6-4pF">
@@ -1198,7 +1198,7 @@
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <tableHeaderView key="headerView" id="Nim-vb-sCx">
+                        <tableHeaderView key="headerView" wantsLayer="YES" id="Nim-vb-sCx">
                             <rect key="frame" x="0.0" y="0.0" width="215" height="25"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
@@ -1247,8 +1247,17 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xk1-yL-GDs">
+                        <rect key="frame" x="943" y="572" width="104" height="104"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="104" id="eC6-1N-1xA"/>
+                            <constraint firstAttribute="height" constant="104" id="qVS-EW-GoO"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Alice-nel-paese-delle-meraviglie" id="kSx-Lr-qhq"/>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="xk1-yL-GDs" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="28" id="0RI-bE-aht"/>
                     <constraint firstItem="1or-p5-XVI" firstAttribute="height" secondItem="6Kg-Vu-dcM" secondAttribute="height" constant="28" id="13G-el-cvn"/>
                     <constraint firstItem="Y3C-Jf-Yo4" firstAttribute="top" secondItem="zq5-oO-ujc" secondAttribute="bottom" constant="17" id="1TR-Je-Z7P"/>
                     <constraint firstAttribute="bottom" secondItem="Azd-zv-QHI" secondAttribute="bottom" constant="42" id="2Le-tj-TB7"/>
@@ -1265,6 +1274,7 @@
                     <constraint firstItem="Y01-0e-G7E" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VXA-ya-73o"/>
                     <constraint firstItem="zq5-oO-ujc" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="41" id="VxC-1R-EUf"/>
                     <constraint firstItem="bWt-K0-gcY" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="YyT-FJ-v02"/>
+                    <constraint firstAttribute="trailing" secondItem="xk1-yL-GDs" secondAttribute="trailing" constant="9" id="Zqk-xz-kcn"/>
                     <constraint firstAttribute="bottom" secondItem="1or-p5-XVI" secondAttribute="bottom" constant="30" id="ay0-m3-5YT"/>
                     <constraint firstAttribute="trailing" secondItem="Y01-0e-G7E" secondAttribute="trailing" constant="121" id="bks-97-3Xe"/>
                     <constraint firstItem="6Kg-Vu-dcM" firstAttribute="top" secondItem="Y3C-Jf-Yo4" secondAttribute="bottom" constant="8" id="i30-ns-2Pn"/>
@@ -1277,10 +1287,15 @@
         </window>
         <userDefaultsController representsSharedInstance="YES" id="zaO-7A-IgU"/>
     </objects>
+    <designables>
+        <designable name="X7Z-7H-mOf"/>
+        <designable name="zq5-oO-ujc"/>
+    </designables>
     <resources>
+        <image name="Alice-nel-paese-delle-meraviglie" width="1418" height="800"/>
         <image name="Move" width="18" height="18"/>
-        <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="NSAddTemplate" width="14" height="13"/>
+        <image name="NSRemoveTemplate" width="14" height="4"/>
         <image name="Selection" width="8" height="14"/>
         <image name="Zoom" width="18" height="18"/>
     </resources>
